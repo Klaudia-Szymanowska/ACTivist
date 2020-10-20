@@ -7,6 +7,7 @@ import Signup from "./containers/Signup";
 import { Challenges } from "./containers/Challenges";
 import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
+import { Settings } from "./containers/Settings";
 import { Home } from "./containers/Home";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/mychallenges" component={MyChallenges} />
           <Route path="/transportation" component={Transportation} />
           <Route path="/home" component={Home} />
+          <Route path="/settings" component={Settings} />
         </Switch>
       </BrowserRouter>
     </body>

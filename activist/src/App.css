@@ -137,7 +137,17 @@ h5 {
 /* some font, Roboto for now */
 h4 {
   font-family: "Roboto";
-  color: #427a83;
+  color: #427A83;
+}
+
+
+/* font for settings */
+h6{
+  font-family: "Roboto";
+  color: #427A83;
+  font-size: 280%;
+  text-align: center;
+
 }
 
 .App-logo {
