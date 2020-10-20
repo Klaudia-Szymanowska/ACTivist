@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
+import "./App.css";
+import {HashLink as Link} from "react-router-hash-link";
+
 
 export default function Signup() {
   const [username, setUsername] = useState("");
@@ -51,18 +54,28 @@ export default function Signup() {
             onChange={e => setEmail(e.target.value)}
             type="email"
           />
-        </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        </FormGroup>  
+
+        <div> <Link to ='/home'><button> Submit </button></Link></div>
+
+
+
+       {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Submit
-        </Button>
+        </Button>    */}   
+
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Sign up with Google
         </Button>
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Sign up with Facebook
-        </Button>
+        </Button> 
 
       </form>
     </div>
+
+//<div> <Link to ='/mychallenges'><button><img src={food} style={{marginRight: "5%", marginBottom: "-1%", width: "11%"}} alt = "food" /> Food </button></Link></div>
+
+
   );
 }
