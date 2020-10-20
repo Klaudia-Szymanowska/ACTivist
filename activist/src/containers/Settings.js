@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {HashLink as Link} from "react-router-hash-link";
 import './App.css';
 
 import home2 from "./img/home2.png";
@@ -7,10 +7,17 @@ import home2 from "./img/home2.png";
 export const Settings = () => {
     return(
         <body>
- <div>
-        <img class="column" src={home2} style={{width: "10%"}} alt="home2"/>
+ <div> <Link to ='/Home'><button>
+    <img class="column" src={home2} style={{width: "10%"}} alt="home2"/> </button></Link>
     </div>
-    <h6>Notifications</h6>
+
+
+    <div className="form-check">
+            <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
+            <label className="form-check-label" for="defaultCheck1">
+                Notifications<br/>
+            </label></div>
+
 
     <div><button className="button2" > My account </button></div>
     <div><button className="button2" > Delete account </button></div>
