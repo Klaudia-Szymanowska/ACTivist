@@ -12,11 +12,22 @@ export const Settings = () => {
     </div>
 
 
-    <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="" id="defaultCheck1"/>
-            <label className="form-check-label" for="defaultCheck1">
-                Notifications<br/>
-            </label></div>
+    <div>
+        <button style={{ fontSize: "220%", textAlign: "left" }}>
+        <div class="form-check">
+            <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="defaultCheck1"
+              />
+            <label class="form-check-label" for="defaultCheck1">
+                Notifications
+                <br />
+              </label>
+            </div>
+          </button>
+        </div>
 
 
     <div><button className="button2" > My account </button></div>
