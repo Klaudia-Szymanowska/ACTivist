@@ -10,17 +10,15 @@ body {
 }
 
 /* button font*/
-h5{
+h5 {
   font-family: "Roboto";
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-
 /* some font, Roboto for now */
-h4{
+h4 {
   font-family: "Roboto";
-  color: #427A83;
-
+  color: #427a83;
 }
 
 .App-logo {
@@ -32,12 +30,9 @@ h4{
 
 /*
 //inspiration: transparent background 
-
 .container {
   position: relative;
 }
-
-
 .text-block {
   position: absolute;
   top: 30%;
@@ -48,9 +43,7 @@ h4{
   padding-right: 30px;
   transform: translate(40%, -27%);
 }
-
 // let's see later if we will use it
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -61,5 +54,4 @@ h4{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 */

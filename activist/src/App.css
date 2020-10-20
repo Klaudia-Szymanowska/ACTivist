@@ -1,83 +1,133 @@
-
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
 
 body {
-    background-position: center center; 
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h3 {
-    font-size: 280%;
-    text-align: center;
-    font-family: "Roboto";
+  font-size: 280%;
+  text-align: center;
+  font-family: "Roboto";
 }
 
-.column{
-    float: left;
-    width: 50%;
+h5 {
+  font-size: 75%;
+  text-align: center;
+  font-family: "Roboto";
+  color: #ffffff;
 }
 
-button{
-    border: none;
-    color: #427A83;
-    font-family: "Roboto";
-    font-size: 320%;
-    padding: 40px 32px;
-    background-color: #C0D2D9;
-    width: 60%;
-    border-radius: 12px;
-    margin-top: 6%;
-    margin-bottom: 9%;
+h6 {
+  font-size: 30%;
+  text-align: center;
+  font-family: "Roboto";
+  color: #ffffff;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+button {
+  border: none;
+  color: #427a83;
+  font-family: "Roboto";
+  font-size: 320%;
+  padding: 40px 32px;
+  background-color: #c0d2d9;
+  width: 60%;
+  border-radius: 12px;
+  margin-top: 6%;
+  margin-bottom: 9%;
 }
 
 .button2 {
-    color: #FFFFFF;
-    background-color: #427A83;
-    font-size: 200%;
-    padding: 20px 32px;
-    width: 40%;
+  color: #ffffff;
+  background-color: #427a83;
+  font-size: 200%;
+  padding: 20px 32px;
+  width: 40%;
 }
 
-.text{
-    margin-top: 2%;
-    margin-bottom: 4%;
-    clear: both;
-    float: center;
-    text-align: center;
+.text {
+  margin-top: 2%;
+  margin-bottom: 4%;
+  clear: both;
+  float: center;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container2 {
+  position: center;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  height: 220px;
+  width: 220px;
+  background-color: #5a8a83;
+  float: center;
+  border-radius: 50%;
+}
+
+.circleSmall {
+  display: flex;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  background-color: #9db5bd;
+  border-radius: 50%;
+}
+
+.progressbox {
+  display: flex;
+  justify-content: center;
+  height: 161px;
+  width: 337px;
+  background-color: #c0d2d9;
+  float: center;
+  border-radius: 0%;
 }
 
 @media only screen and (max-device-width: 600px) {
-    body {
-        background-image: url(./img/background.jpg);
-    }
-} 
+  body {
+    background-image: url(./img/background.jpg);
+  }
+}
 
 @media only screen and (max-device-width: 1500px) {
-    body {
-        background-image: url(./img/background.jpg);
-    }
-} 
+  body {
+    background-image: url(./img/background.jpg);
+  }
+}
 
 input.form-check-input {
-  width: 25px; 
-  height: 25px; 
+  width: 25px;
+  height: 25px;
 }
-
 
 /* button font*/
-h5{
+h5 {
   font-family: "Roboto";
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-
 /* some font, Roboto for now */
-h4{
+h4 {
   font-family: "Roboto";
-  color: #427A83;
-
+  color: #427a83;
 }
 
 .App-logo {
@@ -86,7 +136,6 @@ h4{
   height: 100%;
   pointer-events: none;
 }
-
 
 /*
 //inspiration: transparent background 
