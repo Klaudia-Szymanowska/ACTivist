@@ -14,7 +14,7 @@ export const Challenges = () => {
       <div id="navbuttons">
         <div>
           {" "}
-          <Link to="/home">
+          <Link to="/settings">
             <button>
               <img
                 className="column"
@@ -27,14 +27,16 @@ export const Challenges = () => {
         </div>
 
         <div>
-          <button>
-            <img
-              className="column"
-              src={home2}
-              style={{ width: "100%", float: "right" }}
-              alt="set"
-            />
-          </button>
+          <Link to="/home">
+            <button>
+              <img
+                className="column"
+                src={home2}
+                style={{ width: "100%", float: "right" }}
+                alt="set"
+              />
+            </button>
+          </Link>
         </div>
       </div>
 

@@ -10,12 +10,14 @@ export const Home = () => {
   return (
     <body>
       <div>
-        <img
-          class="column"
-          src={set}
-          style={{ width: "10%", float: "right" }}
-          alt="set"
-        />
+        <Link to="/settings">
+          <img
+            class="column"
+            src={set}
+            style={{ width: "10%", float: "right" }}
+            alt="set"
+          />
+        </Link>
       </div>
       <div>
         <div className="container">
@@ -47,9 +49,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="container">
-          <button className="progressbox">
-            <h6>follow your progress - under construction</h6>
-          </button>
+          <button className="progressbox"></button>
         </div>
       </div>
     </body>
