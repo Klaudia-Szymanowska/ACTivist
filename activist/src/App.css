@@ -45,6 +45,16 @@ button {
   margin-bottom: 9%;
 }
 
+#navbuttons button 
+{
+  clear: both;
+  width: 10%;
+  padding: 10px 10px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+
+}
+
 .button2 {
   color: #ffffff;
   background-color: #427a83;
