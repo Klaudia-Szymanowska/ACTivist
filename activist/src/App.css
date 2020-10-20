@@ -1,13 +1,70 @@
+
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
 
-.App {
-  text-align: center;
+body {
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-body {
-  background-size: cover;
-  background-image: url(./img/background.jpg);
+h3 {
+    font-size: 280%;
+    text-align: center;
+    font-family: "Roboto";
 }
+
+.column{
+    float: left;
+    width: 50%;
+}
+
+button{
+    border: none;
+    color: #427A83;
+    font-family: "Roboto";
+    font-size: 320%;
+    padding: 40px 32px;
+    background-color: #C0D2D9;
+    width: 60%;
+    border-radius: 12px;
+    margin-top: 6%;
+    margin-bottom: 9%;
+}
+
+.button2 {
+    color: #FFFFFF;
+    background-color: #427A83;
+    font-size: 200%;
+    padding: 20px 32px;
+    width: 40%;
+}
+
+.text{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    clear: both;
+    float: center;
+    text-align: center;
+}
+
+@media only screen and (max-device-width: 600px) {
+    body {
+        background-image: url(./img/background.jpg);
+    }
+} 
+
+@media only screen and (max-device-width: 1500px) {
+    body {
+        background-image: url(./img/background.jpg);
+    }
+} 
+
+input.form-check-input {
+  width: 25px; 
+  height: 25px; 
+}
+
 
 /* button font*/
 h5{
@@ -29,6 +86,7 @@ h4{
   height: 100%;
   pointer-events: none;
 }
+
 
 /*
 //inspiration: transparent background 
