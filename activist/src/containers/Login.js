@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import Signup from "./Signup";
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+import {HashLink as Link} from "react-router-hash-link";
+import "./App.css";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -36,13 +38,17 @@ export default function Login() {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+
+        <div> <Link to ='/home'><button> Login </button></Link></div>
+        <div> <Link to ='/signup'><button> Sign up </button></Link></div>
+
+       {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Login
         </Button>       
 
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Sign up
-        </Button>           
+        </Button>    */}        
 
       </form>
     </div>
