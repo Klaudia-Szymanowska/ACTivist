@@ -6,7 +6,7 @@ import { Login } from './containers/Login';
 import { Signup } from './containers/Signup';
 import { Challenges } from './containers/Challenges';
 import { MyChallenges } from './containers/MyChallenges';
-
+import { Settings } from './containers/Settings'
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
     <Route path="/signup" component={Signup} /> */}
     <Route exact path="/" component={Challenges} />
     <Route path="/mychallenges" component={MyChallenges} />
+    <Route path="/settings" component={Settings} />
     </Switch>
     </BrowserRouter>
     </body>
