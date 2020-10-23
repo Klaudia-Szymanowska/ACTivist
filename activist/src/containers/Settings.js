@@ -6,25 +6,27 @@ import home2 from "./img/home2.png";
 
 export const Settings = () => {
     return(
-        <body>
- <div> <Link to ='/Home'><button>
-    <img class="column" src={home2} style={{width: "10%"}} alt="home2"/> </button></Link>
+        <body> {/*added id and changed style*/}
+ <div> <Link to ='/Home'><button id="homebutton">
+    <img class="column" src={home2} style={{width: "100%", marginTop: "-10%"}} alt="home2"/> </button></Link>
     </div>
 
-
-    <div>
-        <button style={{ fontSize: "220%", textAlign: "left" }}>
+    
+    <div>{/*added id*/}
+        <button id= "notifications" style={{ fontSize: "220%", textAlign: "left" }}>
         <div class="form-check">
             <input
                 class="form-check-input"
                 type="checkbox"
                 value=""
                 id="defaultCheck1"
-              />
+              /> 
+              
             <label class="form-check-label" for="defaultCheck1">
                 Notifications
                 <br />
               </label>
+             
             </div>
           </button>
         </div>

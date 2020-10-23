@@ -29,21 +29,38 @@ h6 {
 
 .column {
   float: left;
-  width: 50%;
+  width: 40%;
 }
 
 button {
+  float: center;
   border: none;
   color: #427a83;
   font-family: "Roboto";
-  font-size: 320%;
-  padding: 40px 32px;
+  font-size: 130%;
+  padding: 10px 10px;
   background-color: #c0d2d9;
-  width: 60%;
-  border-radius: 12px;
+  width: 100%;
+  border-radius: 10px;
   margin-top: 6%;
   margin-bottom: 9%;
 }
+
+#homebutton {
+  width: 10%;
+  padding: 10px ;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-radius: 90%;
+  opacity: 0.9;
+}
+
+#notifications
+{
+  text-align: center;
+  width: 50%;
+}
+
 
 #navbuttons button {
   clear: both;
@@ -72,12 +89,27 @@ button {
 .container {
   display: flex;
   justify-content: center;
+  position: center;
+  float: center;
+  align-items: center;
+}
+
+.container1 {
+  position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: center;
+  width: 50%;
 }
 
 .container2 {
+  float: center;
   position: center;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  float: center;
   width: 50%;
 }
 .circle {
@@ -93,8 +125,8 @@ button {
 .circleSmall {
   display: flex;
   justify-content: center;
-  height: 34px;
-  width: 34px;
+  float:center;
+  padding: 10px 10px;
   background-color: #9db5bd;
   border-radius: 50%;
 }
@@ -107,6 +139,7 @@ button {
   background-color: #c0d2d9;
   float: center;
   border-radius: 0%;
+  opacity: 0.6;
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -130,6 +163,7 @@ input.form-check-input {
 h5 {
   font-family: "Roboto";
   color: #ffffff;
+  size: 300%;
 }
 
 /* some font, Roboto for now */

@@ -8,27 +8,18 @@ import home2 from "./img/home2.png";
 export const MyChallenges = () => {
   return (
     <body>
-      <div id="navbuttons">
-        <div>
-          <Link to="/home">
-            <button>
-              <img
-                class="column"
-                src={home2}
-                style={{ width: "100%" }}
-                alt="home2"
-              />
-            </button>
-          </Link>
-        </div>
+      <div id="navbuttons"> {/* changed homebutton and settings button*/}
+      <div> <Link to ='/Home'><button id="homebutton">
+    <img class="column" src={home2} style={{width: "100%", marginTop: "-10%"}} alt="home2"/> </button></Link>
+    </div>
 
         <div>
           <Link to="/settings">
-            <button>
+            <button id="homebutton">
               <img
                 class="column"
                 src={set}
-                style={{ width: "100%", float: "right" }}
+                style={{ width: "100%", marginLeft: "5%"}}
                 alt="set"
               />
             </button>

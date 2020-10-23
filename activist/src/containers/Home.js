@@ -27,6 +27,8 @@ export const Home = () => {
         </div>
         <div>
           <div className="container2">
+          
+        
             <div>
               <Link to="/mychallenges">
                 <button className="circleSmall">
@@ -48,9 +50,11 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="container">
+        
+        <button className="progressbox"></button>
+        {/*<div className="container">
           <button className="progressbox"></button>
-        </div>
+  </div> */}
       </div>
     </body>
   );
