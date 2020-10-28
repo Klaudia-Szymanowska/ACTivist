@@ -1,12 +1,13 @@
 import React from 'react';
-import {HashLink as Link} from "react-router-hash-link";
+import {Link} from "react-router-dom";
 import './App.css';
 
 import home2 from "./img/home2.png";
 
 export const Settings = () => {
     return(
-        <body> {/*added id and changed style*/}
+        <body> 
+          {/*to be changed by Louise as a component */}
  <div>
         <Link to="/home">
           <img
@@ -43,7 +44,7 @@ export const Settings = () => {
     <div> <Link to ='/'><button  className="button2" > Delete account </button></Link></div>
     <div> <Link to ='/'><button  className="button2" > Log out </button></Link></div>
 
-        </body>
+    </body>
     );
 }
 
