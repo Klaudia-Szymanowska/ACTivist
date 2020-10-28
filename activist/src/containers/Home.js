@@ -48,9 +48,11 @@ export const Home = () => {
               </Link>
             </div>
             <div>
+            <Link to="/goals">
               <button className="circleSmall">
                 <img src={rew} alt="rew" />
               </button>
+              </Link>
             </div>
             </div>
             <div className="container2">

@@ -104,6 +104,14 @@ button {
   text-align: center;
 }
 
+.badges {
+  float: center;
+  display: flex;
+  position: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -127,9 +135,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  float: center;
-  width: 95%;
+  width: 100%;
 }
+
+#badges {
+  width: 6%;
+  float: center;
+  padding: 4px 5px;
+  border-radius: 150px;
+  margin-top: 0%;
+  margin-bottom: 1%;
+  margin-right: 1%;
+}
+
 .circle {
   display: flex;
   justify-content: center;
