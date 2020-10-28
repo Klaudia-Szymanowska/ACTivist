@@ -12,7 +12,7 @@ import { Home } from "./containers/Home";
 
 function App() {
   return (
-    <body>
+    <main>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Login} />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/settings" component={Settings} />
         </Switch>
       </BrowserRouter>
-    </body>
+    </main>
   );
 }
 

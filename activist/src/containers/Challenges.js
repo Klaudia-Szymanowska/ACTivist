@@ -9,35 +9,30 @@ import cart from "./img/cart.png";
 import home2 from "./img/home2.png";
 
 export const Challenges = () => {
-  return (
+  return ( 
+    
     <body>
-      <div id="navbuttons">
+      {/* changed navbar */}
+       <div>
+        <Link to="/settings">
+          <img
+            class="column"
+            src={set}
+            style={{ width: "5%", float: "right" }}
+            alt="set"
+          />
+        </Link>
         <div>
-          {" "}
-          <Link to="/settings">
-            <button>
-              <img
-                className="column"
-                src={set}
-                style={{ width: "100%" }}
-                alt="set"
-              />
-            </button>
-          </Link>
-        </div>
+        <Link to="/home">
+          <img
+            class="column"
+            src={home2}
+            style={{ width: "5%", float: "left" }}
+            alt="set"
+          />
+        </Link>
+      </div>
 
-        <div>
-          <Link to="/home">
-            <button>
-              <img
-                className="column"
-                src={home2}
-                style={{ width: "100%", float: "right" }}
-                alt="set"
-              />
-            </button>
-          </Link>
-        </div>
       </div>
 
       <div className="text">
@@ -50,7 +45,7 @@ export const Challenges = () => {
         <div>
           {" "}
           <Link to="/mychallenges">
-            <button>
+            <button id="challbutton">
               <img
                 src={food}
                 style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
@@ -62,7 +57,7 @@ export const Challenges = () => {
         </div>
         <div>
           <Link to="/transportation">
-            <button>
+            <button id="challbutton">
               <img
                 src={bike}
                 style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
@@ -73,7 +68,7 @@ export const Challenges = () => {
           </Link>
         </div>
         <div>
-          <button>
+          <button id="challbutton">
             <img
               src={home}
               style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
@@ -83,7 +78,7 @@ export const Challenges = () => {
           </button>
         </div>
         <div>
-          <button>
+          <button id="challbutton">
             <img
               src={cart}
               style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}

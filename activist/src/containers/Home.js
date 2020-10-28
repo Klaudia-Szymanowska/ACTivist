@@ -14,7 +14,7 @@ export const Home = () => {
           <img
             class="column"
             src={set}
-            style={{ width: "10%", float: "right" }}
+            style={{ width: "5%", float: "right" }}
             alt="set"
           />
         </Link>
@@ -22,7 +22,7 @@ export const Home = () => {
       <div>
         <div className="container">
           <button className="circle">
-            <h5>Your carbon savings are:</h5>
+            <h5 style={{fontSize: "120%"}}>Your carbon <br/> savings are:</h5>
           </button>
         </div>
         <div>
@@ -35,6 +35,7 @@ export const Home = () => {
                   <img src={list} alt="list" />
                 </button>
               </Link>
+              
             </div>
             <div>
               <Link to="/challenges">
@@ -48,14 +49,18 @@ export const Home = () => {
                 <img src={rew} alt="rew" />
               </button>
             </div>
-          </div>
-        </div>
+            </div>
+            <div className="container2">
+        
         
         <button className="progressbox"></button>
+        </div>
+        </div> 
+        </div>
         {/*<div className="container">
           <button className="progressbox"></button>
   </div> */}
-      </div>
+     
     </body>
   );
 };

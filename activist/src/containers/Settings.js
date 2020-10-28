@@ -7,9 +7,16 @@ import home2 from "./img/home2.png";
 export const Settings = () => {
     return(
         <body> {/*added id and changed style*/}
- <div> <Link to ='/Home'><button id="homebutton">
-    <img class="column" src={home2} style={{width: "100%", marginTop: "-10%"}} alt="home2"/> </button></Link>
-    </div>
+ <div>
+        <Link to="/home">
+          <img
+            class="column"
+            src={home2}
+            style={{ width: "5%", float: "left" }}
+            alt="set"
+          />
+        </Link>
+      </div>
 
     
     <div>{/*added id*/}

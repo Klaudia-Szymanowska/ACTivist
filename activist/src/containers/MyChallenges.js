@@ -7,30 +7,33 @@ import home2 from "./img/home2.png";
 
 export const MyChallenges = () => {
   return (
-    <body>
-      <div id="navbuttons"> {/* changed homebutton and settings button*/}
-      <div> <Link to ='/Home'><button id="homebutton">
-    <img class="column" src={home2} style={{width: "100%", marginTop: "-10%"}} alt="home2"/> </button></Link>
-    </div>
-
+    <body> {/* changed nav bar */}
+       <div>
+        <Link to="/settings">
+          <img
+            class="column"
+            src={set}
+            style={{ width: "5%", float: "right" }}
+            alt="set"
+          />
+        </Link>
         <div>
-          <Link to="/settings">
-            <button id="homebutton">
-              <img
-                class="column"
-                src={set}
-                style={{ width: "100%", marginLeft: "5%"}}
-                alt="set"
-              />
-            </button>
-          </Link>
-        </div>
+        <Link to="/home">
+          <img
+            class="column"
+            src={home2}
+            style={{ width: "5%", float: "left" }}
+            alt="set"
+          />
+        </Link>
+      </div>
+
       </div>
 
       <div className="text">
         <h3>Food</h3>
         <div>
-          <button style={{ fontSize: "220%", textAlign: "left" }}>
+          <button id="challbutton">
             <div className="form-check">
               <input
                 className="form-check-input"
@@ -41,7 +44,7 @@ export const MyChallenges = () => {
               <label className="form-check-label" for="defaultCheck1">
                 No beef!
                 <br />{" "}
-                <b style={{ color: "#000000", fontSize: "75%", float: "left" }}>
+                <b id="challtext">
                   Can save CO2: 160 kg/day
                 </b>
               </label>
@@ -50,7 +53,7 @@ export const MyChallenges = () => {
         </div>
 
         <div>
-          <button style={{ fontSize: "220%", textAlign: "left" }}>
+          <button id="challbutton">
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -61,7 +64,7 @@ export const MyChallenges = () => {
               <label class="form-check-label" for="defaultCheck1">
                 Go pescatarian!
                 <br />{" "}
-                <b style={{ color: "#000000", fontSize: "75%", float: "left" }}>
+                <b id="challtext">
                   Can save CO2: 200 kg/day{" "}
                 </b>
               </label>
@@ -70,7 +73,7 @@ export const MyChallenges = () => {
         </div>
 
         <div>
-          <button style={{ fontSize: "220%", textAlign: "left" }}>
+          <button id="challbutton">
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -81,7 +84,7 @@ export const MyChallenges = () => {
               <label class="form-check-label" for="defaultCheck1">
                 Go vegetarian!
                 <br />{" "}
-                <b style={{ color: "#000000", fontSize: "75%", float: "left" }}>
+                <b id="challtext">
                   Can save CO2: 250 kg/day{" "}
                 </b>
               </label>
@@ -90,7 +93,7 @@ export const MyChallenges = () => {
         </div>
 
         <div>
-          <button style={{ fontSize: "220%", textAlign: "left" }}>
+          <button id="challbutton">
             <div class="form-check">
               <input
                 class="form-check-input"
@@ -101,7 +104,7 @@ export const MyChallenges = () => {
               <label class="form-check-label" for="defaultCheck1">
                 Go vegan!
                 <br />
-                <b style={{ color: "#000000", fontSize: "75%", float: "left" }}>
+                <b id="challtext">
                   Can save CO2: 300 kg/day{" "}
                 </b>
               </label>
@@ -112,7 +115,7 @@ export const MyChallenges = () => {
         <div>
           <button
             class="button2"
-            style={{ color: "#000000", fontSize: "220%" }}
+            style={{ color: "#000000", fontSize: "150%" }}
           >
             {" "}
             Pledge{" "}

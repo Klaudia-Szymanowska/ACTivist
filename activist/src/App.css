@@ -8,7 +8,7 @@ body {
 }
 
 h3 {
-  font-size: 280%;
+  font-size: 200%;
   text-align: center;
   font-family: "Roboto";
 }
@@ -37,7 +37,6 @@ button {
   border: none;
   color: #427a83;
   font-family: "Roboto";
-  font-size: 130%;
   padding: 10px 10px;
   background-color: #c0d2d9;
   width: 100%;
@@ -53,6 +52,21 @@ button {
   margin-bottom: 0%;
   border-radius: 90%;
   opacity: 0.9;
+}
+
+#challbutton{
+font-size: 180%;
+text-align: center;
+padding: 8px 8px;
+width: 25%;
+margin-top: 1%;
+margin-bottom: 5%;
+}
+
+#challtext{
+  color: #000000;
+  font-size: 60%;
+  float: left;
 }
 
 #notifications
@@ -73,9 +87,10 @@ button {
 .button2 {
   color: #ffffff;
   background-color: #427a83;
-  font-size: 200%;
-  padding: 20px 32px;
-  width: 40%;
+  font-size: 150%;
+  padding: 10px 32px;
+  width: 20%;
+  margin-top: 0%;
 }
 
 .text {
@@ -110,7 +125,7 @@ button {
   align-items: center;
   justify-content: center;
   float: center;
-  width: 50%;
+  width: 95%;
 }
 .circle {
   display: flex;
@@ -134,6 +149,9 @@ button {
 .progressbox {
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 161px;
   width: 337px;
   background-color: #c0d2d9;
