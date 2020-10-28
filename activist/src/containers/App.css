@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
+/*@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
 
 .App {
   text-align: center;
@@ -9,13 +9,7 @@ body {
   background-image: url(./img/background.jpg);
 }
 
-/* button font*/
-h5 {
-  font-family: "Roboto";
-  color: #ffffff;
-}
 
-/* some font, Roboto for now */
 h4 {
   font-family: "Roboto";
   color: #427a83;
@@ -27,7 +21,7 @@ h4 {
   height: 100%;
   pointer-events: none;
 }
-
+*/
 /*
 //inspiration: transparent background 
 .container {

@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
+import { Goals } from "./containers/Goals";
 import { Challenges } from "./containers/Challenges";
 import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/transportation" component={Transportation} />
           <Route path="/home" component={Home} />
           <Route path="/settings" component={Settings} />
+          <Route path="/goals" component={Goals} />
         </Switch>
       </BrowserRouter>
     </main>
