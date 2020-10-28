@@ -39,10 +39,10 @@ export const Settings = () => {
         </div>
 
 
-    <div><button className="button2" > My account </button></div>
-    <div><button className="button2" > Delete account </button></div>
-    <div><button className="button2" > Log out </button></div>            
-    
+    <div> <Link to ='/account'><button className="button2" > My account </button></Link></div>
+    <div> <Link to ='/'><button  className="button2" > Delete account </button></Link></div>
+    <div> <Link to ='/'><button  className="button2" > Log out </button></Link></div>
+
         </body>
     );
 }
