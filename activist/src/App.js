@@ -9,6 +9,8 @@ import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
 import { Settings } from "./containers/Settings";
 import { Home } from "./containers/Home";
+import { Account } from "./containers/Account";
+import { Changepassword } from "./containers/Changepassword";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/transportation" component={Transportation} />
           <Route path="/home" component={Home} />
           <Route path="/settings" component={Settings} />
+          <Route path="/account" component={Account} />
+          <Route path="/changepassword" component={Changepassword} />
         </Switch>
       </BrowserRouter>
     </body>
