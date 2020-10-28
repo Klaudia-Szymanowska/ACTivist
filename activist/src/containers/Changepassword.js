@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import {  FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import {HashLink as Link} from "react-router-hash-link";
 import './App.css';
 import "./Login.css";
@@ -17,32 +17,26 @@ function handleSubmit(event) {
 
   return(
     <body>
-      <div id="navbuttons">
-      <div>
-          <Link to="/home">
-            <button>
-              <img
-                class="column"
-                src={home2}
-                style={{ width: "100%" }}
-                alt="home2"
-              />
-            </button>
-          </Link>
-        </div>
-      <div>
-          <Link to="/settings">
-            <button>
-              <img
-                class="column"
-                src={set}
-                style={{ width: "100%", float: "right" }}
-                alt="set"
-              />
-            </button>
-          </Link>
-        </div>
+       <div>
+        <Link to="/settings">
+          <img
+            class="column"
+            src={set}
+            style={{ width: "5%", float: "right" }}
+            alt="set"
+          />
+        </Link>
+        <div>
+        <Link to="/home">
+          <img
+            class="column"
+            src={home2}
+            style={{ width: "5%", float: "left" }}
+            alt="set"
+          />
+        </Link>
       </div>
+    </div>
 
     <div className = "Login"> 
     <form onSubmit={handleSubmit}>
@@ -75,8 +69,17 @@ function handleSubmit(event) {
         </FormGroup>    
         </form>
         </div> 
-
-    <div><Link to="/"><button className="button2" > Submit and re-login </button></Link></div>
+    
+      
+    <div className="text">
+    <div>
+      {" "}
+      <Link to="/">
+        <button className = "button2"> Submit and re-login 
+        </button>
+      </Link>
+    </div>
+  </div>
   </body>
-    );
+  );
 } 

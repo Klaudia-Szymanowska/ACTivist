@@ -21,46 +21,31 @@ export function Account() {
 
   return(
     <body>
-      <div id="navbuttons">
+      
       <div>
-          <Link to="/home">
-            <button>
-              <img
-                class="column"
-                src={home2}
-                style={{ width: "100%" }}
-                alt="home2"
-              />
-            </button>
-          </Link>
-        </div>
-      <div>
-          <Link to="/settings">
-            <button>
-              <img
-                class="column"
-                src={set}
-                style={{ width: "100%", float: "right" }}
-                alt="set"
-              />
-            </button>
-          </Link>
-        </div>
+        <Link to="/settings">
+          <img
+            class="column"
+            src={set}
+            style={{ width: "5%", float: "right" }}
+            alt="set"
+          />
+        </Link>
+        <div>
+        <Link to="/home">
+          <img
+            class="column"
+            src={home2}
+            style={{ width: "5%", float: "left" }}
+            alt="set"
+          />
+        </Link>
       </div>
+    </div>
 
     <div className = "Login"> 
     <form onSubmit={handleSubmit}>
-    <FormGroup controlId="username" bsSize="large">
-          <ControlLabel>Username</ControlLabel>
-          <FormControl
-            autoFocus
-            type="username"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-          />
-        </FormGroup>
-
-        <FormGroup controlId="name" bsSize="large">
+      <FormGroup controlId="name" bsSize="large">
           <ControlLabel>Name</ControlLabel>
           <FormControl
             value={name}
@@ -80,7 +65,15 @@ export function Account() {
         </form>
         </div> 
 
-    <div><Link to="/changepassword"><button className="button2" > Change password </button></Link></div>
+        <div className="text">
+          <div>
+            {" "}
+            <Link to="/changepassword">
+              <button className="button2" > Change password 
+            </button>
+          </Link>
+        </div>
+      </div>
     </body>
-    );
+  );
 } 
