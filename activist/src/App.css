@@ -47,34 +47,32 @@ button {
 
 #homebutton {
   width: 10%;
-  padding: 10px ;
+  padding: 10px;
   margin-top: 0%;
   margin-bottom: 0%;
   border-radius: 90%;
   opacity: 0.9;
 }
 
-#challbutton{
-font-size: 180%;
-text-align: center;
-padding: 8px 8px;
-width: 25%;
-margin-top: 1%;
-margin-bottom: 5%;
+#challbutton {
+  font-size: 180%;
+  text-align: center;
+  padding: 8px 8px;
+  width: 25%;
+  margin-top: 1%;
+  margin-bottom: 5%;
 }
 
-#challtext{
+#challtext {
   color: #000000;
   font-size: 60%;
   float: left;
 }
 
-#notifications
-{
+#notifications {
   text-align: center;
-  width: 50%;
+  width: 25%;
 }
-
 
 #navbuttons button {
   clear: both;
@@ -140,7 +138,7 @@ margin-bottom: 5%;
 .circleSmall {
   display: flex;
   justify-content: center;
-  float:center;
+  float: center;
   padding: 10px 10px;
   background-color: #9db5bd;
   border-radius: 50%;
