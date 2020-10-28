@@ -6,7 +6,7 @@ import home2 from "./img/home2.png";
 
 export const Settings = () => {
     return(
-        <body> 
+        <main> 
           {/*to be changed by Louise as a component */}
 
        {/*added id and changed style*/}
@@ -23,6 +23,7 @@ export const Settings = () => {
 
     
     <div className='text'>
+
         <button id= "notifications" style={{ fontSize: "150%" }}>
         <div class="form-check">
             <input
@@ -46,6 +47,6 @@ export const Settings = () => {
     <div> <Link to ='/'><button  className="button2" > Delete account </button></Link></div>
     <div> <Link to ='/'><button  className="button2" > Log out </button></Link></div>
 
-    </body>
+    </main>
     );
 }
