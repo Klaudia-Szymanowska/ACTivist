@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import {Link} from "react-router-dom";
 //import logo from './img/logo 1.png';
 import "./App.css";
 import set from "./img/set.png";
@@ -7,11 +7,12 @@ import home2 from "./img/home2.png";
 
 export const MyChallenges = () => {
   return (
-    <body> {/* changed nav bar */}
+    <main> 
+      {/*to be changed by Louise as a component */}
        <div>
         <Link to="/settings">
           <img
-            class="column"
+            className="column"
             src={set}
             style={{ width: "5%", float: "right" }}
             alt="set"
@@ -20,7 +21,7 @@ export const MyChallenges = () => {
         <div>
         <Link to="/home">
           <img
-            class="column"
+            className="column"
             src={home2}
             style={{ width: "5%", float: "left" }}
             alt="set"
@@ -41,7 +42,7 @@ export const MyChallenges = () => {
                 value=""
                 id="defaultCheck1"
               />
-              <label className="form-check-label" for="defaultCheck1">
+              <label className="form-check-label" htmlFor="defaultCheck1">
                 No beef!
                 <br />{" "}
                 <b id="challtext">
@@ -54,14 +55,14 @@ export const MyChallenges = () => {
 
         <div>
           <button id="challbutton">
-            <div class="form-check">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 value=""
                 id="defaultCheck1"
               />
-              <label class="form-check-label" for="defaultCheck1">
+              <label className="form-check-label" htmlFor="defaultCheck1">
                 Go pescatarian!
                 <br />{" "}
                 <b id="challtext">
@@ -74,14 +75,14 @@ export const MyChallenges = () => {
 
         <div>
           <button id="challbutton">
-            <div class="form-check">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 value=""
                 id="defaultCheck1"
               />
-              <label class="form-check-label" for="defaultCheck1">
+              <label className="form-check-label" htmlFor="defaultCheck1">
                 Go vegetarian!
                 <br />{" "}
                 <b id="challtext">
@@ -94,14 +95,14 @@ export const MyChallenges = () => {
 
         <div>
           <button id="challbutton">
-            <div class="form-check">
+            <div className="form-check">
               <input
-                class="form-check-input"
+                className="form-check-input"
                 type="checkbox"
                 value=""
                 id="defaultCheck1"
               />
-              <label class="form-check-label" for="defaultCheck1">
+              <label className="form-check-label" htmlFor="defaultCheck1">
                 Go vegan!
                 <br />
                 <b id="challtext">
@@ -114,14 +115,13 @@ export const MyChallenges = () => {
 
         <div>
           <button
-            class="button2"
-            style={{ color: "#000000", fontSize: "150%" }}
+            className="button2"
           >
             {" "}
             Pledge{" "}
           </button>
         </div>
       </div>
-    </body>
+    </main>
   );
 };

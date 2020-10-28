@@ -3,7 +3,7 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import Signup from "./Signup";
 //import { Link } from 'react-router-dom';
-import {HashLink as Link} from "react-router-hash-link";
+import {Link} from "react-router-dom";
 import "./App.css";
 
 export default function Login() {

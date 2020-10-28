@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import "./App.css";
-import {HashLink as Link} from "react-router-hash-link";
+import {Link} from "react-router-dom";
 
 
 export default function Signup() {

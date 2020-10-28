@@ -45,36 +45,41 @@ button {
   margin-bottom: 9%;
 }
 
+#imgchall {
+  margin-right: 5%;
+  width: 11%;
+}
+
 #homebutton {
   width: 10%;
-  padding: 10px ;
+  padding: 10px;
   margin-top: 0%;
   margin-bottom: 0%;
   border-radius: 90%;
   opacity: 0.9;
 }
 
-#challbutton{
-font-size: 180%;
-text-align: center;
-padding: 8px 8px;
-width: 25%;
-margin-top: 1%;
-margin-bottom: 5%;
+#challbutton {
+  font-size: 180%;
+  text-align: center;
+  padding: 8px 8px;
+  width: 25%;
+  margin-top: 1%;
+  margin-bottom: 5%;
 }
 
-#challtext{
+#challtext {
   color: #000000;
   font-size: 60%;
   float: left;
 }
 
-#notifications
-{
+#notifications {
   text-align: center;
   width: 50%;
+  font-size: 220%;
+  text-align: left;
 }
-
 
 #navbuttons button {
   clear: both;
@@ -140,7 +145,7 @@ margin-bottom: 5%;
 .circleSmall {
   display: flex;
   justify-content: center;
-  float:center;
+  float: center;
   padding: 10px 10px;
   background-color: #9db5bd;
   border-radius: 50%;
@@ -204,37 +209,3 @@ h6 {
   height: 100%;
   pointer-events: none;
 }
-
-/*
-//inspiration: transparent background 
-
-.container {
-  position: relative;
-}
-
-
-.text-block {
-  position: absolute;
-  top: 30%;
-  left: 37%;
-  background-color: #FFFFFF;
-  opacity: 0.6;
-  padding-left: 35px;
-  padding-right: 30px;
-  transform: translate(40%, -27%);
-}
-
-// let's see later if we will use it
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-*/

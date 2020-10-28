@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import {Link} from "react-router-dom";
 import "./App.css";
 import food from "./img/food.png";
 import set from "./img/set.png";
@@ -11,12 +11,12 @@ import home2 from "./img/home2.png";
 export const Challenges = () => {
   return ( 
     
-    <body>
-      {/* changed navbar */}
+    <main>
+      {/*to be changed by Louise as a component */}
        <div>
         <Link to="/settings">
           <img
-            class="column"
+            className="column"
             src={set}
             style={{ width: "5%", float: "right" }}
             alt="set"
@@ -25,7 +25,7 @@ export const Challenges = () => {
         <div>
         <Link to="/home">
           <img
-            class="column"
+            className="column"
             src={home2}
             style={{ width: "5%", float: "left" }}
             alt="set"
@@ -48,7 +48,7 @@ export const Challenges = () => {
             <button id="challbutton">
               <img
                 src={food}
-                style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
+                id="imgchall"
                 alt="food"
               />{" "}
               Food{" "}
@@ -60,7 +60,7 @@ export const Challenges = () => {
             <button id="challbutton">
               <img
                 src={bike}
-                style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
+                id="imgchall"
                 alt="bike"
               />{" "}
               Transportation{" "}
@@ -71,7 +71,7 @@ export const Challenges = () => {
           <button id="challbutton">
             <img
               src={home}
-              style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
+              id="imgchall"
               alt="home"
             />{" "}
             Household{" "}
@@ -81,7 +81,7 @@ export const Challenges = () => {
           <button id="challbutton">
             <img
               src={cart}
-              style={{ marginRight: "5%", marginBottom: "-1%", width: "11%" }}
+              id="imgchall"
               alt="cart"
             />{" "}
             Shopping{" "}
@@ -91,6 +91,6 @@ export const Challenges = () => {
           <button className="button2"> I will choose later </button>
         </div>
       </div>
-    </body>
+    </main>
   );
 };

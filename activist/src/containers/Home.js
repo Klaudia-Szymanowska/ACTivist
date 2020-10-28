@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import {Link} from "react-router-dom";
 import "./App.css";
 import set from "./img/set.png";
 import list from "./img/list.png";
@@ -8,17 +8,20 @@ import rew from "./img/rew.png";
 
 export const Home = () => {
   return (
-    <body>
+    <main>
+      {/*to be changed by Louise as a component */}
       <div>
         <Link to="/settings">
           <img
-            class="column"
+            className="column"
             src={set}
             style={{ width: "5%", float: "right" }}
             alt="set"
           />
         </Link>
       </div>
+
+
       <div>
         <div className="container">
           <button className="circle">
@@ -61,6 +64,6 @@ export const Home = () => {
           <button className="progressbox"></button>
   </div> */}
      
-    </body>
+    </main>
   );
 };
