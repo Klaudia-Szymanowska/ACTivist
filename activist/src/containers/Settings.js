@@ -42,11 +42,31 @@ export const Settings = () => {
           </button>
         </div>
 
-
-    <div> <Link to ='/account'><button className="button2" > My account </button></Link></div>
-    <div> <Link to ='/'><button  className="button2" > Delete account </button></Link></div>
-    <div> <Link to ='/'><button  className="button2" > Log out </button></Link></div>
-
-    </main>
+    <div className="text">
+    <div>
+      <Link to ='/account'>
+        <button className="button2" > 
+          {" "}My account{" "} 
+      </button>
+    </Link>
+  </div>
+    
+    <div> 
+      <Link to ='/'>
+        <button  className="button2" > 
+            {" "}Delete account{" "}
+            </button>
+          </Link>
+        </div>
+    
+    <div> 
+      <Link to ='/'>
+        <button  className="button2" > 
+            {" "}Log out{" "}
+            </button>
+          </Link>
+        </div>
+    </div>
+  </main>
     );
 }
