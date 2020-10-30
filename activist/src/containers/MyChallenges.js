@@ -1,15 +1,16 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 //import logo from './img/logo 1.png';
 import "./App.css";
-import set from "./img/set.png";
-import home2 from "./img/home2.png";
+import CheckboxContainer from "./components/checkboxcontainer";
+import Settingbutton from "./components/Settingsbutton";
+import Homebutton from "./components/homebutton";
 
 export const MyChallenges = () => {
   return (
-    <main> 
+    <main>
       {/*to be changed by Louise as a component */}
-       <div>
+      <div>
         <Link to="/settings">
           <img
             className="column"
@@ -19,16 +20,15 @@ export const MyChallenges = () => {
           />
         </Link>
         <div>
-        <Link to="/home">
-          <img
-            className="column"
-            src={home2}
-            style={{ width: "5%", float: "left" }}
-            alt="set"
-          />
-        </Link>
-      </div>
-
+          <Link to="/home">
+            <img
+              className="column"
+              src={home2}
+              style={{ width: "5%", float: "left" }}
+              alt="set"
+            />
+          </Link>
+        </div>
       </div>
 
       <div className="text">
@@ -44,10 +44,7 @@ export const MyChallenges = () => {
               />
               <label className="form-check-label" htmlFor="defaultCheck1">
                 No beef!
-                <br />{" "}
-                <b id="challtext">
-                  Can save CO2: 160 kg/day
-                </b>
+                <br /> <b id="challtext">Can save CO2: 160 kg/day</b>
               </label>
             </div>{" "}
           </button>
@@ -64,10 +61,7 @@ export const MyChallenges = () => {
               />
               <label className="form-check-label" htmlFor="defaultCheck1">
                 Go pescatarian!
-                <br />{" "}
-                <b id="challtext">
-                  Can save CO2: 200 kg/day{" "}
-                </b>
+                <br /> <b id="challtext">Can save CO2: 200 kg/day </b>
               </label>
             </div>{" "}
           </button>
@@ -84,10 +78,7 @@ export const MyChallenges = () => {
               />
               <label className="form-check-label" htmlFor="defaultCheck1">
                 Go vegetarian!
-                <br />{" "}
-                <b id="challtext">
-                  Can save CO2: 250 kg/day{" "}
-                </b>
+                <br /> <b id="challtext">Can save CO2: 250 kg/day </b>
               </label>
             </div>
           </button>
@@ -105,21 +96,14 @@ export const MyChallenges = () => {
               <label className="form-check-label" htmlFor="defaultCheck1">
                 Go vegan!
                 <br />
-                <b id="challtext">
-                  Can save CO2: 300 kg/day{" "}
-                </b>
+                <b id="challtext">Can save CO2: 300 kg/day </b>
               </label>
             </div>
           </button>
         </div>
 
         <div>
-          <button
-            className="button2"
-          >
-            {" "}
-            Pledge{" "}
-          </button>
+          <button className="button2"> Pledge </button>
         </div>
       </div>
     </main>

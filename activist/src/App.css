@@ -92,6 +92,15 @@ button {
   margin-top: 0%;
 }
 
+.button3 {
+  color: #ffffff;
+  background-color: none;
+  font-size: 200%;
+  padding: 20px 32px;
+  width: 40%;
+  border-radius: 50%;
+}
+
 .text {
   margin-top: 2%;
   margin-bottom: 4%;
