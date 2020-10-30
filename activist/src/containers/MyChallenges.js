@@ -1,10 +1,30 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+//import React from "react";
+//import { HashLink as Link } from "react-router-hash-link";
+//import set from "./img/set.png";
+//import home2 from "./img/home2.png";
 //import logo from './img/logo 1.png';
 import "./App.css";
-import set from "./img/set.png";
-import home2 from "./img/home2.png";
+import React, { useState } from "react";
+import CheckboxContainer from "./components/checkboxcontainer";
+import Settingbutton from "./components/Settingsbutton";
+import Homebutton from "./components/homebutton";
 
+export const MyChallenges = () => {
+  return (
+    <body>
+      <div id="navbuttons">
+        <Settingbutton />
+        <Homebutton />
+      </div>
+      <div className="text">
+        <h3>Food</h3>
+        <CheckboxContainer />
+      </div>
+    </body>
+  );
+};
+
+/*
 export const MyChallenges = () => {
   return (
     <body>
@@ -131,3 +151,4 @@ export const MyChallenges = () => {
     </body>
   );
 };
+*/

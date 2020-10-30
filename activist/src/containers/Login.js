@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import Signup from "./Signup";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+//import { HashLink as Link } from "react-router-hash-link";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -25,25 +26,29 @@ export default function Login() {
             autoFocus
             type="username"
             value={username}
-            onChange={e => setUsername(e.target.value)}
+            onChange={(e) => setUsername(e.target.value)}
           />
         </FormGroup>
         <FormGroup controlId="password" bsSize="large">
           <ControlLabel>Password</ControlLabel>
           <FormControl
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             type="password"
           />
         </FormGroup>
+        <Link to="/home">
+          <Button block bsSize="large" disabled={!validateForm()} type="submit">
+            Login
+          </Button>
+        </Link>
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Login
-        </Button>       
+        </Button>
 
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Sign up
-        </Button>           
-
+        </Button>
       </form>
     </div>
   );
