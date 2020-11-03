@@ -8,7 +8,7 @@ import { Goals } from "./containers/Goals";
 import { Challenges } from "./containers/Challenges";
 import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
-import { Settings } from "./containers/Settings";
+import {Settings} from "./containers/Settings";
 import { Home } from "./containers/Home";
 import { Account } from "./containers/Account";
 import { Changepassword } from "./containers/Changepassword";

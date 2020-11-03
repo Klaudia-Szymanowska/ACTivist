@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import './App.css';
+import Switch from "./Switch"
 
 import home2 from "./img/home2.png";
 
-export const Settings = () => {
+ export const Settings = () => {
+    const [value, setValue] = useState(false);
     return(
         <main> 
           {/*to be changed by Louise as a component */}
@@ -23,9 +25,8 @@ export const Settings = () => {
 
     
     <div className='text'>
-
-        <button id= "notifications" style={{ fontSize: "150%" }}>
-        <div class="form-check">
+        <button id= "notifications" style={{ fontSize: "200%" }}>
+        {/* <div class="form-check">
             <input
                 class="form-check-input"
                 type="checkbox"
@@ -38,7 +39,12 @@ export const Settings = () => {
                 <br />
               </label>
              
-            </div>
+            </div> */}
+          <Switch
+            isOn = {value}
+            handleToggle={() => setValue(!value)}
+            />
+            <h6 id= "textswitch">Notifications</h6>{" "}
           </button>
         </div>
 
@@ -69,4 +75,4 @@ export const Settings = () => {
     </div>
   </main>
     );
-}
+};
