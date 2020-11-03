@@ -6,7 +6,8 @@ import Signup from "./Signup";
 import { Link } from "react-router-dom";
 import "./App.css";
 
-export default function Login() {
+export const Login = () => {
+//export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -62,4 +63,4 @@ export default function Login() {
       </form>
     </div>
   );
-}
+};
