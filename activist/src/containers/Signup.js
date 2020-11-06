@@ -1,82 +1,87 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
 import "./App.css";
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import "firebase/auth";
+import firebase from "firebase/app";
+//import * as firebase from "firebase";
+import { firebaseAppAuth, database, provider } from "./firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 export const Signup = () => {
-//export default function Signup() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  //export default function Signup() {
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   function validateForm() {
-    return username.length > 0 && password.length > 0 && name.length > 0 && email.length > 0;
+    return password.length > 0 && name.length > 0 && email.length > 0;
   }
 
   function handleSubmit(event) {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      /* .then(() => {
+        console.log('User created');
+      }) */
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });
     event.preventDefault();
   }
+
+  const handleSignIn = () => firebaseAppAuth.signInWithPopup(provider);
 
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="username" bsSize="large">
-          <ControlLabel>Username</ControlLabel>
-          <FormControl
-            autoFocus
-            type="username"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          <ControlLabel>Password</ControlLabel>
-          <FormControl
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            type="password"
-          />
-        </FormGroup>
         <FormGroup controlId="name" bsSize="large">
-          <ControlLabel>Name</ControlLabel>
+          <FormLabel>Name</FormLabel>
           <FormControl
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)}
             type="name"
           />
         </FormGroup>
         <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Email</ControlLabel>
+          <FormLabel>Email</FormLabel>
           <FormControl
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             type="email"
           />
-        </FormGroup>  
+        </FormGroup>
+        <FormGroup controlId="password" bsSize="large">
+          <FormLabel>Password</FormLabel>
+          <FormControl
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+          />
+        </FormGroup>
+        <div>
+          {" "}
+          <button onClick={handleSubmit}> Submit </button>
+        </div>
 
-        <div> <Link to ='/home'><button> Submit </button></Link></div>
-
-
-
-       {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Submit
-        </Button>    */}   
+        </Button>    */}
 
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Sign up with Google
-        </Button>
+        <div>
+          {" "}
+          <button onClick={handleSignIn}>Sign in with Google</button>
+        </div>
         <Button block bsSize="large" disabled={!validateForm()} type="submit">
           Sign up with Facebook
-        </Button> 
-
+        </Button>
       </form>
     </div>
-
-//<div> <Link to ='/mychallenges'><button><img src={food} style={{marginRight: "5%", marginBottom: "-1%", width: "11%"}} alt = "food" /> Food </button></Link></div>
-
-
   );
 };

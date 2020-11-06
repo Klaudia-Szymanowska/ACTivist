@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import {HashLink as Link} from "react-router-hash-link";
-import './App.css';
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import { HashLink as Link } from "react-router-hash-link";
+import "./App.css";
 import "./Login.css";
 import home2 from "./img/home2.png";
 import set from "./img/set.png";
@@ -11,7 +11,6 @@ export function Account() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-
   function validateForm() {
     return username.length > 0 && name.length > 0 && email.length > 0;
   }
@@ -19,9 +18,8 @@ export function Account() {
     event.preventDefault();
   }
 
-  return(
+  return (
     <body>
-      
       <div>
         <Link to="/settings">
           <img
@@ -32,48 +30,47 @@ export function Account() {
           />
         </Link>
         <div>
-        <Link to="/home">
-          <img
-            class="column"
-            src={home2}
-            style={{ width: "5%", float: "left" }}
-            alt="set"
-          />
-        </Link>
+          <Link to="/home">
+            <img
+              class="column"
+              src={home2}
+              style={{ width: "5%", float: "left" }}
+              alt="set"
+            />
+          </Link>
+        </div>
       </div>
-    </div>
 
-    <div className = "Login"> 
-    <form onSubmit={handleSubmit}>
-      <FormGroup controlId="name" bsSize="large">
-          <ControlLabel>Name</ControlLabel>
-          <FormControl
-            value={name}
-            onChange={e => setName(e.target.value)}
-            type="name"
-          />
-        </FormGroup>
+      <div className="Login">
+        <form onSubmit={handleSubmit}>
+          <FormGroup controlId="name" bsSize="large">
+            <FormLabel>Name</FormLabel>
+            <FormControl
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="name"
+            />
+          </FormGroup>
 
-        <FormGroup controlId="email" bsSize="large">
-          <ControlLabel>Email</ControlLabel>
-          <FormControl
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            type="email"
-          />
-        </FormGroup>    
+          <FormGroup controlId="email" bsSize="large">
+            <FormLabel>Email</FormLabel>
+            <FormControl
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+            />
+          </FormGroup>
         </form>
-        </div> 
+      </div>
 
-        <div className="text">
-          <div>
-            {" "}
-            <Link to="/changepassword">
-              <button className="button2" > Change password 
-            </button>
+      <div className="text">
+        <div>
+          {" "}
+          <Link to="/changepassword">
+            <button className="button2"> Change password</button>
           </Link>
         </div>
       </div>
     </body>
   );
-} 
+}
