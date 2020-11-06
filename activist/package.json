@@ -8,14 +8,9 @@
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
-<<<<<<< HEAD
-    "react": "^16.13.1",
-    "react-bootstrap": "^0.32.4",
-=======
     "firebase": "^8.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
->>>>>>> firebase_login
     "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
     "react-firebase-hooks": "^2.2.0",
