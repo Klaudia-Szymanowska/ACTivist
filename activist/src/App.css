@@ -71,12 +71,12 @@ button {
 }
 
 #textswitch {
-  margin-top: -15%;
-  margin-left: -15%;
+  margin-top: -13%;
+  /* margin-left: -15%; */
 }
 
 #notifications {
-  text-align: center;
+  text-align: left;
   width: 20%;
 }
 
@@ -247,14 +247,14 @@ h6 {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  width: 70px;
-  height: 40px;
+  width: 60px;
+  height: 35px;
   background: rgba(151, 149, 149, 0.315);
   border-radius: 100px;
   position: relative;
   transition: background-color 0.2s;
   margin-top: -15%;
-  margin-left: 75%;
+  margin-left: 78%;
 }
 
 .react-switch-label .react-switch-button {
@@ -262,8 +262,8 @@ h6 {
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   border-radius: 45px;
   transition: 0.2s;
   background: #fff;
