@@ -5,7 +5,8 @@ import "./App.css";
 import {Link} from "react-router-dom";
 
 
-export default function Signup() {
+export const Signup = () => {
+//export default function Signup() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -78,4 +79,4 @@ export default function Signup() {
 
 
   );
-}
+};
