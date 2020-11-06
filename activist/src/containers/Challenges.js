@@ -1,26 +1,36 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import "./App.css";
-import food from "./img/food.png";
-import set from "./img/set.png";
-import bike from "./img/bike.png";
-import home from "./img/home.png";
-import cart from "./img/cart.png";
-import home2 from "./img/home2.png";
+import "../App.css";
+import ContainerHomeSettings from "./components/containerHomeSettings";
+import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 export const Challenges = () => {
-  return ( 
-    
+  return (
     <main>
-      <div id="navbuttons">
-        <Settingbutton />
-        <Homebutton />
+      <div>
+        <div id="navbuttons">
+          <ContainerHomeSettings />
+        </div>
+        <div>
+          <div>
+            <h3>
+              <br />
+              Let’s choose one challenge <br /> under one of the four
+              categories!
+              <br />{" "}
+            </h3>
+          </div>
+          <div>
+            <ChallengesCatagoriesButtons />
+          </div>
+        </div>
       </div>
     </main>
   );
 };
 
-{/*to be changed by Louise as a component */}
+{
+  /*to be changed by Louise as a component */
+}
 /*
 <div>
 <Link to="/settings">

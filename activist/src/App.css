@@ -76,6 +76,8 @@ button {
 }
 
 #navbuttons button {
+  display: flex;
+  justify-content: space-between;
   clear: both;
   width: 10%;
   padding: 10px 10px;
@@ -136,15 +138,14 @@ button {
   width: 100%;
 }
 
-#badges{
+#badges {
   width: 6%;
   float: center;
-  padding:4px 5px;
+  padding: 4px 5px;
   border-radius: 150px;
   margin-top: 0%;
   margin-bottom: 1%;
   margin-right: 1%;
-
 }
 
 .circle {
