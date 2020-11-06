@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import './App.css';
-import Switch from "./Switch"
+import Switch from "./components/Switch"
 
 import home2 from "./img/home2.png";
 
