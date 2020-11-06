@@ -97,6 +97,15 @@ button {
   margin-top: 0%;
 }
 
+.button3 {
+  color: #ffffff;
+  background-color: none;
+  font-size: 200%;
+  padding: 20px 32px;
+  width: 40%;
+  border-radius: 50%;
+}
+
 .text {
   margin-top: 2%;
   margin-bottom: 4%;
@@ -128,8 +137,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
+}
+
+.container3 {
+  float: center;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150%;
 }
 
 #badges {
@@ -172,7 +189,6 @@ button {
   background-color: #c0d2d9;
   float: center;
   border-radius: 0%;
-  opacity: 0.6;
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -262,6 +278,11 @@ h6 {
 .react-switch-label:active .react-switch-button {
   width: 60px;
 }
+.piechart {
+  height: 10%;
+  width: 20%;
+}
+
 /*
 //inspiration: transparent background 
 
