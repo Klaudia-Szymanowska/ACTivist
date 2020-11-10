@@ -5,7 +5,6 @@ import "./App.css";
 import { Link } from "react-router-dom";
 import "firebase/auth";
 import firebase from "firebase/app";
-//import * as firebase from "firebase";
 import { firebaseAppAuth, database, provider } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -16,6 +15,7 @@ export const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
     return password.length > 0 && name.length > 0 && email.length > 0;
   }
