@@ -8,14 +8,16 @@ import ContainerHomeSettings from "./components/containerHomeSettings";
 export const MyChallenges = () => {
   return (
     <main>
-      <div id="navbuttons">
-        <ContainerHomeSettings />
+      <div>
+        <div id="navbuttons">
+          <ContainerHomeSettings />
+        </div>
+        <div className="text">
+          <h3>Food</h3>
+          <CheckboxContainer />
+        </div>
+        );
       </div>
-      <div className="text">
-        <h3>Food</h3>
-        <CheckboxContainer />
-      </div>
-      );
     </main>
   );
 };

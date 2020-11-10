@@ -136,7 +136,7 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button2"
+                  className="button"
                   style={{ color: "#000000", fontSize: "220%" }}
                   //onClick={handlePledge}
                 >

@@ -6,11 +6,11 @@ import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButton
 export const Challenges = () => {
   return (
     <main>
-      <div>
+      <div className="Page">
         <div id="navbuttons">
           <ContainerHomeSettings />
         </div>
-        <div>
+        <div className="text">
           <div>
             <h3>
               <br />

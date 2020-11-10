@@ -8,6 +8,10 @@ body {
   background-image: url(./img/background.jpg);
 }
 
+.Page {
+  padding: 60px 0;
+}
+
 h3 {
   font-size: 200%;
   text-align: center;
@@ -70,9 +74,14 @@ button {
   float: left;
 }
 
+#textswitch {
+  margin-top: -15%;
+  margin-left: -15%;
+}
+
 #notifications {
   text-align: center;
-  width: 25%;
+  width: 20%;
 }
 
 #navbuttons button {
@@ -134,8 +143,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 100%;
+}
+
+.container3 {
+  float: center;
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150%;
 }
 
 #badges {
@@ -178,7 +195,6 @@ button {
   background-color: #c0d2d9;
   float: center;
   border-radius: 0%;
-  opacity: 0.6;
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -215,7 +231,7 @@ h4 {
 h6 {
   font-family: "Roboto";
   color: #427a83;
-  font-size: 280%;
+  font-size: 100%;
   text-align: center;
 }
 
@@ -224,6 +240,53 @@ h6 {
   justify-content: center;
   height: 100%;
   pointer-events: none;
+}
+
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 70px;
+  height: 40px;
+  background: rgba(151, 149, 149, 0.315);
+  border-radius: 100px;
+  position: relative;
+  transition: background-color 0.2s;
+  margin-top: -15%;
+  margin-left: 75%;
+}
+
+.react-switch-label .react-switch-button {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 60px;
+}
+.piechart {
+  height: 10%;
+  width: 20%;
 }
 
 /*

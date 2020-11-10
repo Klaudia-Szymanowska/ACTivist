@@ -2,16 +2,17 @@ import React from "react";
 //import logo from './img/logo 1.png';
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Login from "./containers/Login";
-import Signup from "./containers/Signup";
+import { Login } from "./containers/Login";
+import { Signup } from "./containers/Signup";
 import { Goals } from "./containers/Goals";
 import { Challenges } from "./containers/Challenges";
 import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
-import { Settings } from "./containers/Settings";
+import {Settings} from "./containers/Settings";
 import { Home } from "./containers/Home";
 import { Account } from "./containers/Account";
 import { Changepassword } from "./containers/Changepassword";
+import Charts from "./containers/components/Charts";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/account" component={Account} />
           <Route path="/changepassword" component={Changepassword} />
           <Route path="/goals" component={Goals} />
+          <Route path="/chart" component={Charts} />
         </Switch>
       </BrowserRouter>
     </main>

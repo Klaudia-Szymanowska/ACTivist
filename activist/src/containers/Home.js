@@ -1,10 +1,11 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./App.css";
 import set from "./img/set.png";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
+import Charts from "./components/Charts";
 
 export const Home = () => {
   return (
@@ -21,24 +22,22 @@ export const Home = () => {
         </Link>
       </div>
 
-
       <div>
         <div className="container">
           <button className="circle">
-            <h5 style={{fontSize: "120%"}}>Your carbon <br/> savings are:</h5>
+            <h5 style={{ fontSize: "120%" }}>
+              Your carbon <br /> savings are:
+            </h5>
           </button>
         </div>
         <div>
           <div className="container2">
-          
-        
             <div>
               <Link to="/mychallenges">
                 <button className="circleSmall">
                   <img src={list} alt="list" />
                 </button>
               </Link>
-              
             </div>
             <div>
               <Link to="/challenges">
@@ -48,24 +47,23 @@ export const Home = () => {
               </Link>
             </div>
             <div>
-            <Link to="/goals">
-              <button className="circleSmall">
-                <img src={rew} alt="rew" />
-              </button>
+              <Link to="/goals">
+                <button className="circleSmall">
+                  <img src={rew} alt="rew" />
+                </button>
               </Link>
             </div>
-            </div>
-            <div className="container2">
-        
-        
-        <button className="progressbox"></button>
+          </div>
+          <div className="container2">
+            <button className="progressbox">
+              <Charts />
+            </button>
+          </div>
         </div>
-        </div> 
-        </div>
-        {/*<div className="container">
+      </div>
+      {/*<div className="container">
           <button className="progressbox"></button>
   </div> */}
-     
     </main>
   );
 };

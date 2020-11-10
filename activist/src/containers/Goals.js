@@ -8,6 +8,7 @@ import home from "./img/home.png";
 import cart from "./img/cart.png";
 import home2 from "./img/home2.png";
 import chart from "./img/chart.png";
+import Piechart from "./components/Piechart";
 
 export const Goals = () => {
   return (
@@ -34,9 +35,14 @@ export const Goals = () => {
         </div>
       </div>
 
+      <h3>Congratulations</h3>
+      <div className="container2">
+        <Piechart />
+      </div>
+      {/* <Link to="/chart">
+          <img src={chart} alt="chart" />
+  </Link> */}
       <div className="text">
-        <h3>Congratulations</h3>
-        <img src={chart} alt="chart" />
         <h4>
           You have insisted 20 days
           <br />
