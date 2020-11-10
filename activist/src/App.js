@@ -13,6 +13,7 @@ import { Home } from "./containers/Home";
 import { Account } from "./containers/Account";
 import { Changepassword } from "./containers/Changepassword";
 import Charts from "./containers/components/Charts";
+import { Pops } from "./continers/Notification";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/changepassword" component={Changepassword} />
           <Route path="/goals" component={Goals} />
           <Route path="/chart" component={Charts} />
+          <Route path="/notification" component={Pops} />
         </Switch>
       </BrowserRouter>
     </main>
