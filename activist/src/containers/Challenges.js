@@ -59,10 +59,13 @@ export const Challenges = () => {
           </Link>
         </div>
         <div>
-          <button id="challbutton">
-            <img src={home} id="imgchall" alt="home" /> Household{" "}
-          </button>
+          <Link to="/household">
+            <button id="challbutton">
+              <img src={home} id="imgchall" alt="home" /> Household{" "}
+            </button>
+          </Link>
         </div>
+
         <div>
           <button id="challbutton">
             <img src={cart} id="imgchall" alt="cart" /> Shopping{" "}
