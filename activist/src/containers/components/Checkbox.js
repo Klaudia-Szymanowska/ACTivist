@@ -1,7 +1,7 @@
 import React from "react";
 
 const Checkbox = ({ label1, label2, isSelected, onCheckboxChange }) => (
-  <button className="" style={{ fontSize: "220%", textAlign: "left" }}>
+  <button className="center" style={{ fontSize: "220%", textAlign: "left" }}>
     <div className="form-check">
       <label>
         <input

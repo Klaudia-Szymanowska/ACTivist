@@ -6,9 +6,21 @@ import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
 import Charts from "./components/Charts";
-import CheckboxContainer from "./components/checkboxcontainer";
+import "firebase/auth";
+import firebase from "firebase/app";
+import { currentUser } from "./firebase";
+//import firebase from "firebase";
 
 export const Home = () => {
+  // should we use let instead of var?
+  var user = firebase.auth().currentUser;
+  var name, email;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+  }
+
   return (
     <main>
       {/*to be changed by Louise as a component */}
@@ -22,6 +34,12 @@ export const Home = () => {
           />
         </Link>
       </div>
+
+      {/** The below 'Welcome' only shows the name if the user signs in with Google */}
+      <h3>
+        <br />
+        Welcome, {name}{" "}
+      </h3>
 
       <div>
         <div className="container">

@@ -51,19 +51,15 @@ export const Settings = () => {
       </div>
 
       <div className="text">
-        <div>
+        <div className="center2">
           <Link to="/account">
             <button className="button2"> My account </button>
           </Link>
-        </div>
 
-        <div>
           <Link to="/">
             <button className="button2"> Delete account </button>
           </Link>
-        </div>
 
-        <div>
           <Link to="/">
             <button className="button2" onClick={handleSignout}>
               {" "}
