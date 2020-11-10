@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 //import logo from './img/logo 1.png';
 import "./App.css";
 import CheckboxContainer from "./components/checkboxcontainer";
-import Settingbutton from "./components/Settingsbutton";
-import Homebutton from "./components/homebutton";
+import ContainerHomeSettings from "./components/containerHomeSettings";
 
 export const MyChallenges = () => {
   return (
     <main>
-      <div id="navbuttons">
-        <Settingbutton />
-        <Homebutton />
+      <div>
+        <div id="navbuttons">
+          <ContainerHomeSettings />
+        </div>
+        <div className="text">
+          <h3>Food</h3>
+          <CheckboxContainer />
+        </div>
+        );
       </div>
-      <div className="text">
-        <h3>Food</h3>
-        <CheckboxContainer />
-      </div>
-      );
     </main>
   );
 };
