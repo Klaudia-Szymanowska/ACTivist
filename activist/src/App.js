@@ -1,5 +1,9 @@
 import React from "react";
 //import logo from './img/logo 1.png';
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { firebaseAppAuth } from "./containers/firebase";
+
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login } from "./containers/Login";
@@ -15,11 +19,19 @@ import { Changepassword } from "./containers/Changepassword";
 import Charts from "./containers/components/Charts";
 
 function App() {
+  const [user, loading] = useAuthState(firebaseAppAuth);
+
+  if (loading) {
+    return null;
+  }
+
+  const MainComponent = user ? Home : Login;
+
   return (
     <main>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={MainComponent} />
           <Route path="/signup" component={Signup} />
           <Route exact path="/challenges" component={Challenges} />
           <Route path="/mychallenges" component={MyChallenges} />
