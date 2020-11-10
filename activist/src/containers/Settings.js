@@ -46,7 +46,7 @@ export const Settings = () => {
       <div className="text">
         <button id="notifications" style={{ fontSize: "200%" }}>
           <Switch isOn={value} handleToggle={() => setValue(!value)} />
-          <h6 id="textswitch">Notifications</h6>{" "}
+          <h6 id="textswitch">Notifications </h6>{" "}
         </button>
       </div>
 
