@@ -6,6 +6,7 @@ import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
 import Charts from "./components/Charts";
+import CheckboxContainer from "./components/checkboxcontainer";
 
 export const Home = () => {
   return (
