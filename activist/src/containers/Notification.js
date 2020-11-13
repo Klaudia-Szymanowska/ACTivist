@@ -1,7 +1,7 @@
 import React from "react";
 import Popup from "reactjs-popup";
 
-export const Pops = () => {
+ export const Pops = () => {
   return(
     <main>
     <Popup trigger={<button> Trigger</button>} position="right center">
@@ -10,5 +10,6 @@ export const Pops = () => {
   </main>
   );
 };
+
 
 

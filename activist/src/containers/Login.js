@@ -3,18 +3,16 @@ import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
 import Signup from "./Signup";
 import { Link } from "react-router-dom";
-//import { HashLink as Link } from "react-router-hash-link";
 import "./App.css";
 import "firebase/auth";
 import firebase from "firebase/app";
-//import * as firebase from "firebase";
 import { firebaseAppAuth, provider } from "./firebase";
 
 export const Login = () => {
-  //export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
@@ -70,14 +68,6 @@ export const Login = () => {
           {" "}
           <button onClick={handleSignIn}>Sign in with Google</button>
         </div>
-
-        {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Login
-        </Button>
-
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Sign up
-        </Button>    */}
       </form>
     </div>
   );

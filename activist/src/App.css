@@ -8,6 +8,10 @@ body {
   background-image: url(./img/background.jpg);
 }
 
+.Page {
+  padding: 60px 0;
+}
+
 h3 {
   font-size: 200%;
   text-align: center;
@@ -81,6 +85,8 @@ button {
 }
 
 #navbuttons button {
+  display: flex;
+  justify-content: space-between;
   clear: both;
   width: 10%;
   padding: 10px 10px;
