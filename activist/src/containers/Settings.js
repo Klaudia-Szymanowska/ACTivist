@@ -10,6 +10,8 @@ import home2 from "./img/home2.png";
 export const Settings = () => {
   const [value, setValue] = useState(false);
 
+  var user = firebase.auth().currentUser;
+
   function handleSignout(event) {
     firebase
       .auth()
@@ -23,7 +25,21 @@ export const Settings = () => {
         console.log(error);
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
+      });
+  }
+
+  function handleDelete(event) {
+    user
+      .delete()
+      .then(function () {
+        // Delete successful
+        console.log("Account deleted!");
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        console.log(error);
+        var errorCode = error.code;
+        var errorMessage = error.message;
       });
   }
 
@@ -57,7 +73,10 @@ export const Settings = () => {
           </Link>
 
           <Link to="/">
-            <button className="button2"> Delete account </button>
+            <button className="button2" onClick={handleDelete}>
+              {" "}
+              Delete account{" "}
+            </button>
           </Link>
 
           <Link to="/">
