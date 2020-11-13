@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import logo from './img/logo 1.png';
 import "./App.css";
 import CheckboxContainer from "./components/checkboxcontainer";
 import ContainerHomeSettings from "./components/containerHomeSettings";
