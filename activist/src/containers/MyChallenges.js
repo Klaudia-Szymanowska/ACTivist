@@ -13,7 +13,9 @@ export const MyChallenges = () => {
         </div>
         <div className="text">
           <h3>Food</h3>
-          <CheckboxContainer />
+          <div className="center">
+            <CheckboxContainer />
+          </div>
         </div>
         );
       </div>
