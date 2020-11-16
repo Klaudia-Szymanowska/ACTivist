@@ -9,33 +9,18 @@ import cart from "./img/cart.png";
 import home2 from "./img/home2.png";
 import chart from "./img/chart.png";
 import Piechart from "./components/Piechart";
+import ContainerHomeSettings from "./components/containerHomeSettings";
 
 export const Goals = () => {
   return (
     <main>
-      {/*to be changed by Louise as a component */}
-      <div>
-        <Link to="/settings">
-          <img
-            className="column"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
-        </Link>
-        <div>
-          <Link to="/home">
-            <img
-              className="column"
-              src={home2}
-              style={{ width: "5%", float: "left" }}
-              alt="set"
-            />
-          </Link>
-        </div>
+      <div id="navbuttons">
+        <ContainerHomeSettings />
       </div>
 
-      <h3>Congratulations</h3>
+      <div className="text">
+        <h3>Congratulations</h3>
+      </div>
       <div className="container2">
         <Piechart />
       </div>

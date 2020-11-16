@@ -6,14 +6,13 @@ import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButton
 export const Challenges = () => {
   return (
     <main>
+      <div id="navbuttons">
+        <ContainerHomeSettings />
+      </div>
       <div className="Page">
-        <div id="navbuttons">
-          <ContainerHomeSettings />
-        </div>
         <div className="text">
           <div>
             <h3>
-              <br />
               Let’s choose one challenge <br /> under one of the four
               categories!
               <br />{" "}
