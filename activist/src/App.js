@@ -15,6 +15,7 @@ import { Transportation } from "./containers/Transportation";
 import { Settings } from "./containers/Settings";
 import { Home } from "./containers/Home";
 import { Account } from "./containers/Account";
+import { Welcome } from "./containers/Welcome";
 import { Household } from "./containers/Household";
 import { Changepassword } from "./containers/Changepassword";
 
@@ -42,6 +43,7 @@ function App() {
           <Route path="/account" component={Account} />
           <Route path="/changepassword" component={Changepassword} />
           <Route path="/goals" component={Goals} />
+          <Route path="/welcome" component={Welcome} />
         </Switch>
       </BrowserRouter>
     </main>
