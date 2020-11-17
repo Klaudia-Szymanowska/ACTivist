@@ -1,0 +1,51 @@
+/*@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
+
+.App {
+  text-align: center;
+}
+
+body {
+  background-size: cover;
+  background-image: url(./img/background.jpg);
+}
+
+
+h4 {
+  font-family: "Roboto";
+  color: #427a83;
+}
+
+.App-logo {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  pointer-events: none;
+}
+*/
+/*
+//inspiration: transparent background 
+.container {
+  position: relative;
+}
+.text-block {
+  position: absolute;
+  top: 30%;
+  left: 37%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  padding-left: 35px;
+  padding-right: 30px;
+  transform: translate(40%, -27%);
+}
+// let's see later if we will use it
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+*/

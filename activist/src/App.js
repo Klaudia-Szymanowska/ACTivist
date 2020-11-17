@@ -1,25 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//import logo from './img/logo 1.png';
+
+import { useAuthState } from "react-firebase-hooks/auth";
+import { firebaseAppAuth } from "./containers/firebase";
+
+import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Login } from "./containers/Login";
+import { Signup } from "./containers/Signup";
+import { Goals } from "./containers/Goals";
+import { Challenges } from "./containers/Challenges";
+import { MyChallenges } from "./containers/MyChallenges";
+import { Transportation } from "./containers/Transportation";
+import {Settings} from "./containers/Settings";
+import { Home } from "./containers/Home";
+import { Account } from "./containers/Account";
+import { Changepassword } from "./containers/Changepassword";
+import Charts from "./containers/components/Charts";
 
 function App() {
+  const [user, loading] = useAuthState(firebaseAppAuth);
+
+  if (loading) {
+    return null;
+  }
+
+  const MainComponent = user ? Home : Login;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={MainComponent} />
+          <Route path="/signup" component={Signup} />
+          <Route exact path="/challenges" component={Challenges} />
+          <Route path="/mychallenges" component={MyChallenges} />
+          <Route path="/transportation" component={Transportation} />
+          <Route path="/home" component={Home} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/account" component={Account} />
+          <Route path="/changepassword" component={Changepassword} />
+          <Route path="/goals" component={Goals} />
+          <Route path="/chart" component={Charts} />
+        </Switch>
+      </BrowserRouter>
+    </main>
   );
 }
 
