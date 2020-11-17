@@ -34,13 +34,10 @@ export const Home = () => {
           />
         </Link>
       </div>
-
-      {/** The below 'Welcome' only shows the name if the user signs in with Google */}
-      <h3>
-        <br />
-        Welcome, {name}{" "}
-      </h3>
-
+      <div className="text">
+        {/** The below 'Welcome' only shows the name if the user signs in with Google */}
+        <h3>Welcome, {name} </h3>
+      </div>
       <div>
         <div className="container">
           <button className="circle">
