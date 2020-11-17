@@ -77,13 +77,6 @@ export const Settings = () => {
             <button className="button2"> My account </button>
           </Link>
 
-          {/* <Link to="/">
-            <button className="button2" onClick={handleDelete}>
-              {" "}
-              Delete account{" "}
-            </button>
-          </Link> */}
-
           <Link to="/">
             <button className="button2" onClick={handleSignout}>
               {" "}
