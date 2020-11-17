@@ -24,9 +24,13 @@ export const Signup = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      /* .then(() => {
-        console.log('User created');
-      }) */
+      .then(function (event) {
+        var user = firebase.auth().currentUser;
+        var ref = firebase.database().ref("user_info").child(user.uid).set({
+          name: name,
+          uid: user.uid,
+        });
+      })
       .catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
