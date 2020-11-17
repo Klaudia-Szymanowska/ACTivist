@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
-import "./App.css";
+//import "./src/App.css";
 import { Link } from "react-router-dom";
 import "firebase/auth";
 import firebase from "firebase/app";
@@ -24,9 +24,15 @@ export const Signup = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      /* .then(() => {
-        console.log('User created');
-      }) */
+      .then(() => {
+        firebase
+          .firestore()
+          .collection("users")
+          .doc(firebase.auth().currentUser.uid)
+          .set({
+            name: name,
+          });
+      })
       .catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -49,6 +55,7 @@ export const Signup = () => {
             type="name"
           />
         </FormGroup>
+
         <FormGroup controlId="email" bsSize="large">
           <FormLabel>Email</FormLabel>
           <FormControl

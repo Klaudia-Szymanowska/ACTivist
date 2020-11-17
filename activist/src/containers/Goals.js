@@ -21,8 +21,10 @@ export const Goals = () => {
       <div className="text">
         <h3>Congratulations</h3>
       </div>
-      <div className="container2">
-        <Piechart />
+      <div className="chartsize">
+        <div className="container2">
+          <Piechart />
+        </div>
       </div>
       {/* <Link to="/chart">
           <img src={chart} alt="chart" />
@@ -35,6 +37,7 @@ export const Goals = () => {
         </h4>
       </div>
 
+      {/*   still working on the functionality of the badges
       <div className="container2">
         <button className="circleSmall" id="badges">
           <img src={food} alt="food" />
@@ -52,6 +55,7 @@ export const Goals = () => {
           <img src={cart} alt="cart" />
         </button>
       </div>
+      */}
     </main>
   );
 };
