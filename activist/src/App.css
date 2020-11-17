@@ -1,11 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap);
 
+main {
+  width: 100vw;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
 body {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(./img/background.jpg);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .Page {
@@ -215,13 +224,40 @@ button {
 
 @media only screen and (max-device-width: 600px) {
   body {
-    background-image: url(./img/background.jpg);
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
   }
-}
+  .button2 {
+    display: block;
+    margin: auto;
+    float: center;
+    width: 70%;
+    margin-top: 10%;
+  }
+  button {
+    width: 100%;
+    float: center;
+  }
 
-@media only screen and (max-device-width: 1500px) {
-  body {
-    background-image: url(./img/background.jpg);
+  #challbutton {
+    margin-top: 2%;
+    width: 85%;
+  }
+
+  #notifications {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  #set {
+    width: 500%;
+  }
+  .chartsize {
+    margin-top: 15%;
+  }
+  h3 {
+    font-size: 190%;
   }
 }
 
@@ -358,7 +394,7 @@ h6 {
   top: 0;
   left: 0;
 }
- 
+
 .box {
   position: relative;
   width: 70%;
@@ -372,9 +408,9 @@ h6 {
   border: 1px solid #999;
   overflow: auto;
 }
- 
+
 .close-icon {
-  content: 'x';
+  content: "x";
   cursor: pointer;
   position: fixed;
   right: calc(16% - 30px);
