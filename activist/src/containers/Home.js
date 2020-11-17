@@ -29,6 +29,7 @@ export const Home = () => {
         <Link to="/settings">
           <img
             className="column"
+            id="set"
             src={set}
             style={{ width: "5%", float: "right" }}
             alt="set"
