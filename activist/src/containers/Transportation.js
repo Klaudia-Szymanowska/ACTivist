@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState }  from 'react';
 //import logo from './img/logo 1.png';
 import {Link} from "react-router-dom";
 import './App.css';
 import set from "./img/set.png";
 import home2 from "./img/home2.png";
+import Popup from './components/Popup';
 
 export const Transportation = () => {
-    return (
+
+  const [isOpen, setIsOpen] = useState(false); 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
+  return (
       <main>
 
 {/*to be changed by Louise as a component */}
@@ -67,7 +74,18 @@ export const Transportation = () => {
         </label>
       </div></button></div>
 
-      <button className="button2"> Pledge </button>
+      {/* <button className="button2"> Pledge </button> */}
+      <button className="button2" onClick={togglePopup}>
+          {" "}
+          Pledge{" "}
+          </button>
+          {isOpen && <Popup
+          content={<>
+            <b>Congratulations!</b>
+            <p>Your pledge has been successfully registered!</p>
+          </>}
+          handleClose={togglePopup}
+        />}
 
     </div>  
 
