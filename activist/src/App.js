@@ -12,10 +12,12 @@ import { Goals } from "./containers/Goals";
 import { Challenges } from "./containers/Challenges";
 import { MyChallenges } from "./containers/MyChallenges";
 import { Transportation } from "./containers/Transportation";
+import { Food } from "./containers/Food";
 import { Settings } from "./containers/Settings";
 import { Home } from "./containers/Home";
 import { Account } from "./containers/Account";
 import { Household } from "./containers/Household";
+import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
           <Route exact path="/challenges" component={Challenges} />
           <Route path="/mychallenges" component={MyChallenges} />
           <Route path="/transportation" component={Transportation} />
-          {/*<Route path="/household" component={Household} /> */}
+          <Route path="/food" component={Food} />
+          <Route path="/household" component={Household} />
+          <Route path="/shopping" component={Shopping} />
           <Route path="/home" component={Home} />
           <Route path="/settings" component={Settings} />
           <Route path="/account" component={Account} />
