@@ -11,14 +11,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 export const Signup = () => {
   //export default function Signup() {
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
-    return password.length > 0 && firstName.length > 0 && email.length > 0;
+    return password.length > 0 && name.length > 0 && email.length > 0;
   }
 
   function handleSubmit(event) {
@@ -31,9 +30,7 @@ export const Signup = () => {
           .collection("users")
           .doc(firebase.auth().currentUser.uid)
           .set({
-            firstname: firstName,
-            lastname: lastName,
-            email: email,
+            name: name,
           });
       })
       .catch(function (error) {
@@ -50,22 +47,15 @@ export const Signup = () => {
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="firstName" bsSize="large">
-          <FormLabel>First name</FormLabel>
+        <FormGroup controlId="name" bsSize="large">
+          <FormLabel>Name</FormLabel>
           <FormControl
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            type="firstName"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            type="name"
           />
         </FormGroup>
-        <FormGroup controlId="lastName" bsSize="large">
-          <FormLabel>Last name</FormLabel>
-          <FormControl
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            type="lastName"
-          />
-        </FormGroup>
+
         <FormGroup controlId="email" bsSize="large">
           <FormLabel>Email</FormLabel>
           <FormControl
