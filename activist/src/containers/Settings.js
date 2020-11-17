@@ -5,15 +5,17 @@ import Switch from "./components/Switch";
 import "firebase/auth";
 import firebase from "firebase/app";
 import home2 from "./img/home2.png";
-import Popup from './components/Popup';
+import Popup from "./components/Popup";
 import { Login } from "./Login";
 
 export const Settings = () => {
   const [value, setValue] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
-  }
+  };
+
+  var user = firebase.auth().currentUser;
 
   function handleSignout(event) {
     firebase
@@ -28,7 +30,21 @@ export const Settings = () => {
         console.log(error);
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
+      });
+  }
+
+  function handleDelete(event) {
+    user
+      .delete()
+      .then(function () {
+        // Delete successful
+        console.log("Account deleted!");
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        console.log(error);
+        var errorCode = error.code;
+        var errorMessage = error.message;
       });
   }
 
@@ -61,6 +77,13 @@ export const Settings = () => {
             <button className="button2"> My account </button>
           </Link>
 
+          {/* <Link to="/">
+            <button className="button2" onClick={handleDelete}>
+              {" "}
+              Delete account{" "}
+            </button>
+          </Link> */}
+
           <Link to="/">
             <button className="button2" onClick={handleSignout}>
               {" "}
@@ -69,18 +92,30 @@ export const Settings = () => {
           </Link>
         </div>
 
-        <button className="button2" onClick={togglePopup}>Delete account</button>
-          {isOpen && <Popup
-          content={<>
-            <b>Warning!</b>
-            <p>Are you sure to cancel the account? Once the account is cancelled, your information will be deleted immediately, and the account can not be restored.</p>
-            <Link to="/"><button id="popup_button">Yes, I am sure to cancel my account</button></Link>
-          </>}
-          handleClose={togglePopup}
-          />}
+        <button className="button2" onClick={togglePopup}>
+          Delete account
+        </button>
+        {isOpen && (
+          <Popup
+            content={
+              <>
+                <b>Warning!</b>
+                <p>
+                  Are you sure to cancel the account? Once the account is
+                  cancelled, your information will be deleted immediately, and
+                  the account can not be restored.
+                </p>
+                <Link to="/">
+                  <button id="popup_button" onClick={handleDelete}>
+                    Yes, I am sure to cancel my account
+                  </button>
+                </Link>
+              </>
+            }
+            handleClose={togglePopup}
+          />
+        )}
       </div>
-
-
     </main>
   );
 };
