@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "src/App.css";
 import food from "../img/food.png";
 import bike from "../img/bike.png";
 import CheckboxContainer from "./components/checkboxcontainer";

@@ -78,7 +78,7 @@ export const Transportation = () => {
               <input
                 className="form-check-input"
                 type="checkbox"
-                value="250"
+                value=""
                 id="defaultCheck1"
               />
               <label className="form-check-label" htmlFor="defaultCheck1">

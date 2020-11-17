@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./App.css";
+import "src/App.css";
 import Switch from "./components/Switch";
 import "firebase/auth";
 import firebase from "firebase/app";

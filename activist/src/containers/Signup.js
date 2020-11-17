@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
-import "./App.css";
+//import "./src/App.css";
 import { Link } from "react-router-dom";
 import "firebase/auth";
 import firebase from "firebase/app";
