@@ -11,25 +11,30 @@ import { useAuthState } from "react-firebase-hooks/auth";
 export const Signup = () => {
   //export default function Signup() {
 
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
-    return password.length > 0 && name.length > 0 && email.length > 0;
+    return password.length > 0 && firstName.length > 0 && email.length > 0;
   }
 
   function handleSubmit(event) {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(function (event) {
-        var user = firebase.auth().currentUser;
-        var ref = firebase.database().ref("user_info").child(user.uid).set({
-          name: name,
-          uid: user.uid,
-        });
+      .then(() => {
+        firebase
+          .firestore()
+          .collection("users")
+          .doc(firebase.auth().currentUser.uid)
+          .set({
+            firstname: firstName,
+            lastname: lastName,
+            email: email,
+          });
       })
       .catch(function (error) {
         // Handle Errors here.
@@ -45,12 +50,20 @@ export const Signup = () => {
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
-        <FormGroup controlId="name" bsSize="large">
-          <FormLabel>Name</FormLabel>
+        <FormGroup controlId="firstName" bsSize="large">
+          <FormLabel>First name</FormLabel>
           <FormControl
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            type="firstName"
+          />
+        </FormGroup>
+        <FormGroup controlId="lastName" bsSize="large">
+          <FormLabel>Last name</FormLabel>
+          <FormControl
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            type="lastName"
           />
         </FormGroup>
         <FormGroup controlId="email" bsSize="large">
