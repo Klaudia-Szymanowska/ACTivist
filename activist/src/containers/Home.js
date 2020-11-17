@@ -21,9 +21,10 @@ export const Home = () => {
     email = user.email;
   }
 
+  const savedCarbon = 100 + 200 + 300 + 400;
+
   return (
     <main>
-      {/*to be changed by Louise as a component */}
       <div>
         <Link to="/settings">
           <img
@@ -43,6 +44,8 @@ export const Home = () => {
           <button className="circle">
             <h5 style={{ fontSize: "120%" }}>
               Your carbon <br /> savings are:
+              <h3>{savedCarbon}</h3>
+              kg
             </h5>
           </button>
         </div>
@@ -77,9 +80,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      {/*<div className="container">
-          <button className="progressbox"></button>
-  </div> */}
     </main>
   );
 };
