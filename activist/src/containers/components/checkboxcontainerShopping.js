@@ -22,27 +22,25 @@ componentDidMount() {
 }
 */
 
-//const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
-
 //hardcoding the CO2
 const OPTIONS = [
   {
-    name: "No beef",
+    name: "Buy Eco products",
     id: 1,
     CO2: 50,
   },
   {
-    name: "Go pescatarian!",
+    name: "Go package free",
     id: 2,
     CO2: 100,
   },
   {
-    name: "Go vegetarian!",
+    name: "No plastic bags",
     id: 3,
     CO2: 150,
   },
   {
-    name: "Go vegan!",
+    name: "Buy from local suppliers",
     id: 4,
     CO2: 200,
   },
@@ -75,7 +73,7 @@ const addData = (id, CO2) => {
 };
 */
 
-class CheckboxContainer extends Component {
+class CheckboxContainerShopping extends Component {
   state = {
     checkboxes: OPTIONS.reduce(
       (options, option) => ({
@@ -136,8 +134,7 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button2"
-                  id="pledge"
+                  className="button4"
                   //onClick={handlePledge}
                 >
                   Pledge
@@ -151,49 +148,4 @@ class CheckboxContainer extends Component {
   }
 }
 
-export default CheckboxContainer;
-
-/*import React from "react";
-import PropTypes from "prop-types";
-import checkboxes from "./checkboxes";
-import Checkbox from "./Checkbox";
-
-class CheckboxContainer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      checkedItems: new Map(),
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    const item = e.target.name;
-    const isChecked = e.target.checked;
-    this.setState((prevState) => ({
-      checkedItems: prevState.checkedItems.set(item, isChecked),
-    }));
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        {checkboxes.map((item) => (
-          <label key={item.key}>
-            {item.name}
-            <Checkbox
-              name={item.name}
-              checked={this.state.checkedItems.get(item.name)}
-              onChange={this.handleChange}
-            />
-          </label>
-        ))}
-      </React.Fragment>
-    );
-  }
-}
-
-export default CheckboxContainer;
-*/
+export default CheckboxContainerShopping;

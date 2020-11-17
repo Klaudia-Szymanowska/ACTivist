@@ -23,26 +23,25 @@ componentDidMount() {
 */
 
 //const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
-
 //hardcoding the CO2
 const OPTIONS = [
   {
-    name: "No beef",
+    name: "Compost at home",
     id: 1,
     CO2: 50,
   },
   {
-    name: "Go pescatarian!",
+    name: "Recycle waste at home",
     id: 2,
     CO2: 100,
   },
   {
-    name: "Go vegetarian!",
+    name: "Use lesswater",
     id: 3,
     CO2: 150,
   },
   {
-    name: "Go vegan!",
+    name: "Switch off lights",
     id: 4,
     CO2: 200,
   },
@@ -75,7 +74,7 @@ const addData = (id, CO2) => {
 };
 */
 
-class CheckboxContainer extends Component {
+class CheckboxContainerHousehold extends Component {
   state = {
     checkboxes: OPTIONS.reduce(
       (options, option) => ({
@@ -136,8 +135,7 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button2"
-                  id="pledge"
+                  className="button4"
                   //onClick={handlePledge}
                 >
                   Pledge
@@ -151,7 +149,7 @@ class CheckboxContainer extends Component {
   }
 }
 
-export default CheckboxContainer;
+export default CheckboxContainerHousehold;
 
 /*import React from "react";
 import PropTypes from "prop-types";

@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import logo from './img/logo 1.png';
 import "./App.css";
+import food from "../img/food.png";
+import bike from "../img/bike.png";
 import CheckboxContainer from "./components/checkboxcontainer";
 import ContainerHomeSettings from "./components/containerHomeSettings";
+import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 export const MyChallenges = () => {
   return (
@@ -12,113 +14,75 @@ export const MyChallenges = () => {
         <div id="navbuttons">
           <ContainerHomeSettings />
         </div>
-        <div className="text">
-          <h3>Food</h3>
-          <div className="center">
-            <CheckboxContainer />
+        <div>
+          <div>
+            <h3>
+              <br />
+              Ungoing challenges:
+            </h3>
+            <div className="container">
+              <button
+                id="challbutton"
+                className="center"
+                style={{ fontSize: "220%", textAlign: "left" }}
+              >
+                <img src={food} id="imgchall" alt="food" />
+                <b
+                  style={{
+                    color: "#000000",
+                    fontSize: "75%",
+                    float: "left",
+                  }}
+                >
+                  No beef for 7 days
+                </b>
+              </button>
+            </div>
+          </div>
+          <div>
+            <h3>
+              <br />
+              Finished challenges:
+            </h3>
+            <div className="container">
+              <button
+                id="challbutton"
+                className="center"
+                style={{ fontSize: "220%", textAlign: "left" }}
+              >
+                <img src={bike} id="imgchall" alt="bike" />
+                <b
+                  style={{
+                    color: "#000000",
+                    fontSize: "75%",
+                    float: "left",
+                  }}
+                >
+                  Car share!{" "}
+                </b>
+              </button>
+            </div>
+            <div className="container">
+              <button
+                id="challbutton"
+                className="center"
+                style={{ fontSize: "220%", textAlign: "left" }}
+              >
+                <img src={bike} id="imgchall" alt="bike" />
+                <b
+                  style={{
+                    color: "#000000",
+                    fontSize: "75%",
+                    float: "left",
+                  }}
+                >
+                  Public transport!{" "}
+                </b>
+              </button>
+            </div>
           </div>
         </div>
-        );
       </div>
     </main>
   );
 };
-
-/*to be changed by Louise as a component 
-<div>
-<Link to="/settings">
-  <img
-    className="column"
-    src={set}
-    style={{ width: "5%", float: "right" }}
-    alt="set"
-  />
-</Link>
-<div>
-  <Link to="/home">
-    <img
-      className="column"
-      src={home2}
-      style={{ width: "5%", float: "left" }}
-      alt="set"
-    />
-  </Link>
-</div>
-</div>
-
-<div className="text">
-<h3>Food</h3>
-<div>
-  <button id="challbutton">
-    <div className="form-check">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value=""
-        id="defaultCheck1"
-      />
-      <label className="form-check-label" htmlFor="defaultCheck1">
-        No beef!
-        <br /> <b id="challtext">Can save CO2: 160 kg/day</b>
-      </label>
-    </div>{" "}
-  </button>
-</div>
-
-<div>
-  <button id="challbutton">
-    <div className="form-check">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value=""
-        id="defaultCheck1"
-      />
-      <label className="form-check-label" htmlFor="defaultCheck1">
-        Go pescatarian!
-        <br /> <b id="challtext">Can save CO2: 200 kg/day </b>
-      </label>
-    </div>{" "}
-  </button>
-</div>
-
-<div>
-  <button id="challbutton">
-    <div className="form-check">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value=""
-        id="defaultCheck1"
-      />
-      <label className="form-check-label" htmlFor="defaultCheck1">
-        Go vegetarian!
-        <br /> <b id="challtext">Can save CO2: 250 kg/day </b>
-      </label>
-    </div>
-  </button>
-</div>
-
-<div>
-  <button id="challbutton">
-    <div className="form-check">
-      <input
-        className="form-check-input"
-        type="checkbox"
-        value=""
-        id="defaultCheck1"
-      />
-      <label className="form-check-label" htmlFor="defaultCheck1">
-        Go vegan!
-        <br />
-        <b id="challtext">Can save CO2: 300 kg/day </b>
-      </label>
-    </div>
-  </button>
-</div>
-
-<div>
-  <button className="button2"> Pledge </button>
-</div>
-</div>
-*/
