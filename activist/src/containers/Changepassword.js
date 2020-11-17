@@ -5,14 +5,37 @@ import "./App.css";
 import "./Login.css";
 import home2 from "./img/home2.png";
 import set from "./img/set.png";
+import firebase from "firebase/app";
 
 export function Changepassword() {
   const [currentpassword, enterPassword] = useState("");
   const [newpassword, setNewPassword] = useState("");
   const [confirmpassword, confirmNewPassword] = useState("");
+  var user = firebase.auth().currentUser;
 
   function handleSubmit(event) {
     event.preventDefault();
+  }
+
+  function samePasswordInput() {
+    if (newpassword === confirmpassword) return true;
+  }
+
+  function validatePassword() {
+    if (samePasswordInput) {
+      user
+        .updatePassword(newpassword)
+        .then(function () {
+          // Password change successful
+          console.log("Password changed");
+        })
+        .catch(function (error) {
+          // Handle Errors here.
+          console.log(error);
+          var errorCode = error.code;
+          var errorMessage = error.message;
+        });
+    }
   }
 
   return (
@@ -73,9 +96,10 @@ export function Changepassword() {
       <div className="text">
         <div>
           {" "}
-          <Link to="/">
-            <button className="button2"> Submit and re-login</button>
-          </Link>
+          <button className="button2" onClick={validatePassword}>
+            {" "}
+            Submit new password
+          </button>
         </div>
       </div>
     </body>
