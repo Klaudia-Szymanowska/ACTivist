@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "src/App.css";
+import "./App.css";
 import food from "./img/food.png";
 import set from "./img/set.png";
 import bike from "./img/bike.png";

@@ -223,6 +223,11 @@ button {
 }
 
 @media only screen and (max-device-width: 600px) {
+  body {
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
+  }
   .button2 {
     display: block;
     margin: auto;
