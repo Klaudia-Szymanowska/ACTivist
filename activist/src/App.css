@@ -322,7 +322,8 @@ h6 {
 }
 
 .button4 {
-  color: "#000000";
+  color: #ffffff;
+  background-color: #427a83;
   font-size: 220%;
   padding: 5px 0px;
 }

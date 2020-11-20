@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import Checkbox from "./Checkbox";
 import "../../App.css";
 import Popup from './Popup';
@@ -23,26 +23,25 @@ componentDidMount() {
 }
 */
 
-//const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
 //hardcoding the CO2
 const OPTIONS = [
   {
-    name: "Compost at home",
+    name: "Car share!",
     id: 1,
     CO2: 50,
   },
   {
-    name: "Recycle waste at home",
+    name: "Public transportation!",
     id: 2,
     CO2: 100,
   },
   {
-    name: "Use lesswater",
+    name: "Go cycling to work!",
     id: 3,
     CO2: 150,
   },
   {
-    name: "Switch off lights",
+    name: "Work from home!",
     id: 4,
     CO2: 200,
   },
@@ -75,13 +74,14 @@ const addData = (id, CO2) => {
 };
 */
 
-class CheckboxContainerHousehold extends Component {
+class CheckboxContainerTransportation extends Component {
   state = {
     checkboxes: OPTIONS.reduce(
       (options, option) => ({
         ...options,
         [option]: false,
       }),
+      {}
     ),
     isOpen: false
   };
@@ -117,6 +117,7 @@ class CheckboxContainerHousehold extends Component {
     addData(options.id, options.CO2);
   };
   */
+
   createCheckbox = (option) => (
     <Checkbox
       label1={option.name}
@@ -127,8 +128,8 @@ class CheckboxContainerHousehold extends Component {
     />
   );
 
-  createCheckboxes = () =>OPTIONS.map(this.createCheckbox);
-  
+  createCheckboxes = () => OPTIONS.map(this.createCheckbox);
+
   render() {
     return (
       <div className="container">
@@ -141,6 +142,7 @@ class CheckboxContainerHousehold extends Component {
                   type="submit"
                   className="button4"
                   onClick={this.togglePopup}
+                  //onClick={handlePledge}
                 >
                   Pledge
                 </button>
@@ -160,5 +162,4 @@ class CheckboxContainerHousehold extends Component {
   }
 }
 
-
-export default CheckboxContainerHousehold;
+export default CheckboxContainerTransportation;
