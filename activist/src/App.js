@@ -20,8 +20,8 @@ import { Welcome } from "./containers/Welcome";
 import { Household } from "./containers/Household";
 import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
+import { ForgotPassword } from "./containers/ForgotPassword";
 import Charts from "./containers/components/Charts";
-
 
 function App() {
   const [user, loading] = useAuthState(firebaseAppAuth);
@@ -51,6 +51,7 @@ function App() {
           <Route path="/goals" component={Goals} />
           <Route path="/chart" component={Charts} />
           <Route path="/welcome" component={Welcome} />
+          <Route path="/forgot" component={ForgotPassword} />
         </Switch>
       </BrowserRouter>
     </main>
