@@ -8,18 +8,51 @@ import rew from "./img/rew.png";
 import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 import { currentUser } from "./firebase";
+import { getDefaultNormalizer } from "@testing-library/react";
 //import firebase from "firebase";
 
 export const Home = () => {
   // should we use let instead of var?
   var user = firebase.auth().currentUser;
-  var name, email;
+  var name, email, nameFirestore;
 
   if (user != null) {
     name = user.displayName;
     email = user.email;
+    //nameFirestore = fecthName();
   }
+
+  //Below are two functions trying to fecth a field from a firebase collection
+  // it doesn't work - we get the following error:
+  // "Objects are not valid as a React child "
+
+  // FUNCTION 1 -
+  /*  function fecthName() {
+    var db = firebase.firestore();
+    var user = firebase.auth().currentUser;
+    var uid = firebase.auth().currentUser.uid;
+    return db.collection("users").doc(uid).get("name");
+  } */
+
+  // FUNCTION 2 -
+  /* function fecthName() {
+    var docRef = firebase
+      .firestore()
+      .collection("users")
+      .doc(firebase.auth().currentUser.uid);
+    docRef
+      .get()
+      .then(function (doc) {
+        if (doc.exists) {
+          doc.data();
+        }
+      })
+      .catch(function (error) {
+        //handle errors
+      });
+  } */
 
   const savedCarbon = 100 + 200 + 300 + 400;
 
@@ -29,6 +62,7 @@ export const Home = () => {
         <Link to="/settings">
           <img
             className="column"
+            id="set"
             src={set}
             style={{ width: "5%", float: "right" }}
             alt="set"
@@ -37,7 +71,9 @@ export const Home = () => {
       </div>
       <div className="text">
         {/** The below 'Welcome' only shows the name if the user signs in with Google */}
-        <h3>Welcome, {name} </h3>
+        <h3>
+          Welcome, {name} {/* {nameFirestore} */}{" "}
+        </h3>
       </div>
       <div>
         <div className="container">
