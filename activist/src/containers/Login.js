@@ -26,6 +26,21 @@ export const Login = () => {
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
+        //can be made to switch-case
+        /* if (errorCode === "auth/invalid-email") {
+          alert("Email not found.");
+          setPassword("");
+          setEmail("");
+        } */
+        if (errorCode === "auth/wrong-password") {
+          alert("Wrong password.");
+          setPassword("");
+        } else {
+          alert(errorMessage);
+          setPassword("");
+          setEmail("");
+        }
+        console.log(error);
       });
 
     event.preventDefault();
@@ -53,6 +68,12 @@ export const Login = () => {
             type="password"
           />
         </FormGroup>
+        <div>
+          {" "}
+          <Link to="/forgot">
+            <button>Forgot password?</button>
+          </Link>
+        </div>
 
         <div>
           {" "}

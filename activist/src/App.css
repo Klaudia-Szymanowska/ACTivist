@@ -59,6 +59,11 @@ button {
   margin-bottom: 9%;
 }
 
+#radio_button {
+  padding: 5px;
+  width: 70%;
+}
+
 #popup_button {
   float: center;
   border: none;
@@ -143,6 +148,16 @@ button {
   clear: both;
   float: center;
   text-align: center;
+}
+
+.button-container {
+  position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  float: center;
+  width: 100%;
 }
 
 .container {
@@ -262,8 +277,8 @@ button {
 }
 
 input.form-check-input {
-  width: 25px;
-  height: 25px;
+  width: 10px;
+  height: 10px;
 }
 
 /* button font*/

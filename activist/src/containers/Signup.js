@@ -32,11 +32,15 @@ export const Signup = () => {
           .set({
             name: name,
           });
+        window.location = "/welcome";
       })
       .catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        alert(errorMessage);
+        setEmail("");
+        setPassword("");
         // ...
       });
     event.preventDefault();

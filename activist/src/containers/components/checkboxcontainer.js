@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Checkbox from "./Checkbox";
-import "../../App.css";
-import Popup from './Popup';
+import "./App.css";
 
 //Import to make firebase work
 /*
@@ -48,6 +47,8 @@ const OPTIONS = [
     CO2: 200,
   },
 ];
+
+var userPledges = [1, 2];
 
 //data base
 /*
@@ -165,13 +166,6 @@ class CheckboxContainer extends Component {
                 >
                   Pledge
                 </button>
-                {this.state.isOpen && <Popup
-                  content={<>
-                    <b>Congratulations!</b>
-                    <p>Your pledge has been successfully registered!</p>
-                  </>}
-                  handleClose={this.togglePopup}
-                  />} 
               </div>
             </form>
           </div>
