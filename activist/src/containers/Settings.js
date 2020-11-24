@@ -15,7 +15,14 @@ export const Settings = () => {
     setIsOpen(!isOpen);
   };
 
-  var user = firebase.auth().currentUser;
+  const user = firebase.auth().currentUser;
+  let name;
+  let email;
+
+  if (user != null) {
+    name = user.displayName;
+    email = user.email;
+  }
 
   function handleSignout(event) {
     firebase
@@ -65,16 +72,16 @@ export const Settings = () => {
       </div>
 
       <div className="text">
-        <button id="notifications" style={{ fontSize: "200%" }}>
-          <Switch isOn={value} handleToggle={() => setValue(!value)} />
-          <h6 id="textswitch">Notifications </h6>{" "}
-        </button>
+        <h3>
+          {name} {/* {nameFirestore} */}{" "}
+        </h3>
+        <h2>{email}</h2>
       </div>
 
       <div className="text">
         <div className="center2">
-          <Link to="/account">
-            <button className="button2"> My account </button>
+          <Link to="/changepassword">
+            <button className="button2"> Change password</button>
           </Link>
 
           <Link to="/">

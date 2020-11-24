@@ -10,14 +10,13 @@ import "firebase/auth";
 import firebase from "firebase/app";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { currentUser } from "./firebase";
-import { getDefaultNormalizer } from "@testing-library/react";
-//import { count } from "./components/checkboxtest1";
-//import firebase from "firebase";
 
 export const Home = () => {
   // should we use let instead of var?
-  var user = firebase.auth().currentUser;
-  var name, email, nameFirestore;
+  const user = firebase.auth().currentUser;
+  let name;
+  let email;
+  // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
@@ -55,8 +54,8 @@ export const Home = () => {
       });
   } */
 
-  const savedCarbon = 100 + 200 + 300 + 400;
-  //const savedCarbon = count;
+  //const savedCarbon = 100 + 200 + 300 + 400;
+  const count = localStorage.getItem("count");
 
   return (
     <main>
@@ -74,7 +73,7 @@ export const Home = () => {
       <div className="text">
         {/** The below 'Welcome' only shows the name if the user signs in with Google */}
         <h3>
-          Welcome, {name} {/* {nameFirestore} */}{" "}
+          Welcome {name} {/* {nameFirestore} */}{" "}
         </h3>
       </div>
       <div>
@@ -82,7 +81,7 @@ export const Home = () => {
           <button className="circle">
             <h5 style={{ fontSize: "120%" }}>
               Your carbon <br /> savings are:
-              <h3>{savedCarbon}</h3>
+              <h3>{count}</h3>
               kg
             </h5>
           </button>

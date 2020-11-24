@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import CheckboxContainerShopping from "./components/checkboxcontainerShopping";
 import ContainerHomeSettings from "./components/containerHomeSettings";
+import ShoppingCO2 from "./components/ShoppingCO2";
 
 export const Shopping = () => {
   return (
@@ -14,7 +15,8 @@ export const Shopping = () => {
         <div className="text">
           <h3>Shopping</h3>
           <div className="center">
-            <CheckboxContainerShopping />
+            {/*<CheckboxContainerShopping />*/}
+            <ShoppingCO2 />
           </div>
         </div>
         );

@@ -8,33 +8,57 @@ import set from "./img/set.png";
 import firebase from "firebase/app";
 
 export function Changepassword() {
-  const [currentpassword, enterPassword] = useState("");
-  const [newpassword, setNewPassword] = useState("");
-  const [confirmpassword, confirmNewPassword] = useState("");
-  var user = firebase.auth().currentUser;
+  const [email, setEmail] = useState("");
+  const [currentPassword, setPassword] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmNewPassword] = useState("");
+  const user = firebase.auth().currentUser;
+  // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
-  function samePasswordInput() {
-    if (newpassword === confirmpassword) return true;
+  function cleanForms() {
+    setEmail("");
+    setPassword("");
+    setNewPassword("");
+    setConfirmNewPassword("");
   }
 
   function validatePassword() {
-    if (samePasswordInput) {
-      user
-        .updatePassword(newpassword)
+    //if (samePasswordInput === true) {
+    if (newPassword === confirmPassword) {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, currentPassword)
         .then(function () {
-          // Password change successful
-          console.log("Password changed");
+          user
+            .updatePassword(newPassword)
+            .then(function () {
+              alert("Password changed");
+              console.log("Password changed");
+              cleanForms();
+            })
+            .catch(function (error) {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+              alert(errorMessage);
+              cleanForms();
+              //Do something
+            });
         })
         .catch(function (error) {
-          // Handle Errors here.
-          console.log(error);
           var errorCode = error.code;
           var errorMessage = error.message;
+          alert(errorMessage);
+          cleanForms();
+          //Do something
         });
+    } else {
+      alert("Not the same password");
+      setNewPassword("");
+      setConfirmNewPassword("");
     }
   }
 
@@ -63,31 +87,40 @@ export function Changepassword() {
 
       <div className="Login">
         <form onSubmit={handleSubmit}>
+          <FormGroup controlId="email" bsSize="large">
+            <FormLabel>Insert email</FormLabel>
+            <FormControl
+              autoFocus
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormGroup>
+
           <FormGroup controlId="currentpassword" bsSize="large">
             <FormLabel>Current password</FormLabel>
             <FormControl
-              autoFocus
-              type="currentpassword"
-              value={currentpassword}
-              onChange={(e) => enterPassword(e.target.value)}
+              type="password"
+              value={currentPassword}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </FormGroup>
 
           <FormGroup controlId="newpassword" bsSize="large">
             <FormLabel>New password</FormLabel>
             <FormControl
-              value={newpassword}
+              value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-              type="newpassword"
+              type="password"
             />
           </FormGroup>
 
           <FormGroup controlId="confirmpassword" bsSize="large">
             <FormLabel>Confirm new password</FormLabel>
             <FormControl
-              value={confirmpassword}
-              onChange={(e) => confirmNewPassword(e.target.value)}
-              type="confirmpassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmNewPassword(e.target.value)}
+              type="password"
             />
           </FormGroup>
         </form>
