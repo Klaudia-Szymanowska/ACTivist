@@ -2,8 +2,19 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 const CheckboxTest1 = () => {
+  var pledgedChallenges = [];
   const initialState = () => Number(window.localStorage.getItem("count")) || 0;
   const [count, setCount] = useState(initialState);
+
+  const [challenges, setChallenges] = useState(pledgedChallenges);
+
+  useEffect(() => {
+    localStorage.setItem(foodChallenges, JSON.stringify(challenges));
+  });
+
+  const addChallenge = (newChallenge) => {
+    setChallenges([...challenges, newChallenge]);
+  };
 
   const addAmount = (amount) => {
     setCount(count + amount);
@@ -26,7 +37,11 @@ const CheckboxTest1 = () => {
         <button
           id="radio_button"
           className="button button--primary"
-          onClick={() => addAmount(50)}
+          value="No Beef"
+          onClick={() => {
+            addAmount(50);
+            addChallenge("No beef");
+          }}
         >
           No beef
         </button>
@@ -34,6 +49,7 @@ const CheckboxTest1 = () => {
         <button
           id="radio_button"
           className="button button--primary"
+          value="Go pescetarian"
           onClick={() => addAmount(100)}
         >
           Go pescetarian{" "}
@@ -41,6 +57,7 @@ const CheckboxTest1 = () => {
         <button
           id="radio_button"
           className="button button--primary"
+          value="Go vegetarian"
           onClick={() => addAmount(150)}
         >
           Go vegetarian{" "}
@@ -48,6 +65,7 @@ const CheckboxTest1 = () => {
         <button
           id="radio_button"
           className="button button--primary"
+          value="Go vegan"
           onClick={() => addAmount(200)}
         >
           Go vegan{" "}

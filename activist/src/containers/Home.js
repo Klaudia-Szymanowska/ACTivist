@@ -11,6 +11,7 @@ import firebase from "firebase/app";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { currentUser } from "./firebase";
 import { getDefaultNormalizer } from "@testing-library/react";
+//import { count } from "./components/checkboxtest1";
 //import firebase from "firebase";
 
 export const Home = () => {
@@ -55,6 +56,7 @@ export const Home = () => {
   } */
 
   const savedCarbon = 100 + 200 + 300 + 400;
+  //const savedCarbon = count;
 
   return (
     <main>
