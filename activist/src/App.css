@@ -95,6 +95,29 @@ button {
   margin-bottom: 5%;
 }
 
+#challbutton1:focus {
+  background-color: #427a83;
+  color: #f0f4f6;
+}
+
+#challbutton1 {
+  font-size: 210%;
+  text-align: center;
+  padding: 10px 10px;
+  width: 20%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+#challbutton3 {
+  font-size: 140%;
+  text-align: center;
+  padding: 10px 10px;
+  width: 12%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
 #challtext {
   color: #000000;
   font-size: 60%;

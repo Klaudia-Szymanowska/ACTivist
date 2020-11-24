@@ -54,7 +54,8 @@ export const Home = () => {
       });
   } */
 
-  const savedCarbon = 100 + 200 + 300 + 400;
+  //const savedCarbon = 100 + 200 + 300 + 400;
+  const count = localStorage.getItem("count");
 
   return (
     <main>
@@ -80,7 +81,7 @@ export const Home = () => {
           <button className="circle">
             <h5 style={{ fontSize: "120%" }}>
               Your carbon <br /> savings are:
-              <h3>{savedCarbon}</h3>
+              <h3>{count}</h3>
               kg
             </h5>
           </button>
