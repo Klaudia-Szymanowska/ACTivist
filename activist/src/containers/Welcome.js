@@ -6,8 +6,9 @@ import { Link } from "react-router-dom";
 
 export const Welcome = () => {
   // should we use let instead of var?
-  var user = firebase.auth().currentUser;
-  var name, email;
+  const user = firebase.auth().currentUser;
+  let name;
+  let email;
 
   if (user != null) {
     name = user.displayName;
@@ -23,7 +24,7 @@ export const Welcome = () => {
             <br />{" "}
           </h3>
           <h3>
-            Every day the average Dane produces 2340 kg of CO2. Therefore, if we
+            Every day the average Dane produces 47 kg of CO2. Therefore, if we
             want to combat we need to ACT!
             <br /> On the next page you can choose challenges from 4 different
             categories. You can choose one pledge in each category and follow it
