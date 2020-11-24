@@ -85,7 +85,8 @@ class CheckboxContainer extends Component {
       }),
       {}
     ),
-    isOpen: false
+    isOpen: false,
+    // isPledged: false,
   };
 
   togglePopup = () => {
@@ -112,6 +113,20 @@ class CheckboxContainer extends Component {
         console.log(checkbox, "is selected.");
       });
   };
+
+  // handlePledge = () => {
+  //   const {isPledged} = this.state
+  //   localStorage.setItem('isPledged', isPledged)
+  //   localStorgae.
+  //   // const value = option.type === 'checkbox' ? option.checked: option.value;
+  //   // this.setState({ [option.name, option.CO2]: value })
+  // }
+
+  // componentDidMount() {
+  //   const isPledged = localStorage.getItem('isPledged') === 'true';
+  //   const challenge = rememberMe ? localStorage.getItem('user') : '';
+  //   this.setState({ user, isPledged });
+  // }
 
   //Add data to firebase:
   /*
@@ -144,6 +159,7 @@ class CheckboxContainer extends Component {
                   type="submit"
                   className="button4"
                   onClick={this.togglePopup}
+                  value={this.state.isPledged}
                   // id="pledge"
                   //onClick={handlePledge}
                 >

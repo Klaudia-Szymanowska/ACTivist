@@ -21,7 +21,7 @@ import { Household } from "./containers/Household";
 import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
 import Charts from "./containers/components/Charts";
-
+// import {storage} from "./containers/ChallengeList";
 
 function App() {
   const [user, loading] = useAuthState(firebaseAppAuth);
@@ -51,6 +51,7 @@ function App() {
           <Route path="/goals" component={Goals} />
           <Route path="/chart" component={Charts} />
           <Route path="/welcome" component={Welcome} />
+          {/* <Route path="/challengelist" component={storage} /> */}
         </Switch>
       </BrowserRouter>
     </main>

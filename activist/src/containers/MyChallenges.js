@@ -14,7 +14,7 @@ export const MyChallenges = () => {
         <ContainerHomeSettings />
       </div>
       <div className="text">
-        <h3>
+        <h3>。
           <br />
           Ongoing challenges:
         </h3>
