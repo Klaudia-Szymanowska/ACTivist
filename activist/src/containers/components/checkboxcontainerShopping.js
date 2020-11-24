@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Checkbox from "./Checkbox";
 import "../../App.css";
+import Popup from './Popup';
 
 //Import to make firebase work
 /*
@@ -82,6 +83,11 @@ class CheckboxContainerShopping extends Component {
       }),
       {}
     ),
+    isOpen: false
+  };
+
+  togglePopup = () => {
+    this.setState({isOpen: !this.state.isOpen})
   };
 
   handleCheckboxChange = (changeEvent) => {
@@ -135,10 +141,18 @@ class CheckboxContainerShopping extends Component {
                 <button
                   type="submit"
                   className="button4"
+                  onClick={this.togglePopup}
                   //onClick={handlePledge}
                 >
                   Pledge
                 </button>
+                {this.state.isOpen && <Popup
+                  content={<>
+                    <b>Congratulations!</b>
+                    <p>Your pledge has been successfully registered!</p>
+                  </>}
+                  handleClose={this.togglePopup}
+                  />} 
               </div>
             </form>
           </div>

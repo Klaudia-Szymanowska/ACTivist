@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Checkbox from "./Checkbox";
 import "../../App.css";
+import Popup from "./Popup";
 
 //Import to make firebase work
 /*
@@ -76,13 +77,15 @@ const addData = (id, CO2) => {
 
 class CheckboxContainerHousehold extends Component {
   state = {
-    checkboxes: OPTIONS.reduce(
-      (options, option) => ({
-        ...options,
-        [option]: false,
-      }),
-      {}
-    ),
+    checkboxes: OPTIONS.reduce((options, option) => ({
+      ...options,
+      [option]: false,
+    })),
+    isOpen: false,
+  };
+
+  togglePopup = () => {
+    this.setState({ isOpen: !this.state.isOpen });
   };
 
   handleCheckboxChange = (changeEvent) => {
@@ -112,7 +115,6 @@ class CheckboxContainerHousehold extends Component {
     addData(options.id, options.CO2);
   };
   */
-
   createCheckbox = (option) => (
     <Checkbox
       label1={option.name}
@@ -136,10 +138,21 @@ class CheckboxContainerHousehold extends Component {
                 <button
                   type="submit"
                   className="button4"
-                  //onClick={handlePledge}
+                  onClick={this.togglePopup}
                 >
                   Pledge
                 </button>
+                {this.state.isOpen && (
+                  <Popup
+                    content={
+                      <>
+                        <b>Congratulations!</b>
+                        <p>Your pledge has been successfully registered!</p>
+                      </>
+                    }
+                    handleClose={this.togglePopup}
+                  />
+                )}
               </div>
             </form>
           </div>

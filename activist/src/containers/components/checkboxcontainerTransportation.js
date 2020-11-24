@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Checkbox from "./Checkbox";
-import "./App.css";
+import "../../App.css";
+import Popup from './Popup';
 
 //Import to make firebase work
 /*
@@ -22,33 +23,29 @@ componentDidMount() {
 }
 */
 
-//const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
-
 //hardcoding the CO2
 const OPTIONS = [
   {
-    name: "No beef",
+    name: "Car share!",
     id: 1,
     CO2: 50,
   },
   {
-    name: "Go pescatarian!",
+    name: "Public transportation!",
     id: 2,
     CO2: 100,
   },
   {
-    name: "Go vegetarian!",
+    name: "Go cycling to work!",
     id: 3,
     CO2: 150,
   },
   {
-    name: "Go vegan!",
+    name: "Work from home!",
     id: 4,
     CO2: 200,
   },
 ];
-
-var userPledges = [1, 2];
 
 //data base
 /*
@@ -77,7 +74,7 @@ const addData = (id, CO2) => {
 };
 */
 
-class CheckboxContainer extends Component {
+class CheckboxContainerTransportation extends Component {
   state = {
     checkboxes: OPTIONS.reduce(
       (options, option) => ({
@@ -86,6 +83,11 @@ class CheckboxContainer extends Component {
       }),
       {}
     ),
+    isOpen: false
+  };
+
+  togglePopup = () => {
+    this.setState({isOpen: !this.state.isOpen})
   };
 
   handleCheckboxChange = (changeEvent) => {
@@ -138,12 +140,19 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button2"
-                  id="pledge"
+                  className="button4"
+                  onClick={this.togglePopup}
                   //onClick={handlePledge}
                 >
                   Pledge
                 </button>
+                {this.state.isOpen && <Popup
+                  content={<>
+                    <b>Congratulations!</b>
+                    <p>Your pledge has been successfully registered!</p>
+                  </>}
+                  handleClose={this.togglePopup}
+                  />} 
               </div>
             </form>
           </div>
@@ -153,4 +162,4 @@ class CheckboxContainer extends Component {
   }
 }
 
-export default CheckboxContainer;
+export default CheckboxContainerTransportation;

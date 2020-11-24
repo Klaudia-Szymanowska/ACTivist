@@ -12,7 +12,7 @@ export const Household = () => {
           <ContainerHomeSettings />
         </div>
         <div className="text">
-          <h3>Food</h3>
+          <h3>Household</h3>
           <div className="center">
             <CheckboxContainerHousehold />
           </div>
