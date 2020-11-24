@@ -8,12 +8,9 @@ export default class Homebutton extends Component {
     return (
       <div>
         <Link to="/home">
-          <img
-            className="column"
-            src={home2}
-            style={{ width: "5%", float: "left" }}
-            alt="set"
-          />
+          <div className="homebar">
+            <img src={home2} alt="set" />
+          </div>
         </Link>
       </div>
     );

@@ -7,10 +7,8 @@ export default class ContainerHomeSettings extends Component {
   render() {
     return (
       <div>
-        <div id="navbuttons">
-          <Settingbutton />
-          <Homebutton />
-        </div>
+        <Settingbutton />
+        <Homebutton />
       </div>
     );
   }
