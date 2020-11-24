@@ -113,7 +113,17 @@ button {
   font-size: 140%;
   text-align: center;
   padding: 10px 10px;
-  width: 12%;
+  width: 13%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+#challbutton4 {
+  font-size: 140%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #427a83;
+  padding: 10px 10px;
+  width: 13%;
   margin-top: 1%;
   margin-bottom: 2%;
 }
@@ -288,7 +298,8 @@ button {
     width: 85%;
   }
 
-  #challbutton3 {
+  #challbutton3,
+  #challbutton4 {
     margin-top: 2%;
     width: 50%;
   }
@@ -304,6 +315,10 @@ button {
   .chartsize {
     margin-top: 15%;
   }
+  .column {
+    width: 100%;
+  }
+
   h3 {
     font-size: 190%;
   }
