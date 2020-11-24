@@ -7,12 +7,9 @@ export default class Settingbutton extends Component {
     return (
       <div>
         <Link to="/settings">
-          <img
-            className="column"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
+          <div className="settbar">
+            <img src={set} alt="set" />
+          </div>
         </Link>
       </div>
     );

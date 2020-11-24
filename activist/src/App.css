@@ -257,6 +257,16 @@ button {
   border-radius: 50%;
 }
 
+.settbar > img {
+  float: right;
+  width: 5%;
+}
+
+.homebar > img {
+  float: left;
+  width: 5%;
+}
+
 .progressbox {
   display: flex;
   justify-content: center;
@@ -298,8 +308,7 @@ button {
     width: 85%;
   }
 
-  #challbutton3,
-  #challbutton4 {
+  #challbutton3 {
     margin-top: 2%;
     width: 50%;
   }
@@ -315,12 +324,18 @@ button {
   .chartsize {
     margin-top: 15%;
   }
-  .column {
-    width: 100%;
-  }
 
   h3 {
     font-size: 190%;
+  }
+
+  .settbar > img {
+    float: right;
+    width: 11%;
+  }
+  .homebar > img {
+    float: left;
+    width: 11%;
   }
 }
 

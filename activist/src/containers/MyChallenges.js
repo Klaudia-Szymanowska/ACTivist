@@ -17,9 +17,7 @@ if (pledgedChallenges) {
 export const MyChallenges = () => {
   return (
     <main>
-      <div id="navbuttons">
-        <ContainerHomeSettings />
-      </div>
+      <ContainerHomeSettings />
       <div className="text">
         <h3>
           <br />
