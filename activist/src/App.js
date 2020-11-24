@@ -21,6 +21,7 @@ import { Household } from "./containers/Household";
 import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
 import { Checkboxes } from "./containers/Checkboxes";
+import { ForgotPassword } from "./containers/ForgotPassword";
 import Charts from "./containers/components/Charts";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route path="/chart" component={Charts} />
           <Route path="/welcome" component={Welcome} />
           <Route path="/test" component={Checkboxes} />
+          <Route path="/forgot" component={ForgotPassword} />
         </Switch>
       </BrowserRouter>
     </main>
