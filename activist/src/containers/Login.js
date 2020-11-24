@@ -68,12 +68,12 @@ export const Login = () => {
             type="password"
           />
         </FormGroup>
-        <div>
+        {/* <div>
           {" "}
           <Link to="/forgot">
             <button>Forgot password?</button>
           </Link>
-        </div>
+        </div> */}
 
         <div>
           {" "}

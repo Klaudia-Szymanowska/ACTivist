@@ -11,6 +11,8 @@ import chart from "./img/chart.png";
 import Piechart from "./components/Piechart";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 
+const count = localStorage.getItem("count");
+
 export const Goals = () => {
   return (
     <main>
@@ -31,9 +33,9 @@ export const Goals = () => {
   </Link> */}
       <div className="text">
         <h4>
-          You have insisted 20 days
+          You have insisted 1 day
           <br />
-          with 6000 kg of CO2 saved!
+          with {count} kg of CO2 saved!
         </h4>
       </div>
 

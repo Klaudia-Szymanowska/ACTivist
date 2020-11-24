@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 
-const CheckboxTest1 = () => {
+const ShoppingCO2 = () => {
   const initialState = () => Number(window.localStorage.getItem("count")) || 0;
   const [count, setCount] = useState(initialState);
 
@@ -26,17 +26,17 @@ const CheckboxTest1 = () => {
         <div>
           <div className="center">
             <button id="challbutton1" onClick={() => addAmount(50)}>
-              No beef <br /> <b>50 kg saved per day!</b>
+              Buy eco products <br /> <b>50 kg saved per day!</b>
             </button>
 
             <button id="challbutton1" onClick={() => addAmount(100)}>
-              Go pescetarian <br /> <b>100 kg saved per day!</b>
+              Go package free <br /> <b>100 kg saved per day!</b>
             </button>
             <button id="challbutton1" onClick={() => addAmount(150)}>
-              Go vegetarian <br /> <b>150 kg saved per day!</b>
+              No plastic bags <br /> <b>150 kg saved per day!</b>
             </button>
             <button id="challbutton1" onClick={() => addAmount(200)}>
-              Go vegan <br /> <b>200 kg saved per day!</b>
+              Buy from local supplier <br /> <b>200 kg saved per day!</b>
             </button>
           </div>
           <div>
@@ -54,4 +54,4 @@ const CheckboxTest1 = () => {
   );
 };
 
-export default CheckboxTest1;
+export default ShoppingCO2;
