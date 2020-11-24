@@ -10,13 +10,13 @@ import "firebase/auth";
 import firebase from "firebase/app";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { currentUser } from "./firebase";
-import { getDefaultNormalizer } from "@testing-library/react";
-//import firebase from "firebase";
 
 export const Home = () => {
   // should we use let instead of var?
-  var user = firebase.auth().currentUser;
-  var name, email, nameFirestore;
+  const user = firebase.auth().currentUser;
+  let name;
+  let email;
+  // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
@@ -72,7 +72,7 @@ export const Home = () => {
       <div className="text">
         {/** The below 'Welcome' only shows the name if the user signs in with Google */}
         <h3>
-          Welcome, {name} {/* {nameFirestore} */}{" "}
+          Welcome {name} {/* {nameFirestore} */}{" "}
         </h3>
       </div>
       <div>
