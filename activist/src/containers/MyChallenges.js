@@ -7,6 +7,13 @@ import CheckboxContainer from "./components/checkboxcontainer";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
+//const foodChal = localStorage.getItem("foodChallenges");
+/*var foodChal = [];
+var pledgedChallenges = localStorage.getItem("foodChallenges");
+if (pledgedChallenges) {
+  foodChal = JSON.parse(pledgedChallenges);
+} */
+
 export const MyChallenges = () => {
   return (
     <main>

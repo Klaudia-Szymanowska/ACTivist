@@ -10,7 +10,6 @@ export default class Homebutton extends Component {
         <Link to="/home">
           <img
             className="column"
-            id="hom"
             src={home2}
             style={{ width: "5%", float: "left" }}
             alt="set"

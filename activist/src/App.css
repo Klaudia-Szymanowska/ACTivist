@@ -304,6 +304,10 @@ button {
   .chartsize {
     margin-top: 15%;
   }
+  .column {
+    width: 100%;
+  }
+
   h3 {
     font-size: 190%;
   }
