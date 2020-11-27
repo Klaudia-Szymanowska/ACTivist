@@ -10,6 +10,7 @@ import "firebase/auth";
 import firebase from "firebase/app";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { currentUser } from "./firebase";
+import Settingbutton from "./components/Settingsbutton";
 
 export const Home = () => {
   // should we use let instead of var?
@@ -61,13 +62,7 @@ export const Home = () => {
     <main>
       <div>
         <Link to="/settings">
-          <img
-            className="column"
-            id="set"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
+          <Settingbutton />
         </Link>
       </div>
       <div className="text">

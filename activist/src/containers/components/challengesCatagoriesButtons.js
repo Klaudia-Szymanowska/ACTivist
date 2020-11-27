@@ -39,7 +39,9 @@ export default class ChallengesCatagoriesButtons extends Component {
           </Link>
         </div>
         <div>
-          <button className="button2"> I will choose later </button>
+          <Link to="/home">
+            <button className="button2"> I will choose later </button>
+          </Link>
         </div>
       </div>
     );

@@ -7,6 +7,7 @@ import firebase from "firebase/app";
 import home2 from "./img/home2.png";
 import Popup from "./components/Popup";
 import { Login } from "./Login";
+import Homebutton from "./components/homebutton";
 
 export const Settings = () => {
   const [value, setValue] = useState(false);
@@ -62,12 +63,7 @@ export const Settings = () => {
       {/*added id and changed style*/}
       <div>
         <Link to="/home">
-          <img
-            class="column"
-            src={home2}
-            style={{ width: "5%", float: "left" }}
-            alt="set"
-          />
+          <Homebutton />
         </Link>
       </div>
 
