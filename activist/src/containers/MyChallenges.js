@@ -1,12 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./App.css";
 import food from "../img/food.png";
 import bike from "../img/bike.png";
-import CheckboxContainer from "./components/checkboxcontainer";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
-
 //const foodChal = localStorage.getItem("foodChallenges");
 /*var foodChal = [];
 var pledgedChallenges = localStorage.getItem("foodChallenges");

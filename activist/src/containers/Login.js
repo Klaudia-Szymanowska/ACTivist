@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
-//import "./Login.css";
-import Signup from "./Signup";
+import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import "./App.css";
 import "firebase/auth";
@@ -13,19 +11,13 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   let history = useHistory();
 
-  // validation of email and password - should be implemented later, and probably expanded with stricter password policy
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
-
   function handleLogin(event) {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(function (error) {
-        // Handle Errors here.
         var errorCode = error.code;
-        var errorMessage = error.message;
+        //var errorMessage = error.message;
         if (errorCode === "auth/wrong-password") {
           alert("Wrong password.");
           setPassword("");
@@ -68,12 +60,6 @@ export const Login = () => {
             type="password"
           />
         </FormGroup>
-        {/* <div>
-          {" "}
-          <Link to="/forgot">
-            <button>Forgot password?</button>
-          </Link>
-        </div> */}
 
         <div>
           {" "}
