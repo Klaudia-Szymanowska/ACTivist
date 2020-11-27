@@ -20,7 +20,7 @@ import { Welcome } from "./containers/Welcome";
 import { Household } from "./containers/Household";
 import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
-import { Checkboxes } from "./containers/Checkboxes";
+//import { Checkboxes } from "./containers/Checkboxes";
 import Charts from "./containers/components/Charts";
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
           <Route path="/goals" component={Goals} />
           <Route path="/chart" component={Charts} />
           <Route path="/welcome" component={Welcome} />
-          <Route path="/test" component={Checkboxes} />
+          {/* <Route path="/test" component={Checkboxes} /> */}
         </Switch>
       </BrowserRouter>
     </main>
