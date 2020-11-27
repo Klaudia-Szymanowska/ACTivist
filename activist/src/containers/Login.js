@@ -30,7 +30,7 @@ export const Login = () => {
           alert("Wrong password.");
           setPassword("");
         } else {
-          alert(errorMessage);
+          //alert(errorMessage);
           setPassword("");
           setEmail("");
         }
