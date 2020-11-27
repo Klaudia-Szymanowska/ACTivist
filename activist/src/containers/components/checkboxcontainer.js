@@ -2,29 +2,6 @@ import React, { Component } from "react";
 import Checkbox from "./Checkbox";
 import "./App.css";
 
-//Import to make firebase work
-/*
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { firebaseAppAuth, database } from "./firebase";
-*/
-
-//import {db} from './src/config';
-/*
-componentDidMount() {
-  db.ref('/todos').on('value', querySnapShot => {
-    let data = querySnapShot.val() ? querySnapShot.val() : {};
-    let todoItems = {...data};
-    this.setState({
-      todos: todoItems,
-    });
-  });
-}
-*/
-
-//const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
-
-//hardcoding the CO2
 const OPTIONS = [
   {
     name: "No beef",
@@ -47,35 +24,6 @@ const OPTIONS = [
     CO2: 200,
   },
 ];
-
-var userPledges = [1, 2];
-
-//data base
-/*
-const COLLECTION = "Challenges"
-
-const addData = (id, CO2) => {
-  const id = id();
-  database
-    .collection(COLLECTION)
-    .add({
-      id: id,
-      CO2: CO2,
-      timestamp_start: today
-      timestand_stop: empty
-      savedCO2: none
-    })
-    .then((newDocument) => {
-      // This will run if adding data was successful
-      console.log("New document created with ID: ", newDocument.id);
-    })
-    .catch((error) => {
-      // If saving data failed, this will run and we will log an error to the console.
-      // Here you should give a message to users as well!
-      console.error(error.message);
-    });
-};
-*/
 
 class CheckboxContainer extends Component {
   state = {
@@ -108,13 +56,6 @@ class CheckboxContainer extends Component {
         console.log(checkbox, "is selected.");
       });
   };
-
-  //Add data to firebase:
-  /*
-  handlePledge = () => {
-    addData(options.id, options.CO2);
-  };
-  */
 
   createCheckbox = (option) => (
     <Checkbox

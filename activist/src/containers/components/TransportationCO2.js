@@ -2,20 +2,16 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 const TransportationCO2 = () => {
-  var userTransportChall = [];
-  var userTransportSaved = [];
+  var userChall = [];
+  var userChallFinish = [];
+  var transportChallFinished = localStorage.getItem("transportChallFinished");
   var pledgedChallenges = localStorage.getItem("transportChallenges");
   if (pledgedChallenges) {
-    userTransportChall = JSON.parse(
-      localStorage.getItem("transportChallenges")
-    );
+    userChall = JSON.parse(localStorage.getItem("transportChallenges"));
   }
-  var savedFoodCarbon = Number(
-    window.localStorage.getItem("transportSavedCarbon")
-  );
-  if (savedFoodCarbon) {
-    userTransportSaved = JSON.parse(
-      localStorage.getItem("transportSavedCarbon")
+  if (transportChallFinished) {
+    userChallFinish = JSON.parse(
+      localStorage.getItem("transportChallFinished")
     );
   }
 
@@ -24,8 +20,8 @@ const TransportationCO2 = () => {
   const [transporttransportCount, setTransporttransportCount] = useState(
     initialState
   );
-  const [challenges, setChallenges] = useState(userTransportChall);
-  const [carbonSavings, setCarbonSavings] = useState(userTransportSaved);
+  const [challenges, setChallenges] = useState(userChall);
+  const [transportFinished, settransportFinished] = useState(userChallFinish);
 
   useEffect(() => {
     window.localStorage.setItem(
@@ -39,12 +35,15 @@ const TransportationCO2 = () => {
   });
 
   useEffect(() => {
-    localStorage.setItem("transportSavedCarbon", JSON.stringify(carbonSavings));
+    localStorage.setItem(
+      "transportChallFinished",
+      JSON.stringify(transportFinished)
+    );
   });
 
   const addChallenge = (newChallenge, newAmount) => {
-    // here update userTransportChall before checking the condition
-    if (!userTransportChall.includes(newChallenge)) {
+    // here update userChall before checking the condition
+    if (!userChall.includes(newChallenge)) {
       setChallenges([...challenges, newChallenge]);
       setTransporttransportCount(transporttransportCount + newAmount);
     }
@@ -53,9 +52,9 @@ const TransportationCO2 = () => {
   const resetAmount = () => {
     const msg = "Are you sure you want to reset the amount to 0kg?";
     if (window.confirm(msg)) {
+      settransportFinished(Object.assign([], userChall));
       setTransporttransportCount(0);
       setChallenges([]);
-      setCarbonSavings([]);
     }
   };
 

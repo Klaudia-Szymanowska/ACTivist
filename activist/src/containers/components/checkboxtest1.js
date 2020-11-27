@@ -3,16 +3,11 @@ import React, { useState, useEffect } from "react";
 
 const CheckboxTest1 = () => {
   var userChall = [];
-  var userSaved = [];
   var userChallFinish = [];
   var foodChallFinished = localStorage.getItem("foodChallFinished");
   var pledgedChallenges = localStorage.getItem("foodChallenges");
   if (pledgedChallenges) {
     userChall = JSON.parse(localStorage.getItem("foodChallenges"));
-  }
-  var savedFoodCarbon = Number(window.localStorage.getItem("foodSavedCarbon"));
-  if (savedFoodCarbon) {
-    userSaved = JSON.parse(localStorage.getItem("foodSavedCarbon"));
   }
   if (foodChallFinished) {
     userChallFinish = JSON.parse(localStorage.getItem("foodChallFinished"));
@@ -22,15 +17,10 @@ const CheckboxTest1 = () => {
     Number(window.localStorage.getItem("foodCount")) || 0;
   const [foodCount, setfoodCount] = useState(initialState);
   const [challenges, setChallenges] = useState(userChall);
-  const [carbonSavings, setCarbonSavings] = useState(userSaved);
   const [foodFinished, setFoodFinished] = useState(userChallFinish);
 
   useEffect(() => {
     localStorage.setItem("foodChallenges", JSON.stringify(challenges));
-  });
-
-  useEffect(() => {
-    localStorage.setItem("foodSavedCarbon", JSON.stringify(carbonSavings));
   });
 
   useEffect(() => {
@@ -55,7 +45,6 @@ const CheckboxTest1 = () => {
       setFoodFinished(Object.assign([], userChall));
       setfoodCount(0);
       setChallenges([]);
-      setCarbonSavings([]);
     }
   };
 
@@ -67,9 +56,7 @@ const CheckboxTest1 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                //addAmount(50);
                 addChallenge("No beef", 50);
-                //addSavings(50);
               }}
             >
               No beef <br /> <b>50 kg saved per day!</b>
@@ -78,9 +65,7 @@ const CheckboxTest1 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                //addAmount(100);
                 addChallenge("Go pescetarian", 100);
-                //addSavings(100);
               }}
             >
               Go pescetarian <br /> <b>100 kg saved per day!</b>
@@ -88,9 +73,7 @@ const CheckboxTest1 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                //addAmount(150);
                 addChallenge("No vegetarian", 100);
-                //addSavings(150);
               }}
             >
               Go vegetarian <br /> <b>150 kg saved per day!</b>
@@ -98,9 +81,7 @@ const CheckboxTest1 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                //addAmount(200);
                 addChallenge("Go vegan", 200);
-                //addSavings(200);
               }}
             >
               Go vegan <br /> <b>200 kg saved per day!</b>

@@ -2,24 +2,26 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 const HouseholdCO2 = () => {
-  var userHHChall = [];
-  var userHHSavesd = [];
+  var userChall = [];
+  var userChallFinish = [];
   var pledgedChallenges = localStorage.getItem("householdChallenges");
-  if (pledgedChallenges) {
-    userHHChall = JSON.parse(localStorage.getItem("householdChallenges"));
-  }
-  var savedHouseholdCarbon = Number(
-    window.localStorage.getItem("householdSavedCarbon")
+  var householdChallengesFinised = localStorage.getItem(
+    "householdChallengesFinised"
   );
-  if (savedHouseholdCarbon) {
-    userHHSavesd = JSON.parse(localStorage.getItem("householdSavedCarbon"));
+  if (pledgedChallenges) {
+    userChall = JSON.parse(localStorage.getItem("householdChallenges"));
+  }
+  if (householdChallengesFinised) {
+    userChallFinish = JSON.parse(
+      localStorage.getItem("householdChallengesFinised")
+    );
   }
 
   const initialState = () =>
     Number(window.localStorage.getItem("householdCount")) || 0;
   const [householdCount, setHouseholdCount] = useState(initialState);
-  const [challenges, setChallenges] = useState(userHHChall);
-  const [carbonSavings, setCarbonSavings] = useState(userHHSavesd);
+  const [challenges, setChallenges] = useState(userChall);
+  const [householdFinished, setHouseholdeFinished] = useState(userChallFinish);
 
   useEffect(() => {
     window.localStorage.setItem("householdCount", householdCount);
@@ -30,37 +32,25 @@ const HouseholdCO2 = () => {
   });
 
   useEffect(() => {
-    localStorage.setItem("householdSavedCarbon", JSON.stringify(carbonSavings));
+    localStorage.setItem(
+      "householdChallengesFinised",
+      JSON.stringify(householdFinished)
+    );
   });
 
   const addChallenge = (newChallenge, newAmount) => {
-    if (!userHHChall.includes(newChallenge)) {
+    if (!userChall.includes(newChallenge)) {
       setChallenges([...challenges, newChallenge]);
       setHouseholdCount(householdCount + newAmount);
-      //addAmount(newAmount);
     }
   };
-
-  /*
-  const addSavings = (newSaving) => {
-    if (!userHHSavesd.includes(newSaving)) {
-      setCarbonSavings([...carbonSavings, newSaving]);
-      addAmount(newSaving);
-    }
-  };
-  */
-  /*
-  const addAmount = (amount) => {
-    setHouseholdCount(householdCount + amount);
-  };
-*/
 
   const resetAmount = () => {
     const msg = "Are you sure you want to reset the amount to 0kg?";
     if (window.confirm(msg)) {
+      setHouseholdeFinished(Object.assign([], userChall));
       setHouseholdCount(0);
       setChallenges([]);
-      //setCarbonSavings([]);
     }
   };
 
@@ -72,9 +62,7 @@ const HouseholdCO2 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                //addAmount(50);
                 addChallenge("Compost at home", 50);
-                //addSavings(50);
               }}
             >
               Compost at home <br /> <b>50 kg saved per day!</b>
@@ -84,7 +72,6 @@ const HouseholdCO2 = () => {
               id="challbutton1"
               onClick={() => {
                 addChallenge("Recycle waste at home", 100);
-                //addSavings(100);
               }}
             >
               Recycle waste at home
@@ -94,7 +81,6 @@ const HouseholdCO2 = () => {
               id="challbutton1"
               onClick={() => {
                 addChallenge("Use less water", 150);
-                //addSavings(150);
               }}
             >
               Use less water <br /> <b>150 kg saved per day!</b>
@@ -103,7 +89,6 @@ const HouseholdCO2 = () => {
               id="challbutton1"
               onClick={() => {
                 addChallenge("Switch off lights", 200);
-                //addSavings(200);
               }}
             >
               Switch off lights <br /> <b>200 kg saved per day!</b>

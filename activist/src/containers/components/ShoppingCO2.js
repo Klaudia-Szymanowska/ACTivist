@@ -2,26 +2,22 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 const ShoppingCO2 = () => {
-  var userShoppingChall = [];
-  var userShoppingSaved = [];
+  var userChall = [];
+  var userChallFinish = [];
+  var shoppingChallFinished = localStorage.getItem("shoppingChallFinished");
   var pledgedChallenges = localStorage.getItem("shoppingChallenges");
   if (pledgedChallenges) {
-    userShoppingChall = JSON.parse(localStorage.getItem("shoppingChallenges"));
+    userChall = JSON.parse(localStorage.getItem("shoppingChallenges"));
   }
-  var savedShoppingCarbon = Number(
-    window.localStorage.getItem("shoppingSavedCarbon")
-  );
-  if (savedShoppingCarbon) {
-    userShoppingSaved = JSON.parse(localStorage.getItem("shoppingSavedCarbon"));
+  if (shoppingChallFinished) {
+    userChallFinish = JSON.parse(localStorage.getItem("shoppingChallFinished"));
   }
 
   const initialState = () =>
     Number(window.localStorage.getItem("shoppingCount")) || 0;
   const [shoppingCount, setShoppingCount] = useState(initialState);
-  const [shoppingChallenges, setShoppingChallenges] = useState(
-    userShoppingChall
-  );
-  const [carbonSavings, setCarbonSavings] = useState(userShoppingSaved);
+  const [shoppingChallenges, setShoppingChallenges] = useState(userChall);
+  const [shoppingFinished, setshoppingFinished] = useState(userChallFinish);
 
   useEffect(() => {
     localStorage.setItem(
@@ -31,16 +27,19 @@ const ShoppingCO2 = () => {
   });
 
   useEffect(() => {
-    localStorage.setItem("shoppingSavedCarbon", JSON.stringify(carbonSavings));
-  });
-
-  useEffect(() => {
     window.localStorage.setItem("shoppingCount", shoppingCount);
   }, [shoppingCount]);
 
+  useEffect(() => {
+    localStorage.setItem(
+      "shoppingChallFinished",
+      JSON.stringify(shoppingFinished)
+    );
+  });
+
   const addChallenge = (newChallenge, newAmount) => {
-    // here update userShoppingChall before checking the condition
-    if (!userShoppingChall.includes(newChallenge)) {
+    // here update userChall before checking the condition
+    if (!userChall.includes(newChallenge)) {
       setShoppingChallenges([...shoppingChallenges, newChallenge]);
       setShoppingCount(shoppingCount + newAmount);
     }
@@ -49,9 +48,9 @@ const ShoppingCO2 = () => {
   const resetAmount = () => {
     const msg = "Are you sure you want to reset the amount to 0kg?";
     if (window.confirm(msg)) {
+      setshoppingFinished(Object.assign([], userChall));
       setShoppingCount(0);
       setShoppingChallenges([]);
-      setCarbonSavings([]);
     }
   };
 
