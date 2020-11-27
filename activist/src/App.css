@@ -312,6 +312,9 @@ button {
     margin-top: 2%;
     width: 50%;
   }
+  #challbutton4 {
+    width: 50%;
+  }
 
   #notifications {
     width: 80%;
