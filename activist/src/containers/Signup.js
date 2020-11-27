@@ -4,6 +4,7 @@ import "./Login.css";
 import { useHistory } from "react-router-dom";
 import "firebase/auth";
 import firebase from "firebase/app";
+import logo from "../img/logo.png";
 
 export const Signup = () => {
   const [name, setName] = useState("");
@@ -37,38 +38,43 @@ export const Signup = () => {
   }
 
   return (
-    <div className="Login">
-      <form onSubmit={handleSubmit}>
-        <FormGroup controlId="name" bsSize="large">
-          <FormLabel>Name</FormLabel>
-          <FormControl
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="name"
-          />
-        </FormGroup>
+    <div>
+      <div className="logo">
+        <img src={logo} id="logo" alt="logo" />
+      </div>
+      <div className="Login">
+        <form onSubmit={handleSubmit}>
+          <FormGroup controlId="name" bsSize="large">
+            <FormLabel>Name</FormLabel>
+            <FormControl
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="name"
+            />
+          </FormGroup>
 
-        <FormGroup controlId="email" bsSize="large">
-          <FormLabel>Email</FormLabel>
-          <FormControl
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-          />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          <FormLabel>Password</FormLabel>
-          <FormControl
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-          />
-        </FormGroup>
-        <div>
-          {" "}
-          <button onClick={handleSubmit}> Submit </button>
-        </div>
-      </form>
+          <FormGroup controlId="email" bsSize="large">
+            <FormLabel>Email</FormLabel>
+            <FormControl
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              type="email"
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <FormLabel>Password</FormLabel>
+            <FormControl
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+            />
+          </FormGroup>
+          <div>
+            {" "}
+            <button onClick={handleSubmit}> Submit </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

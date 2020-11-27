@@ -5,6 +5,7 @@ import "./App.css";
 import "firebase/auth";
 import firebase from "firebase/app";
 import { firebaseAppAuth, provider } from "./firebase";
+import logo from "../img/logo.png";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -41,6 +42,7 @@ export const Login = () => {
     });
 
   return (
+<<<<<<< HEAD
     <div className="Login">
       <form onSubmit={handleLogin}>
         <FormGroup controlId="email" bsSize="large">
@@ -63,19 +65,54 @@ export const Login = () => {
 
         <div>
           {" "}
-          <button onClick={handleLogin}> Login </button>
-        </div>
-        <div>
+=======
+    <div>
+      <div className="logo">
+        <img src={logo} id="logo" alt="logo" />
+      </div>
+      <div className="Login">
+        <form onSubmit={handleLogin}>
+          <div className="logbuttons">
+            <FormGroup controlId="email" bsSize="large">
+              <FormLabel>Email</FormLabel>
+              <FormControl
+                autoFocus
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </FormGroup>
+          </div>
+          <div className="logbuttons">
+            <FormGroup controlId="password" bsSize="large">
+              <FormLabel>Password</FormLabel>
+              <FormControl
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+              />
+            </FormGroup>
+          </div>
+          {/* <div>
           {" "}
-          <Link to="/signup">
-            <button> Sign up </button>
+          <Link to="/forgot">
+            <button>Forgot password?</button>
           </Link>
-        </div>
-        <div>
-          {" "}
-          <button onClick={handleSignIn}>Sign in with Google</button>
-        </div>
-      </form>
+        </div> */}{" "}
+>>>>>>> 3fe572608dde3017569d066e636dccbe47a8f37f
+          <button onClick={handleLogin}> Login </button>
+          <div>
+            {" "}
+            <Link to="/signup">
+              <button> Sign up </button>
+            </Link>
+          </div>
+          <div>
+            {" "}
+            <button onClick={handleSignIn}>Sign in with Google</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
