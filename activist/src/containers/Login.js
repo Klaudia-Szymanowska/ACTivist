@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 //import "./Login.css";
 import Signup from "./Signup";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./App.css";
 import "firebase/auth";
 import firebase from "firebase/app";
@@ -12,6 +12,7 @@ import logo from "../img/logo.png";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
 
   // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
@@ -26,18 +27,11 @@ export const Login = () => {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // ...
-        //can be made to switch-case
-        /* if (errorCode === "auth/invalid-email") {
-          alert("Email not found.");
-          setPassword("");
-          setEmail("");
-        } */
         if (errorCode === "auth/wrong-password") {
           alert("Wrong password.");
           setPassword("");
         } else {
-          alert(errorMessage);
+          //alert(errorMessage);
           setPassword("");
           setEmail("");
         }
@@ -47,7 +41,13 @@ export const Login = () => {
     event.preventDefault();
   }
 
-  const handleSignIn = () => firebaseAppAuth.signInWithPopup(provider);
+  const handleSignIn = () =>
+    firebaseAppAuth.signInWithPopup(provider).then((result) => {
+      let check = result.additionalUserInfo.isNewUser;
+      if (check) {
+        history.push("/welcome");
+      }
+    });
 
   return (
     <div>
