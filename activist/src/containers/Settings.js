@@ -19,10 +19,13 @@ export const Settings = () => {
   const user = firebase.auth().currentUser;
   let name;
   let email;
+  let photoUrl;
 
+  // photoUrl are seemingly correctly retrieved, but I am not sure how to display a url af a file at the moment - to-do
   if (user != null) {
     name = user.displayName;
     email = user.email;
+    photoUrl = user.photoURL;
   }
 
   function handleSignout(event) {
