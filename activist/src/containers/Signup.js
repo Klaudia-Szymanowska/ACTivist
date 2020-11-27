@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 import "./Login.css";
 //import "./src/App.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "firebase/auth";
 import firebase from "firebase/app";
 import { firebaseAppAuth, database, provider } from "./firebase";
@@ -14,6 +14,8 @@ export const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  let history = useHistory();
 
   // validation of email and password - should be implemented later, and probably expanded with stricter password policy
   function validateForm() {
@@ -32,7 +34,8 @@ export const Signup = () => {
           .set({
             name: name,
           });
-        window.location = "/welcome";
+        history.push("/welcome");
+        //window.location = "/welcome";
       })
       .catch(function (error) {
         // Handle Errors here.
@@ -80,18 +83,6 @@ export const Signup = () => {
           {" "}
           <button onClick={handleSubmit}> Submit </button>
         </div>
-
-        {/*  <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Submit
-        </Button>    */}
-
-        <div>
-          {" "}
-          <button onClick={handleSignIn}>Sign in with Google</button>
-        </div>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
-          Sign up with Facebook
-        </Button>
       </form>
     </div>
   );
