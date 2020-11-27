@@ -42,30 +42,6 @@ export const Login = () => {
     });
 
   return (
-<<<<<<< HEAD
-    <div className="Login">
-      <form onSubmit={handleLogin}>
-        <FormGroup controlId="email" bsSize="large">
-          <FormLabel>Email</FormLabel>
-          <FormControl
-            autoFocus
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </FormGroup>
-        <FormGroup controlId="password" bsSize="large">
-          <FormLabel>Password</FormLabel>
-          <FormControl
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-          />
-        </FormGroup>
-
-        <div>
-          {" "}
-=======
     <div>
       <div className="logo">
         <img src={logo} id="logo" alt="logo" />
@@ -99,7 +75,6 @@ export const Login = () => {
             <button>Forgot password?</button>
           </Link>
         </div> */}{" "}
->>>>>>> 3fe572608dde3017569d066e636dccbe47a8f37f
           <button onClick={handleLogin}> Login </button>
           <div>
             {" "}
