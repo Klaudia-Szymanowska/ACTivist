@@ -7,6 +7,7 @@ import household from "../img/home.png";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
+/*
 const foodChal = JSON.parse(localStorage.getItem("foodChallenges"));
 const foodChallList = foodChal.map((chall) => <li>{chall}</li>);
 const finishedFoodChal = JSON.parse(localStorage.getItem("foodChallFinished"));
@@ -38,6 +39,7 @@ const finishedShoppingChal = JSON.parse(
 const finishedShoppingChallList = finishedShoppingChal.map((chall) => (
   <li>{chall}</li>
 ));
+*/
 
 export const MyChallenges = () => {
   return (
@@ -62,7 +64,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{foodChallList}</ul>
+              {/*<ul>{foodChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -78,7 +80,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{householdChallList}</ul>
+              {/*<ul>{householdChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -94,7 +96,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{shoppingChallList}</ul>
+              {/*<ul>{shoppingChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -110,7 +112,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{transportChallList}</ul>
+              {/*<ul>{transportChallList}</ul>*/}
             </b>
           </button>
         </div>
@@ -135,7 +137,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedFoodChallList}</ul>
+              {/*<ul>{finishedFoodChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -151,7 +153,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedHouseholdChallList}</ul>
+              {/*<ul>{finishedHouseholdChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -167,7 +169,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedShoppingChallList}</ul>
+              {/*<ul>{finishedShoppingChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -183,7 +185,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedTransportChallList}</ul>
+              {/*<ul>{finishedTransportChallList}</ul>*/}
             </b>
           </button>
         </div>

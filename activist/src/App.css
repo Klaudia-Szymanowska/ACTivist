@@ -224,8 +224,7 @@ button {
   position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-evenly;
 }
 
 .container3 {
@@ -337,7 +336,8 @@ button {
     width: 500%;
   }
   .chartsize {
-    margin-top: 15%;
+    margin-top: 25%;
+    height: 150%;
   }
 
   h3 {
@@ -382,6 +382,7 @@ h5 {
 h4 {
   font-family: "Roboto";
   color: #427a83;
+  size: 300%;
 }
 
 /* font for settings */
