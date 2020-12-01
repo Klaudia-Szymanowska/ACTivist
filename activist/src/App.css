@@ -368,6 +368,12 @@ h6 {
   text-align: center;
 }
 
+h7 {
+  font-family: "Roboto";
+  font-size: 150%;
+  text-align: center;
+}
+
 .App-logo {
   display: flex;
   justify-content: center;
