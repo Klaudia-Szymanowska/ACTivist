@@ -33,10 +33,14 @@ const CheckboxTest1 = () => {
 
   const addChallenge = (newChallenge, newAmount) => {
     // here update userChall before checking the condition
-    if (!userChall.includes(newChallenge)) {
+    //if (!userChall.includes(newChallenge)) {
+    if (!(userChall && userChall.length)) {
       setChallenges([...challenges, newChallenge]);
       setfoodCount(foodCount + newAmount);
-    }
+    } /*else {
+      const message = "You can only pledge to one food challenge.";
+      window.alert(message);
+    }*/
   };
 
   const resetAmount = () => {
