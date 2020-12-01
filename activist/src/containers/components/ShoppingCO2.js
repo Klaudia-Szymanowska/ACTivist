@@ -3,50 +3,94 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ShoppingCO2 = () => {
-  const initialState = () => Number(window.localStorage.getItem("count")) || 0;
-  const [count, setCount] = useState(initialState);
+  var userChall = [];
+  var userChallFinish = [];
+  var shoppingChallFinished = localStorage.getItem("shoppingChallFinished");
+  var pledgedChallenges = localStorage.getItem("shoppingChallenges");
+  if (pledgedChallenges) {
+    userChall = JSON.parse(localStorage.getItem("shoppingChallenges"));
+  }
+  if (shoppingChallFinished) {
+    userChallFinish = JSON.parse(localStorage.getItem("shoppingChallFinished"));
+  }
 
-  const addAmount = (amount) => {
-    setCount(count + amount);
+  const initialState = () =>
+    Number(window.localStorage.getItem("shoppingCount")) || 0;
+  const [shoppingCount, setShoppingCount] = useState(initialState);
+  const [shoppingChallenges, setShoppingChallenges] = useState(userChall);
+  const [shoppingFinished, setshoppingFinished] = useState(userChallFinish);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "shoppingChallenges",
+      JSON.stringify(shoppingChallenges)
+    );
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("shoppingCount", shoppingCount);
+  }, [shoppingCount]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "shoppingChallFinished",
+      JSON.stringify(shoppingFinished)
+    );
+  });
+
+  const addChallenge = (newChallenge, newAmount) => {
+    // here update userChall before checking the condition
+    if (!userChall.includes(newChallenge)) {
+      setShoppingChallenges([...shoppingChallenges, newChallenge]);
+      setShoppingCount(shoppingCount + newAmount);
+    }
   };
 
   const resetAmount = () => {
     const msg = "Are you sure you want to reset the amount to 0kg?";
     if (window.confirm(msg)) {
-      setCount(0);
+      setshoppingFinished(Object.assign([], userChall));
+      setShoppingCount(0);
+      setShoppingChallenges([]);
     }
   };
-
-  useEffect(() => {
-    window.localStorage.setItem("count", count);
-  }, [count]);
 
   return (
     <main>
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{count}kg of CO2</span> today!
+            Congrats! You've saved <span>{shoppingCount}kg of CO2</span> today!
           </h3>
         </div>
         <div>
           <div className="center">
-            <button id="challbutton1" onClick={() => addAmount(50)}>
+            <button
+              id="challbutton1"
+              onClick={() => addChallenge("Buy eco products", 50)}
+            >
               Buy eco products <br /> <b>50 kg saved per day!</b>
             </button>
 
-            <button id="challbutton1" onClick={() => addAmount(100)}>
+            <button
+              id="challbutton1"
+              onClick={() => addChallenge("Go package free", 100)}
+            >
               Go package free <br /> <b>100 kg saved per day!</b>
             </button>
-            <button id="challbutton1" onClick={() => addAmount(150)}>
+            <button
+              id="challbutton1"
+              onClick={() => addChallenge("No plastic bags", 150)}
+            >
               No plastic bags <br /> <b>150 kg saved per day!</b>
             </button>
-            <button id="challbutton1" onClick={() => addAmount(200)}>
+            <button
+              id="challbutton1"
+              onClick={() => addChallenge("Buy from local supplier", 200)}
+            >
               Buy from local supplier <br /> <b>200 kg saved per day!</b>
             </button>
           </div>
-
-          {/*<h3>You've saved {count}kg of CO2 so far.</h3>*/}
           <button id="challbutton3" onClick={resetAmount}>
             Reset Amount
           </button>

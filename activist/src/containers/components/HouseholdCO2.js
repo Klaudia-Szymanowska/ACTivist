@@ -3,50 +3,103 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HouseholdCO2 = () => {
-  const initialState = () => Number(window.localStorage.getItem("count")) || 0;
-  const [count, setCount] = useState(initialState);
+  var userChall = [];
+  var userChallFinish = [];
+  var pledgedChallenges = localStorage.getItem("householdChallenges");
+  var householdChallengesFinised = localStorage.getItem(
+    "householdChallengesFinised"
+  );
+  if (pledgedChallenges) {
+    userChall = JSON.parse(localStorage.getItem("householdChallenges"));
+  }
+  if (householdChallengesFinised) {
+    userChallFinish = JSON.parse(
+      localStorage.getItem("householdChallengesFinised")
+    );
+  }
 
-  const addAmount = (amount) => {
-    setCount(count + amount);
+  const initialState = () =>
+    Number(window.localStorage.getItem("householdCount")) || 0;
+  const [householdCount, setHouseholdCount] = useState(initialState);
+  const [challenges, setChallenges] = useState(userChall);
+  const [householdFinished, setHouseholdeFinished] = useState(userChallFinish);
+
+  useEffect(() => {
+    window.localStorage.setItem("householdCount", householdCount);
+  }, [householdCount]);
+
+  useEffect(() => {
+    localStorage.setItem("householdChallenges", JSON.stringify(challenges));
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      "householdChallengesFinised",
+      JSON.stringify(householdFinished)
+    );
+  });
+
+  const addChallenge = (newChallenge, newAmount) => {
+    if (!userChall.includes(newChallenge)) {
+      setChallenges([...challenges, newChallenge]);
+      setHouseholdCount(householdCount + newAmount);
+    }
   };
 
   const resetAmount = () => {
     const msg = "Are you sure you want to reset the amount to 0kg?";
     if (window.confirm(msg)) {
-      setCount(0);
+      setHouseholdeFinished(Object.assign([], userChall));
+      setHouseholdCount(0);
+      setChallenges([]);
     }
   };
-
-  useEffect(() => {
-    window.localStorage.setItem("count", count);
-  }, [count]);
 
   return (
     <main>
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{count}kg of CO2</span> today!
+            Congrats! You've saved <span>{householdCount}kg of CO2</span> today!
           </h3>
         </div>
         <div>
           <div className="center">
-            <button id="challbutton1" onClick={() => addAmount(50)}>
+            <button
+              id="challbutton1"
+              onClick={() => {
+                addChallenge("Compost at home", 50);
+              }}
+            >
               Compost at home <br /> <b>50 kg saved per day!</b>
             </button>
 
-            <button id="challbutton1" onClick={() => addAmount(100)}>
+            <button
+              id="challbutton1"
+              onClick={() => {
+                addChallenge("Recycle waste at home", 100);
+              }}
+            >
               Recycle waste at home
               <br /> <b>100 kg saved per day!</b>
             </button>
-            <button id="challbutton1" onClick={() => addAmount(150)}>
+            <button
+              id="challbutton1"
+              onClick={() => {
+                addChallenge("Use less water", 150);
+              }}
+            >
               Use less water <br /> <b>150 kg saved per day!</b>
             </button>
-            <button id="challbutton1" onClick={() => addAmount(200)}>
+            <button
+              id="challbutton1"
+              onClick={() => {
+                addChallenge("Switch off lights", 200);
+              }}
+            >
               Switch off lights <br /> <b>200 kg saved per day!</b>
             </button>
           </div>
-          {/* <h3>You've saved {count}kg of CO2 so far.</h3> */}
           <button id="challbutton3" onClick={resetAmount}>
             Reset Amount
           </button>

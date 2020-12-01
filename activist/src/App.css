@@ -17,6 +17,15 @@ body {
   box-sizing: border-box;
 }
 
+.Login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
 .Page {
   padding: 60px 0;
 }
@@ -257,6 +266,13 @@ button {
   border-radius: 50%;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: center;
+}
+
 .settbar > img {
   float: right;
   width: 5%;
@@ -298,11 +314,7 @@ button {
     float: center;
   }
 
-  #challbutton {
-    margin-top: 2%;
-    width: 85%;
-  }
-
+  #challbutton,
   #challbutton1 {
     margin-top: 2%;
     width: 85%;
@@ -340,7 +352,19 @@ button {
     float: left;
     width: 11%;
   }
+
+  .logo {
+    margin-top: 9%;
+    margin-bottom: -32%;
+  }
+  #subpass {
+    margin-top: 0%;
+  }
 }
+
+/* .logbuttons {
+    width: 75%;
+  }  */
 
 input.form-check-input {
   width: 10px;

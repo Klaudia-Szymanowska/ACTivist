@@ -1,27 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import set from "./img/set.png";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
 import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { currentUser } from "./firebase";
+//import { useCollectionData } from "react-firebase-hooks/firestore";
+//import { currentUser } from "./firebase";
 import Settingbutton from "./components/Settingsbutton";
 
 export const Home = () => {
-  // should we use let instead of var?
   const user = firebase.auth().currentUser;
   let name;
-  let email;
   // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
-    email = user.email;
     //nameFirestore = fecthName();
   }
 
@@ -56,7 +52,13 @@ export const Home = () => {
   } */
 
   //const savedCarbon = 100 + 200 + 300 + 400;
-  const count = localStorage.getItem("count");
+  //const count = localStorage.getItem("count");
+  const foodCount = Number(localStorage.getItem("foodCount"));
+  const householdCount = Number(localStorage.getItem("householdCount"));
+  const transportCount = Number(localStorage.getItem("transportCount"));
+  const shoppingCount = Number(localStorage.getItem("shoppingCount"));
+  const totalCount =
+    foodCount + householdCount + transportCount + shoppingCount;
 
   return (
     <main>
@@ -76,7 +78,7 @@ export const Home = () => {
           <button className="circle">
             <h5 style={{ fontSize: "120%" }}>
               Your carbon <br /> savings are:
-              <h3>{count}</h3>
+              <h3>{totalCount}</h3>
               kg
             </h5>
           </button>

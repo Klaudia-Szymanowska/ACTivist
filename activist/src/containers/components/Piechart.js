@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Pie } from "react-chartjs-2";
 
+const foodCount = Number(localStorage.getItem("foodCount"));
+const householdCount = Number(localStorage.getItem("householdCount"));
+const transportationCount = Number(localStorage.getItem("transportationCount"));
+const shoppingCount = Number(localStorage.getItem("shoppingCount"));
+const totalCount =
+  foodCount + householdCount + transportationCount + shoppingCount;
+
 const Charts = () => {
   const [chartData, setChartData] = useState({});
   const chart = () => {
     setChartData({
-      labels: ["shopping", "food", "transport", "household"],
+      labels: [
+        "shopping: " + ((shoppingCount / totalCount) * 100).toFixed(2) + "%",
+        "food: " + ((foodCount / totalCount) * 100).toFixed(2) + "%",
+        "transport: " +
+          ((transportationCount / totalCount) * 100).toFixed(2) +
+          "%",
+        "household: " + ((householdCount / totalCount) * 100).toFixed(2) + "%",
+      ],
       datasets: [
         {
           label: "amount saved",
-          data: [100, 200, 300, 400],
+          data: [shoppingCount, foodCount, transportationCount, householdCount],
           backgroundColor: [
             "rgba(75,192,192,0.1)",
             "rgba(75,192,192,0.3)",
