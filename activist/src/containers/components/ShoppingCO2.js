@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ShoppingCO2 = () => {
   var userChall = [];
@@ -58,6 +59,11 @@ const ShoppingCO2 = () => {
     <main>
       <div className="text">
         <div>
+          <h3>
+            Congrats! You've saved <span>{shoppingCount}kg of CO2</span> today!
+          </h3>
+        </div>
+        <div>
           <div className="center">
             <button
               id="challbutton1"
@@ -85,16 +91,14 @@ const ShoppingCO2 = () => {
               Buy from local supplier <br /> <b>200 kg saved per day!</b>
             </button>
           </div>
-          <div>
-            <h3>
-              Congrats! You've saved <span>{shoppingCount}kg of CO2</span>{" "}
-              today!
-            </h3>
-          </div>
-          <h3>You've saved {shoppingCount}kg of CO2 so far.</h3>
           <button id="challbutton3" onClick={resetAmount}>
             Reset Amount
           </button>
+          <div>
+            <Link to="/home">
+              <button id="challbutton4">Pledge</button>
+            </Link>
+          </div>
         </div>
       </div>
     </main>

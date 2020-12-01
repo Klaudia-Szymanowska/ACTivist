@@ -17,6 +17,15 @@ body {
   box-sizing: border-box;
 }
 
+.Login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
 .Page {
   padding: 60px 0;
 }
@@ -113,7 +122,17 @@ button {
   font-size: 140%;
   text-align: center;
   padding: 10px 10px;
-  width: 12%;
+  width: 13%;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+#challbutton4 {
+  font-size: 140%;
+  text-align: center;
+  color: #ffffff;
+  background-color: #427a83;
+  padding: 10px 10px;
+  width: 13%;
   margin-top: 1%;
   margin-bottom: 2%;
 }
@@ -247,6 +266,23 @@ button {
   border-radius: 50%;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: center;
+}
+
+.settbar > img {
+  float: right;
+  width: 5%;
+}
+
+.homebar > img {
+  float: left;
+  width: 5%;
+}
+
 .progressbox {
   display: flex;
   justify-content: center;
@@ -278,11 +314,7 @@ button {
     float: center;
   }
 
-  #challbutton {
-    margin-top: 2%;
-    width: 85%;
-  }
-
+  #challbutton,
   #challbutton1 {
     margin-top: 2%;
     width: 85%;
@@ -290,6 +322,9 @@ button {
 
   #challbutton3 {
     margin-top: 2%;
+    width: 50%;
+  }
+  #challbutton4 {
     width: 50%;
   }
 
@@ -304,14 +339,32 @@ button {
   .chartsize {
     margin-top: 15%;
   }
-  .column {
-    width: 100%;
-  }
 
   h3 {
     font-size: 190%;
   }
+
+  .settbar > img {
+    float: right;
+    width: 11%;
+  }
+  .homebar > img {
+    float: left;
+    width: 11%;
+  }
+
+  .logo {
+    margin-top: 9%;
+    margin-bottom: -32%;
+  }
+  #subpass {
+    margin-top: 0%;
+  }
 }
+
+/* .logbuttons {
+    width: 75%;
+  }  */
 
 input.form-check-input {
   width: 10px;

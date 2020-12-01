@@ -41,19 +41,17 @@ export function Changepassword() {
               cleanForms();
             })
             .catch(function (error) {
-              var errorCode = error.code;
+              //var errorCode = error.code;
               var errorMessage = error.message;
               alert(errorMessage);
               cleanForms();
-              //Do something
             });
         })
         .catch(function (error) {
-          var errorCode = error.code;
+          //var errorCode = error.code;
           var errorMessage = error.message;
           alert(errorMessage);
           cleanForms();
-          //Do something
         });
     } else {
       alert("Not the same password");

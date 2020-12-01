@@ -1,26 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import set from "./img/set.png";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
 import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { currentUser } from "./firebase";
+//import { useCollectionData } from "react-firebase-hooks/firestore";
+//import { currentUser } from "./firebase";
+import Settingbutton from "./components/Settingsbutton";
 
 export const Home = () => {
-  // should we use let instead of var?
   const user = firebase.auth().currentUser;
   let name;
-  let email;
   // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
-    email = user.email;
     //nameFirestore = fecthName();
   }
 
@@ -67,13 +64,7 @@ export const Home = () => {
     <main>
       <div>
         <Link to="/settings">
-          <img
-            className="column"
-            id="set"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
+          <Settingbutton />
         </Link>
       </div>
       <div className="text">

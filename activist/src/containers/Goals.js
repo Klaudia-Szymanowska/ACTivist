@@ -16,7 +16,6 @@ export const Goals = () => {
       <div id="navbuttons">
         <ContainerHomeSettings />
       </div>
-
       <div className="text">
         <h3>Congratulations</h3>
       </div>

@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-import Switch from "./components/Switch";
 import "firebase/auth";
 import firebase from "firebase/app";
-import home2 from "./img/home2.png";
 import Popup from "./components/Popup";
-import { Login } from "./Login";
+import Homebutton from "./components/homebutton";
 
 export const Settings = () => {
-  const [value, setValue] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -18,10 +15,13 @@ export const Settings = () => {
   const user = firebase.auth().currentUser;
   let name;
   let email;
+  //let photoUrl;
 
+  // photoUrl are seemingly correctly retrieved, but I am not sure how to display a url af a file at the moment - to-do
   if (user != null) {
     name = user.displayName;
     email = user.email;
+    //photoUrl = user.photoURL;
   }
 
   function handleSignout(event) {
@@ -33,10 +33,9 @@ export const Settings = () => {
         console.log("User Signed Out!");
       })
       .catch(function (error) {
-        // Handle Errors here.
         console.log(error);
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
       });
   }
 
@@ -48,26 +47,17 @@ export const Settings = () => {
         console.log("Account deleted!");
       })
       .catch(function (error) {
-        // Handle Errors here.
         console.log(error);
-        var errorCode = error.code;
-        var errorMessage = error.message;
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
       });
   }
 
   return (
     <main>
-      {/*to be changed by Louise as a component */}
-
-      {/*added id and changed style*/}
       <div>
         <Link to="/home">
-          <img
-            class="column"
-            src={home2}
-            style={{ width: "5%", float: "left" }}
-            alt="set"
-          />
+          <Homebutton />
         </Link>
       </div>
 

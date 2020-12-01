@@ -5,6 +5,7 @@ import bike from "../img/bike.png";
 import shopping from "../img/cart.png";
 import household from "../img/home.png";
 import ContainerHomeSettings from "./components/containerHomeSettings";
+import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 const foodChal = JSON.parse(localStorage.getItem("foodChallenges"));
 const foodChallList = foodChal.map((chall) => <li>{chall}</li>);
@@ -41,9 +42,7 @@ const finishedShoppingChallList = finishedShoppingChal.map((chall) => (
 export const MyChallenges = () => {
   return (
     <main>
-      <div id="navbuttons">
-        <ContainerHomeSettings />
-      </div>
+      <ContainerHomeSettings />
       <div className="text">
         <h3>
           <br />
