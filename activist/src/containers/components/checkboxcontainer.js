@@ -34,6 +34,12 @@ class CheckboxContainer extends Component {
       }),
       {}
     ),
+    isOpen: false,
+    // isPledged: false,
+  };
+
+  togglePopup = () => {
+    this.setState({isOpen: !this.state.isOpen})
   };
 
   handleCheckboxChange = (changeEvent) => {
@@ -57,6 +63,27 @@ class CheckboxContainer extends Component {
       });
   };
 
+  // handlePledge = () => {
+  //   const {isPledged} = this.state
+  //   localStorage.setItem('isPledged', isPledged)
+  //   localStorgae.
+  //   // const value = option.type === 'checkbox' ? option.checked: option.value;
+  //   // this.setState({ [option.name, option.CO2]: value })
+  // }
+
+  // componentDidMount() {
+  //   const isPledged = localStorage.getItem('isPledged') === 'true';
+  //   const challenge = rememberMe ? localStorage.getItem('user') : '';
+  //   this.setState({ user, isPledged });
+  // }
+
+  //Add data to firebase:
+  /*
+  handlePledge = () => {
+    addData(options.id, options.CO2);
+  };
+  */
+
   createCheckbox = (option) => (
     <Checkbox
       label1={option.name}
@@ -79,8 +106,10 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button2"
-                  id="pledge"
+                  className="button4"
+                  onClick={this.togglePopup}
+                  value={this.state.isPledged}
+                  // id="pledge"
                   //onClick={handlePledge}
                 >
                   Pledge
