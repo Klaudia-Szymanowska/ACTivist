@@ -13,9 +13,10 @@ export const Challenges = () => {
         <div className="text">
           <div>
             <h3>
-              Let’s choose one challenge <br /> under one of the four
-              categories!
-              <br />{" "}
+              Pick a category to choose a challenge!{" "}
+              {/* Let’s choose one
+              challenge <br /> under one of the four categories!
+              <br />{" "} */}
             </h3>
           </div>
           <div>
