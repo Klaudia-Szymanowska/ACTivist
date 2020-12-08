@@ -65,7 +65,7 @@ export const Settings = () => {
         <h3>
           {name} {/* {nameFirestore} */}{" "}
         </h3>
-        <h2>{email}</h2>
+        <h4>{email}</h4>
       </div>
 
       <div className="text">
