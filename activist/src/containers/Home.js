@@ -38,8 +38,6 @@ export const Home = () => {
 "The worst impacts of climate change could be irreversible by 2030.",
 
 ];
-// let i = facts.length
-// const j = Math.floor(math.random() * 1);
 
   return (
     <main>
