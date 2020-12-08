@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const CheckboxTest1 = () => {
+const FoodCO2 = () => {
   var userChall = [];
   var userChallFinish = [];
   var foodChallFinished = localStorage.getItem("foodChallFinished");
@@ -34,14 +34,15 @@ const CheckboxTest1 = () => {
 
   const addChallenge = (newChallenge, newAmount) => {
     // here update userChall before checking the condition
+    userChall = JSON.parse(localStorage.getItem("foodChallenges"));
     //if (!userChall.includes(newChallenge)) {
     if (!(userChall && userChall.length)) {
       setChallenges([...challenges, newChallenge]);
       setfoodCount(foodCount + newAmount);
-    } /*else {
-      const message = "You can only pledge to one food challenge.";
+    } else {
+      const message = "You can only pledge to one food challenge at the time.";
       window.alert(message);
-    }*/
+    }
   };
 
   const resetAmount = () => {
@@ -83,7 +84,7 @@ const CheckboxTest1 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("No vegetarian", 100);
+                addChallenge("Go vegetarian", 100);
               }}
             >
               Go vegetarian <br /> <b>150 kg saved per day!</b>
@@ -97,8 +98,6 @@ const CheckboxTest1 = () => {
               Go vegan <br /> <b>200 kg saved per day!</b>
             </button>
           </div>
-
-          {/* <h3>You've saved {count}kg of CO2 so far.</h3> */}
           <button id="challbutton3" onClick={resetAmount}>
             Reset Amount
           </button>
@@ -113,4 +112,4 @@ const CheckboxTest1 = () => {
   );
 };
 
-export default CheckboxTest1;
+export default FoodCO2;
