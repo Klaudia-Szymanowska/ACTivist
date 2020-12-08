@@ -44,6 +44,7 @@ export const Settings = () => {
       .delete()
       .then(function () {
         // Delete successful
+        localStorage.clear();
         console.log("Account deleted!");
       })
       .catch(function (error) {
