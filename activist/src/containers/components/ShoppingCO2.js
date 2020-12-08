@@ -40,6 +40,7 @@ const ShoppingCO2 = () => {
 
   const addChallenge = (newChallenge, newAmount) => {
     // here update userChall before checking the condition
+    userChall = JSON.parse(localStorage.getItem("shoppingChallenges"));
     if (!userChall.includes(newChallenge)) {
       setShoppingChallenges([...shoppingChallenges, newChallenge]);
       setShoppingCount(shoppingCount + newAmount);

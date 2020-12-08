@@ -3,14 +3,14 @@ import "./App.css";
 import Piechart from "./components/Piechart";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 
-const foodCount = Number(localStorage.getItem("foodCount"));
-const householdCount = Number(localStorage.getItem("householdCount"));
-const transportationCount = Number(localStorage.getItem("transportCount"));
-const shoppingCount = Number(localStorage.getItem("shoppingCount"));
-const totalCount =
-  foodCount + householdCount + transportationCount + shoppingCount;
-
 export const Goals = () => {
+  const foodCount = Number(localStorage.getItem("foodCount"));
+  const householdCount = Number(localStorage.getItem("householdCount"));
+  const transportationCount = Number(localStorage.getItem("transportCount"));
+  const shoppingCount = Number(localStorage.getItem("shoppingCount"));
+  const totalCount =
+    foodCount + householdCount + transportationCount + shoppingCount;
+
   return (
     <main>
       <div id="navbuttons">

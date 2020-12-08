@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import CheckboxTest1 from "./components/checkboxtest1";
+import FoodCO2 from "./components/FoodCO2";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 
 export const Food = () => {
@@ -14,7 +14,7 @@ export const Food = () => {
           <h3>Food</h3>
           <div className="center">
             {/*<CheckboxContainer />*/}
-            <CheckboxTest1 />
+            <FoodCO2 />
           </div>
         </div>
         );

@@ -40,6 +40,8 @@ const HouseholdCO2 = () => {
   });
 
   const addChallenge = (newChallenge, newAmount) => {
+    // here update userChall before checking the condition
+    userChall = JSON.parse(localStorage.getItem("householdChallenges"));
     if (!userChall.includes(newChallenge)) {
       setChallenges([...challenges, newChallenge]);
       setHouseholdCount(householdCount + newAmount);

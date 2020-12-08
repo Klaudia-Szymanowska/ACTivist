@@ -39,9 +39,14 @@ const TransportationCO2 = () => {
 
   const addChallenge = (newChallenge, newAmount) => {
     // here update userChall before checking the condition
-    if (!userChall.includes(newChallenge)) {
+    userChall = JSON.parse(localStorage.getItem("transportChallenges"));
+    if (!(userChall && userChall.length)) {
       setChallenges([...challenges, newChallenge]);
       setTransporttransportCount(transportCount + newAmount);
+    } else {
+      const message =
+        "You can only pledge to one transportation challenge at the time.";
+      window.alert(message);
     }
   };
 
