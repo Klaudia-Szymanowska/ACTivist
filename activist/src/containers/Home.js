@@ -10,6 +10,8 @@ import firebase from "firebase/app";
 //import { useCollectionData } from "react-firebase-hooks/firestore";
 //import { currentUser } from "./firebase";
 import Settingbutton from "./components/Settingsbutton";
+import tree from "./img/tree.png"
+import bulb from "./img/bulb.png"
 
 export const Home = () => {
   const user = firebase.auth().currentUser;
