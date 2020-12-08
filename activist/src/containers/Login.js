@@ -29,7 +29,6 @@ export const Login = () => {
         }
         console.log(error);
       });
-
     event.preventDefault();
   }
 
@@ -68,13 +67,7 @@ export const Login = () => {
                 type="password"
               />
             </FormGroup>
-          </div>
-          {/* <div>
-          {" "}
-          <Link to="/forgot">
-            <button>Forgot password?</button>
-          </Link>
-        </div> */}{" "}
+          </div>{" "}
           <button onClick={handleLogin}> Login </button>
           <div>
             {" "}
