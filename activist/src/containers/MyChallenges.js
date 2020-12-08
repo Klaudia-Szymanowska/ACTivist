@@ -97,6 +97,7 @@ export const MyChallenges = () => {
           <br />
           Pledged challenges:
         </h3>
+<<<<<<< HEAD
         <div className="center">
           <button
             id="challbutton"
@@ -162,14 +163,53 @@ export const MyChallenges = () => {
               <ul>{transportChallList}</ul>
             </b>
           </button>
+=======
+        <div className="container">
+          <div className="content2">
+            <div className="center">
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={food} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{foodChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={household} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{householdChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={shopping} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{shoppingChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={bike} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{transportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> buttonNames
         </div>
-        <div className="container"></div>
       </div>
       <div className="text">
         <h3>
           <br />
           Finished challenges:
         </h3>
+<<<<<<< HEAD
         <div className="center">
           <button
             id="challbutton"
@@ -235,6 +275,50 @@ export const MyChallenges = () => {
               <ul>{finishedTransportChallList}</ul>
             </b>
           </button>
+=======
+        <div className="container">
+          <div className="content2">
+            <div className="center">
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={food} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{finishedFoodChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
+                  <b>
+                    <ul>{finishedHouseholdChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={shopping} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{finishedShoppingChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img src={bike} id="imgchall" alt="food" />
+                  <b>
+                    <ul>{finishedTransportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> buttonNames
         </div>
       </div>
     </main>

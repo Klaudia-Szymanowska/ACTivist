@@ -50,6 +50,13 @@ h6 {
   color: #ffffff;
 }
 
+b {
+  text-align: left;
+  color: #000000;
+  font-size: 75%;
+  float: center;
+}
+
 .column {
   float: left;
   width: 40%;
@@ -102,6 +109,17 @@ button {
   width: 25%;
   margin-top: 1%;
   margin-bottom: 5%;
+}
+
+#challbutton2 {
+  font-size: 220%;
+  text-align: left;
+  background: transparent;
+}
+
+.textchall {
+  display: flex;
+  justify-content: flex-start;
 }
 
 #challbutton1:focus {
@@ -366,6 +384,9 @@ button {
   .content {
     font-size: 70%;
   }
+  .content2 {
+    font-size: 100%;
+  }
 }
 
 /* .logbuttons {
@@ -462,8 +483,8 @@ h7 {
 .center {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
+  align-items: left;
+  align-content: left;
   font-size: 70%;
   text-align: left;
   padding: 10px 40px;
@@ -482,6 +503,19 @@ h7 {
   padding: 5px 0px;
 }
 .content {
+  margin-top: 4%;
+  padding: 20px;
+  width: 710px;
+  position: relative;
+  background: rgb(
+    204,
+    204,
+    204
+  ); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.content2 {
   margin-top: 4%;
   padding: 20px;
   width: 710px;
