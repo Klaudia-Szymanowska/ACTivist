@@ -226,6 +226,7 @@ button {
   position: center;
   float: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .container1 {
@@ -354,8 +355,7 @@ button {
     width: 500%;
   }
   .chartsize {
-    margin-top: 25%;
-    height: 150%;
+    margin-top: 15%;
   }
 
   h3 {
@@ -383,6 +383,8 @@ button {
   }
   .content {
     font-size: 70%;
+    padding: 7px;
+    width: 300px;
   }
   .content2 {
     font-size: 100%;

@@ -128,10 +128,23 @@ export const MyChallenges = () => {
               <div id="challbutton2">
                 <div className="textchall">
                   <img
-                    src={household}
+                    src={bike}
                     id="imgchall"
                     alt="food"
                     style={{ height: "50px", marginTop: "10px" }}
+                  />
+                  <b>
+                    <ul>{transportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "47px", marginTop: "10px" }}
                   />
                   <b>
                     <ul>{householdChallList}</ul>
@@ -148,19 +161,6 @@ export const MyChallenges = () => {
                   />
                   <b>
                     <ul>{shoppingChallList}</ul>
-                  </b>
-                </div>
-              </div>
-              <div id="challbutton2">
-                <div className="textchall">
-                  <img
-                    src={bike}
-                    id="imgchall"
-                    alt="food"
-                    style={{ height: "50px", marginTop: "10px" }}
-                  />
-                  <b>
-                    <ul>{transportChallList}</ul>
                   </b>
                 </div>
               </div>
@@ -192,10 +192,23 @@ export const MyChallenges = () => {
               <div id="challbutton2">
                 <div className="textchall">
                   <img
-                    src={household}
+                    src={bike}
                     id="imgchall"
                     alt="food"
                     style={{ height: "50px", marginTop: "10px" }}
+                  />
+                  <b>
+                    <ul>{finishedTransportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "47px", marginTop: "10px" }}
                   />
                   <b>
                     <ul>{finishedHouseholdChallList}</ul>
@@ -212,19 +225,6 @@ export const MyChallenges = () => {
                   />
                   <b>
                     <ul>{finishedShoppingChallList}</ul>
-                  </b>
-                </div>
-              </div>
-              <div id="challbutton2">
-                <div className="textchall">
-                  <img
-                    src={bike}
-                    id="imgchall"
-                    alt="food"
-                    style={{ height: "50px", marginTop: "10px" }}
-                  />
-                  <b>
-                    <ul>{finishedTransportChallList}</ul>
                   </b>
                 </div>
               </div>
