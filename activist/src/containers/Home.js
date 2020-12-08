@@ -7,15 +7,11 @@ import rew from "./img/rew.png";
 import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
-//import { useCollectionData } from "react-firebase-hooks/firestore";
-//import { currentUser } from "./firebase";
 import Settingbutton from "./components/Settingsbutton";
 
 export const Home = () => {
   const user = firebase.auth().currentUser;
   let name;
-
-  // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
@@ -31,13 +27,6 @@ export const Home = () => {
     foodCount + householdCount + transportCount + shoppingCount;
   let trees = totalCount / 21;
 
-  function calculateTrees() {
-    //if (totalCount > 0) {
-    let trees = totalCount / 21;
-    return trees.toString;
-    //}
-  }
-
   return (
     <main>
       <div>
@@ -47,9 +36,7 @@ export const Home = () => {
       </div>
       <div className="text">
         {/** The below 'Welcome' only shows the name if the user signs in with Google */}
-        <h3>
-          Welcome {name} {/* {nameFirestore} */}{" "}
-        </h3>
+        <h3>Welcome {name} </h3>
       </div>
       <div>
         <div className="container">
@@ -96,7 +83,6 @@ export const Home = () => {
                     absorb in a year!
                   </div>
                 </div>
-
                 <p align="left">
                   <div>
                     <img src={chall} alt="chall" />
