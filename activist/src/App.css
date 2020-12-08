@@ -352,6 +352,9 @@ button {
     float: left;
     width: 11%;
   }
+  .iconswelcome > img {
+    width: 12%;
+  }
 
   .logo {
     margin-top: 9%;
@@ -359,6 +362,9 @@ button {
   }
   #subpass {
     margin-top: 0%;
+  }
+  .content {
+    font-size: 70%;
   }
 }
 
@@ -390,6 +396,12 @@ h6 {
   font-family: "Roboto";
   color: #427a83;
   font-size: 100%;
+  text-align: center;
+}
+
+h7 {
+  font-family: "Roboto";
+  font-size: 150%;
   text-align: center;
 }
 

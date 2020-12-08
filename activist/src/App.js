@@ -22,6 +22,7 @@ import { Shopping } from "./containers/Shopping";
 import { Changepassword } from "./containers/Changepassword";
 //import { Checkboxes } from "./containers/Checkboxes";
 import Charts from "./containers/components/Charts";
+// import {storage} from "./containers/ChallengeList";
 
 function App() {
   const [user, loading] = useAuthState(firebaseAppAuth);
