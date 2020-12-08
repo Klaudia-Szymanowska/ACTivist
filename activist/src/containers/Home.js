@@ -14,42 +14,12 @@ import Settingbutton from "./components/Settingsbutton";
 export const Home = () => {
   const user = firebase.auth().currentUser;
   let name;
+
   // let nameFirestore;
 
   if (user != null) {
     name = user.displayName;
-    //nameFirestore = fecthName();
   }
-
-  //Below are two functions trying to fecth a field from a firebase collection
-  // it doesn't work - we get the following error:
-  // "Objects are not valid as a React child "
-
-  // FUNCTION 1 -
-  /*  function fecthName() {
-    var db = firebase.firestore();
-    var user = firebase.auth().currentUser;
-    var uid = firebase.auth().currentUser.uid;
-    return db.collection("users").doc(uid).get("name");
-  } */
-
-  // FUNCTION 2 -
-  /* function fecthName() {
-    var docRef = firebase
-      .firestore()
-      .collection("users")
-      .doc(firebase.auth().currentUser.uid);
-    docRef
-      .get()
-      .then(function (doc) {
-        if (doc.exists) {
-          doc.data();
-        }
-      })
-      .catch(function (error) {
-        //handle errors
-      });
-  } */
 
   //const savedCarbon = 100 + 200 + 300 + 400;
   //const count = localStorage.getItem("count");
@@ -59,6 +29,14 @@ export const Home = () => {
   const shoppingCount = Number(localStorage.getItem("shoppingCount"));
   const totalCount =
     foodCount + householdCount + transportCount + shoppingCount;
+  let trees = totalCount / 21;
+
+  function calculateTrees() {
+    //if (totalCount > 0) {
+    let trees = totalCount / 21;
+    return trees.toString;
+    //}
+  }
 
   return (
     <main>
@@ -78,8 +56,7 @@ export const Home = () => {
           <button className="circle">
             <h5 style={{ fontSize: "120%" }}>
               Your carbon <br /> savings are:
-              <h3>{totalCount}</h3>
-              kg
+              <h3>{totalCount} kg</h3>
             </h5>
           </button>
         </div>
@@ -107,10 +84,27 @@ export const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="container2">
-            <button className="progressbox">
-              <Charts />
-            </button>
+          <div className="container">
+            <div className="content">
+              <h3>
+                <div className="center">
+                  <div>
+                    <p align="left">
+                      <img src={chall} alt="chall" />
+                    </p>
+                    Your CO2-savings equals what {Math.round(trees)} trees
+                    absorb in a year!
+                  </div>
+                </div>
+
+                <p align="left">
+                  <div>
+                    <img src={chall} alt="chall" />
+                  </div>{" "}
+                  TIPS - ARTICLE
+                </p>
+              </h3>
+            </div>
           </div>
         </div>
       </div>
