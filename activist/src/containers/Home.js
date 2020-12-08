@@ -8,8 +8,8 @@ import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
 import Settingbutton from "./components/Settingsbutton";
-import tree from "./img/tree.png"
-import bulb from "./img/bulb.png"
+import tree from "./img/tree.png";
+import bulb from "./img/bulb.png";
 
 export const Home = () => {
   const user = firebase.auth().currentUser;
@@ -75,23 +75,25 @@ export const Home = () => {
           </div>
           <div className="container">
             <div className="content">
-              <h3>
-                <div className="center">
-                  <div>
-                    <p align="left">
-                      <img src={tree} alt="chall" />
-                    </p>
+              <div className="left">
+                <div className="textchall">
+                  <p align="left">
+                    <img src={tree} alt="chall" />
+                  </p>
+                  <h3>
                     Your CO2-savings equals what {Math.round(trees)} trees
                     absorb in a year!
-                  </div>
+                  </h3>
                 </div>
-                <p align="left">
-                  <div>
+              </div>
+              <div className="left">
+                <div className="textchall">
+                  <p align="left">
                     <img src={bulb} alt="chall" />
-                  </div>{" "}
-                  Tip: 
-                </p>
-              </h3>
+                  </p>
+                  <h3>Tip:</h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>
