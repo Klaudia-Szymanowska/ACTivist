@@ -99,7 +99,7 @@ export const MyChallenges = () => {
         </h3>
         <div className="container">
           <div className="content2">
-            <div className="center">
+            <div className="left">
               <div id="challbutton2">
                 <div className="textchall">
                   <img
@@ -163,10 +163,15 @@ export const MyChallenges = () => {
         </h3>
         <div className="container">
           <div className="content2">
-            <div className="center">
+            <div className="left">
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={food} id="imgchall" alt="food" />
+                  <img
+                    src={food}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{finishedFoodChallList}</ul>
                   </b>
