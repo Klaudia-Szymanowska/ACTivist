@@ -1,14 +1,21 @@
 //import React from "react";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 import food from "../img/food.png";
 import bike from "../img/bike.png";
 import shopping from "../img/cart.png";
 import household from "../img/home.png";
+import Popup from "./components/Popup";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 export const MyChallenges = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   var foodChal = [];
   var householdChal = [];
   var transportChal = [];
@@ -89,6 +96,11 @@ export const MyChallenges = () => {
   const finishedShoppingChallList = finishedShoppingChal.map((chall) => (
     <li>{chall}</li>
   ));
+
+  function handleReset(event) {
+    localStorage.clear();
+  }
+
   return (
     <main>
       <ContainerHomeSettings />
@@ -116,10 +128,23 @@ export const MyChallenges = () => {
               <div id="challbutton2">
                 <div className="textchall">
                   <img
-                    src={household}
+                    src={bike}
                     id="imgchall"
                     alt="food"
                     style={{ height: "50px", marginTop: "10px" }}
+                  />
+                  <b>
+                    <ul>{transportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "47px", marginTop: "10px" }}
                   />
                   <b>
                     <ul>{householdChallList}</ul>
@@ -136,19 +161,6 @@ export const MyChallenges = () => {
                   />
                   <b>
                     <ul>{shoppingChallList}</ul>
-                  </b>
-                </div>
-              </div>
-              <div id="challbutton2">
-                <div className="textchall">
-                  <img
-                    src={bike}
-                    id="imgchall"
-                    alt="food"
-                    style={{ height: "50px", marginTop: "10px" }}
-                  />
-                  <b>
-                    <ul>{transportChallList}</ul>
                   </b>
                 </div>
               </div>
@@ -180,10 +192,23 @@ export const MyChallenges = () => {
               <div id="challbutton2">
                 <div className="textchall">
                   <img
-                    src={household}
+                    src={bike}
                     id="imgchall"
                     alt="food"
                     style={{ height: "50px", marginTop: "10px" }}
+                  />
+                  <b>
+                    <ul>{finishedTransportChallList}</ul>
+                  </b>
+                </div>
+              </div>
+              <div id="challbutton2">
+                <div className="textchall">
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "47px", marginTop: "10px" }}
                   />
                   <b>
                     <ul>{finishedHouseholdChallList}</ul>
@@ -203,22 +228,30 @@ export const MyChallenges = () => {
                   </b>
                 </div>
               </div>
-              <div id="challbutton2">
-                <div className="textchall">
-                  <img
-                    src={bike}
-                    id="imgchall"
-                    alt="food"
-                    style={{ height: "50px", marginTop: "10px" }}
-                  />
-                  <b>
-                    <ul>{finishedTransportChallList}</ul>
-                  </b>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+        <button className="button2" onClick={togglePopup}>
+          Reset challenges
+        </button>
+        {isOpen && (
+          <Popup
+            content={
+              <>
+                <p>
+                  Are you sure you want to reset all finished and pledged
+                  challenges?
+                </p>
+                <Link to="/">
+                  <button id="popup_button" onClick={handleReset}>
+                    Yes, I am sure
+                  </button>
+                </Link>
+              </>
+            }
+            handleClose={togglePopup}
+          />
+        )}
       </div>
     </main>
   );
