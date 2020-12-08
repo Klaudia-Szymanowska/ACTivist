@@ -23,12 +23,14 @@ export const Goals = () => {
         <div className="container2">
           <Piechart />
         </div>
-        <div className="text">
-          <h4>
-            You have insisted 1 day
-            <br />
-            with {totalCount} kg of CO2 saved!
-          </h4>
+        <div className="container">
+          <div className="content">
+            <h5 color={"black"} style={{ fontSize: "140%" }}>
+              Your total CO2-savings are:
+              <br />
+              {totalCount} kg!
+            </h5>
+          </div>
         </div>
       </div>
     </main>
