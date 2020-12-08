@@ -43,10 +43,12 @@ export const Home = () => {
       <div>
         <div className="container">
           <button className="circle">
-            <h5 style={{ fontSize: "120%" }}>
-              Your carbon <br /> savings are:
-              <h3>{totalCount} kg</h3>
-            </h5>
+            <div className="centeredtxt">
+              <h5 style={{ fontSize: "120%" }}>
+                Your carbon <br /> savings are:
+                <h3>{totalCount} kg</h3>
+              </h5>
+            </div>
           </button>
         </div>
         <div>
