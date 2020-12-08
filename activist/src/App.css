@@ -483,6 +483,16 @@ h7 {
 .center {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
+  font-size: 70%;
+  text-align: left;
+  padding: 10px 40px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
   align-items: left;
   align-content: left;
   font-size: 70%;
