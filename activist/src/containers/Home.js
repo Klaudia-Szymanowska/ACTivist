@@ -44,9 +44,9 @@ export const Home = () => {
         <div className="container">
           <button className="circle">
             <div className="centeredtxt">
-              <h5 style={{ fontSize: "120%" }}>
+              <h5 style={{ fontSize: "165%" }}>
                 Your carbon <br /> savings are:
-                <h3>{totalCount} kg</h3>
+                <h5 style={{ fontSize: "135%" }}>{totalCount} kg</h5>
               </h5>
             </div>
           </button>
