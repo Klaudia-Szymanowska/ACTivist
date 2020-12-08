@@ -5,6 +5,7 @@ import "firebase/auth";
 import firebase from "firebase/app";
 import Popup from "./components/Popup";
 import Homebutton from "./components/homebutton";
+import logo from "../img/logo.png";
 
 export const Settings = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,11 +62,13 @@ export const Settings = () => {
           <Homebutton />
         </Link>
       </div>
-
+      <div className="logo2">
+        <img src={logo} id="logo" alt="logo" />
+      </div>
       <div className="text">
-        <h3>
+        <h4 style={{ color: "black" }}>
           {name} {/* {nameFirestore} */}{" "}
-        </h3>
+        </h4>
         <h4>{email}</h4>
       </div>
 

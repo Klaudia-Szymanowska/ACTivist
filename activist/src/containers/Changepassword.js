@@ -6,6 +6,8 @@ import "./Login.css";
 import home2 from "./img/home2.png";
 import set from "./img/set.png";
 import firebase from "firebase/app";
+import ContainerHomeSettings from "./components/containerHomeSettings";
+import logo from "../img/logo.png";
 
 export function Changepassword() {
   const [email, setEmail] = useState("");
@@ -62,27 +64,12 @@ export function Changepassword() {
 
   return (
     <body>
-      <div>
-        <Link to="/settings">
-          <img
-            class="column"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
-        </Link>
-        <div>
-          <Link to="/home">
-            <img
-              class="column"
-              src={home2}
-              style={{ width: "5%", float: "left" }}
-              alt="set"
-            />
-          </Link>
-        </div>
+      <div id="navbuttons">
+        <ContainerHomeSettings />
       </div>
-
+      <div className="logo3">
+        <img src={logo} id="logo" alt="logo" />
+      </div>
       <div className="Login">
         <form onSubmit={handleSubmit}>
           <FormGroup controlId="email" bsSize="large">
@@ -121,18 +108,11 @@ export function Changepassword() {
               type="password"
             />
           </FormGroup>
+          <button onClick={validatePassword}> Submit new password</button>
         </form>
       </div>
 
-      <div className="text">
-        <div>
-          {" "}
-          <button className="button2" onClick={validatePassword}>
-            {" "}
-            Submit new password
-          </button>
-        </div>
-      </div>
+      <div> </div>
     </body>
   );
 }

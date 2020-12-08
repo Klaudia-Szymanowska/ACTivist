@@ -29,15 +29,15 @@ export const Home = () => {
     foodCount + householdCount + transportCount + shoppingCount;
   let trees = totalCount / 21;
 
-  const facts =  [ "800,000 hectares lost every year.",
+  const facts = [
+    "800,000 hectares lost every year.",
 
- "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
+    "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
 
- "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
+    "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
 
-"The worst impacts of climate change could be irreversible by 2030.",
-
-];
+    "The worst impacts of climate change could be irreversible by 2030.",
+  ];
 
   return (
     <main>
@@ -103,7 +103,7 @@ export const Home = () => {
                   <p align="left">
                     <img src={bulb} alt="chall" />
                   </p>
-                  <h3>A fact about climate change:{facts[Math.floor(Math.random() * facts.length)]}</h3>
+                  <h3>{facts[Math.floor(Math.random() * facts.length)]}</h3>
                 </div>
               </div>
             </div>
