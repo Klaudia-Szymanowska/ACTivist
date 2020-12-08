@@ -108,7 +108,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{foodChallList}</ul>
+              {/*<ul>{foodChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -124,7 +124,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{householdChallList}</ul>
+              {/*<ul>{householdChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -140,7 +140,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{shoppingChallList}</ul>
+              {/*<ul>{shoppingChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -156,7 +156,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{transportChallList}</ul>
+              {/*<ul>{transportChallList}</ul>*/}
             </b>
           </button>
         </div>
@@ -181,7 +181,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedFoodChallList}</ul>
+              {/*<ul>{finishedFoodChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -197,7 +197,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedHouseholdChallList}</ul>
+              {/*<ul>{finishedHouseholdChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -213,7 +213,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedShoppingChallList}</ul>
+              {/*<ul>{finishedShoppingChallList}</ul>*/}
             </b>
           </button>
           <button
@@ -229,7 +229,7 @@ export const MyChallenges = () => {
                 float: "left",
               }}
             >
-              <ul>{finishedTransportChallList}</ul>
+              {/*<ul>{finishedTransportChallList}</ul>*/}
             </b>
           </button>
         </div>

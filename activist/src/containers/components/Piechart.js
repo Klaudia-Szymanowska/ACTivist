@@ -22,6 +22,7 @@ const Charts = () => {
       ],
       datasets: [
         {
+          fontSize: "200%",
           label: "amount saved",
           data: [shoppingCount, foodCount, transportationCount, householdCount],
           backgroundColor: [
@@ -40,8 +41,8 @@ const Charts = () => {
   }, []);
 
   return (
-    <div className="chart">
-      <Pie data={chartData} />
+    <div className="pie">
+      <Pie data={chartData} height={"250%"} />
     </div>
   );
 };
