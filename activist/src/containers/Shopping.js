@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import ContainerHomeSettings from "./components/containerHomeSettings";
-import TransportationCO2 from "./components/TransportationCO2";
+import ShoppingCO2 from "./components/ShoppingCO2";
 
-export const Transportation = () => {
+export const Shopping = () => {
   return (
     <main>
       <div>
@@ -11,9 +11,9 @@ export const Transportation = () => {
           <ContainerHomeSettings />
         </div>
         <div className="text">
-          <h3>Transportation</h3>
+          <h3>Shopping</h3>
           <div className="center">
-            <TransportationCO2 />
+            <ShoppingCO2 />
           </div>
         </div>
         );

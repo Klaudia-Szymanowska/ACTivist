@@ -1,71 +1,37 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./App.css";
-import food from "./img/food.png";
-import set from "./img/set.png";
-import bike from "./img/bike.png";
-import home from "./img/home.png";
-import cart from "./img/cart.png";
-import home2 from "./img/home2.png";
-import chart from "./img/chart.png";
 import Piechart from "./components/Piechart";
+import ContainerHomeSettings from "./components/containerHomeSettings";
 
 export const Goals = () => {
+  const foodCount = Number(localStorage.getItem("foodCount"));
+  const householdCount = Number(localStorage.getItem("householdCount"));
+  const transportationCount = Number(localStorage.getItem("transportCount"));
+  const shoppingCount = Number(localStorage.getItem("shoppingCount"));
+  const totalCount =
+    foodCount + householdCount + transportationCount + shoppingCount;
+
   return (
     <main>
-      {/*to be changed by Louise as a component */}
-      <div>
-        <Link to="/settings">
-          <img
-            className="column"
-            src={set}
-            style={{ width: "5%", float: "right" }}
-            alt="set"
-          />
-        </Link>
-        <div>
-          <Link to="/home">
-            <img
-              className="column"
-              src={home2}
-              style={{ width: "5%", float: "left" }}
-              alt="set"
-            />
-          </Link>
-        </div>
+      <div id="navbuttons">
+        <ContainerHomeSettings />
       </div>
-
-      <h3>Congratulations</h3>
-      <div className="container2">
-        <Piechart />
-      </div>
-      {/* <Link to="/chart">
-          <img src={chart} alt="chart" />
-  </Link> */}
       <div className="text">
-        <h4>
-          You have insisted 20 days
-          <br />
-          with 6000 kg of CO2 saved!
-        </h4>
+        <h3>Congratulations</h3>
       </div>
-
-      <div className="container2">
-        <button className="circleSmall" id="badges">
-          <img src={food} alt="food" />
-        </button>
-        <button className="circleSmall" id="badges">
-          <img src={bike} alt="bike" />
-        </button>
-      </div>
-
-      <div className="container2">
-        <button className="circleSmall" id="badges">
-          <img src={home} alt="home" />
-        </button>
-        <button className="circleSmall" id="badges">
-          <img src={cart} alt="cart" />
-        </button>
+      <div className="chartsize">
+        <div className="container2">
+          <Piechart />
+        </div>
+        <div className="container">
+          <div className="content">
+            <h5 color={"black"} style={{ fontSize: "140%" }}>
+              Your total CO2-savings are:
+              <br />
+              {totalCount} kg!
+            </h5>
+          </div>
+        </div>
       </div>
     </main>
   );

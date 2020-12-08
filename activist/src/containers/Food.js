@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
+import FoodCO2 from "./components/FoodCO2";
 import ContainerHomeSettings from "./components/containerHomeSettings";
-import TransportationCO2 from "./components/TransportationCO2";
 
-export const Transportation = () => {
+export const Food = () => {
   return (
     <main>
       <div>
@@ -11,9 +11,10 @@ export const Transportation = () => {
           <ContainerHomeSettings />
         </div>
         <div className="text">
-          <h3>Transportation</h3>
+          <h3>Food</h3>
           <div className="center">
-            <TransportationCO2 />
+            {/*<CheckboxContainer />*/}
+            <FoodCO2 />
           </div>
         </div>
         );

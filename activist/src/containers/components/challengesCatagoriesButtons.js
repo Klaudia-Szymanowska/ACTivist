@@ -11,7 +11,7 @@ export default class ChallengesCatagoriesButtons extends Component {
     return (
       <div>
         <div>
-          <Link to="/mychallenges">
+          <Link to="/food">
             <button id="challbutton">
               <img src={food} id="imgchall" alt="food" /> Food{" "}
             </button>
@@ -25,17 +25,23 @@ export default class ChallengesCatagoriesButtons extends Component {
           </Link>
         </div>
         <div>
-          <button id="challbutton">
-            <img src={home} id="imgchall" alt="home" /> Household{" "}
-          </button>
+          <Link to="/household">
+            <button id="challbutton">
+              <img src={home} id="imgchall" alt="home" /> Household{" "}
+            </button>
+          </Link>
         </div>
         <div>
-          <button id="challbutton">
-            <img src={cart} id="imgchall" alt="cart" /> Shopping{" "}
-          </button>
+          <Link to="/shopping">
+            <button id="challbutton">
+              <img src={cart} id="imgchall" alt="cart" /> Shopping{" "}
+            </button>
+          </Link>
         </div>
         <div>
-          <button className="button2"> I will choose later </button>
+          <Link to="/home">
+            <button className="button2"> I will choose later </button>
+          </Link>
         </div>
       </div>
     );

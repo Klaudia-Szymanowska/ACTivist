@@ -1,30 +1,7 @@
 import React, { Component } from "react";
 import Checkbox from "./Checkbox";
-import "../../App.css";
+import "./App.css";
 
-//Import to make firebase work
-/*
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-import { firebaseAppAuth, database } from "./firebase";
-*/
-
-//import {db} from './src/config';
-/*
-componentDidMount() {
-  db.ref('/todos').on('value', querySnapShot => {
-    let data = querySnapShot.val() ? querySnapShot.val() : {};
-    let todoItems = {...data};
-    this.setState({
-      todos: todoItems,
-    });
-  });
-}
-*/
-
-//const OPTIONS = ["No beef", "Go pescatarian!", "Go vegetarian!", "Go vegan!"];
-
-//hardcoding the CO2
 const OPTIONS = [
   {
     name: "No beef",
@@ -48,33 +25,6 @@ const OPTIONS = [
   },
 ];
 
-//data base
-/*
-const COLLECTION = "Challenges"
-
-const addData = (id, CO2) => {
-  const id = id();
-  database
-    .collection(COLLECTION)
-    .add({
-      id: id,
-      CO2: CO2,
-      timestamp_start: today
-      timestand_stop: empty
-      savedCO2: none
-    })
-    .then((newDocument) => {
-      // This will run if adding data was successful
-      console.log("New document created with ID: ", newDocument.id);
-    })
-    .catch((error) => {
-      // If saving data failed, this will run and we will log an error to the console.
-      // Here you should give a message to users as well!
-      console.error(error.message);
-    });
-};
-*/
-
 class CheckboxContainer extends Component {
   state = {
     checkboxes: OPTIONS.reduce(
@@ -84,6 +34,12 @@ class CheckboxContainer extends Component {
       }),
       {}
     ),
+    isOpen: false,
+    // isPledged: false,
+  };
+
+  togglePopup = () => {
+    this.setState({isOpen: !this.state.isOpen})
   };
 
   handleCheckboxChange = (changeEvent) => {
@@ -106,6 +62,20 @@ class CheckboxContainer extends Component {
         console.log(checkbox, "is selected.");
       });
   };
+
+  // handlePledge = () => {
+  //   const {isPledged} = this.state
+  //   localStorage.setItem('isPledged', isPledged)
+  //   localStorgae.
+  //   // const value = option.type === 'checkbox' ? option.checked: option.value;
+  //   // this.setState({ [option.name, option.CO2]: value })
+  // }
+
+  // componentDidMount() {
+  //   const isPledged = localStorage.getItem('isPledged') === 'true';
+  //   const challenge = rememberMe ? localStorage.getItem('user') : '';
+  //   this.setState({ user, isPledged });
+  // }
 
   //Add data to firebase:
   /*
@@ -136,8 +106,10 @@ class CheckboxContainer extends Component {
               <div className="form-group mt-2">
                 <button
                   type="submit"
-                  className="button"
-                  style={{ color: "#000000", fontSize: "220%" }}
+                  className="button4"
+                  onClick={this.togglePopup}
+                  value={this.state.isPledged}
+                  // id="pledge"
                   //onClick={handlePledge}
                 >
                   Pledge
@@ -152,48 +124,3 @@ class CheckboxContainer extends Component {
 }
 
 export default CheckboxContainer;
-
-/*import React from "react";
-import PropTypes from "prop-types";
-import checkboxes from "./checkboxes";
-import Checkbox from "./Checkbox";
-
-class CheckboxContainer extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      checkedItems: new Map(),
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
-    const item = e.target.name;
-    const isChecked = e.target.checked;
-    this.setState((prevState) => ({
-      checkedItems: prevState.checkedItems.set(item, isChecked),
-    }));
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        {checkboxes.map((item) => (
-          <label key={item.key}>
-            {item.name}
-            <Checkbox
-              name={item.name}
-              checked={this.state.checkedItems.get(item.name)}
-              onChange={this.handleChange}
-            />
-          </label>
-        ))}
-      </React.Fragment>
-    );
-  }
-}
-
-export default CheckboxContainer;
-*/

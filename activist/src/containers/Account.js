@@ -7,13 +7,9 @@ import home2 from "./img/home2.png";
 import set from "./img/set.png";
 
 export function Account() {
-  const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
-  function validateForm() {
-    return username.length > 0 && name.length > 0 && email.length > 0;
-  }
   function handleSubmit(event) {
     event.preventDefault();
   }
