@@ -97,79 +97,17 @@ export const MyChallenges = () => {
           <br />
           Pledged challenges:
         </h3>
-<<<<<<< HEAD
-        <div className="center">
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={food} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{foodChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={household} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{householdChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={shopping} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{shoppingChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={bike} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{transportChallList}</ul>
-            </b>
-          </button>
-=======
         <div className="container">
           <div className="content2">
             <div className="center">
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={food} id="imgchall" alt="food" />
+                  <img
+                    src={food}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{foodChallList}</ul>
                   </b>
@@ -177,7 +115,12 @@ export const MyChallenges = () => {
               </div>
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={household} id="imgchall" alt="food" />
+                  <img
+                    src={household}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{householdChallList}</ul>
                   </b>
@@ -185,7 +128,12 @@ export const MyChallenges = () => {
               </div>
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={shopping} id="imgchall" alt="food" />
+                  <img
+                    src={shopping}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{shoppingChallList}</ul>
                   </b>
@@ -193,7 +141,12 @@ export const MyChallenges = () => {
               </div>
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={bike} id="imgchall" alt="food" />
+                  <img
+                    src={bike}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{transportChallList}</ul>
                   </b>
@@ -201,7 +154,6 @@ export const MyChallenges = () => {
               </div>
             </div>
           </div>
->>>>>>> buttonNames
         </div>
       </div>
       <div className="text">
@@ -209,73 +161,6 @@ export const MyChallenges = () => {
           <br />
           Finished challenges:
         </h3>
-<<<<<<< HEAD
-        <div className="center">
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={food} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{finishedFoodChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={household} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{finishedHouseholdChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={shopping} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{finishedShoppingChallList}</ul>
-            </b>
-          </button>
-          <button
-            id="challbutton"
-            className="center"
-            style={{ fontSize: "220%", textAlign: "left" }}
-          >
-            <img src={bike} id="imgchall" alt="food" />
-            <b
-              style={{
-                color: "#000000",
-                fontSize: "75%",
-                float: "left",
-              }}
-            >
-              <ul>{finishedTransportChallList}</ul>
-            </b>
-          </button>
-=======
         <div className="container">
           <div className="content2">
             <div className="center">
@@ -302,7 +187,12 @@ export const MyChallenges = () => {
               </div>
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={shopping} id="imgchall" alt="food" />
+                  <img
+                    src={shopping}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{finishedShoppingChallList}</ul>
                   </b>
@@ -310,7 +200,12 @@ export const MyChallenges = () => {
               </div>
               <div id="challbutton2">
                 <div className="textchall">
-                  <img src={bike} id="imgchall" alt="food" />
+                  <img
+                    src={bike}
+                    id="imgchall"
+                    alt="food"
+                    style={{ height: "50px", marginTop: "10px" }}
+                  />
                   <b>
                     <ul>{finishedTransportChallList}</ul>
                   </b>
@@ -318,7 +213,6 @@ export const MyChallenges = () => {
               </div>
             </div>
           </div>
->>>>>>> buttonNames
         </div>
       </div>
     </main>

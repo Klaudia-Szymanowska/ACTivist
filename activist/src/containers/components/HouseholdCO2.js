@@ -49,7 +49,8 @@ const HouseholdCO2 = () => {
   };
 
   const resetAmount = () => {
-    const msg = "Are you sure you want to reset the amount to 0kg?";
+    //const msg = "Are you sure you want to reset the amount to 0kg?";
+    const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       setHouseholdeFinished(Object.assign([], userChall));
       setHouseholdCount(0);
@@ -103,7 +104,7 @@ const HouseholdCO2 = () => {
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>
-            Reset Amount
+            Unpledge household challenge
           </button>
           <div>
             <Link to="/home">

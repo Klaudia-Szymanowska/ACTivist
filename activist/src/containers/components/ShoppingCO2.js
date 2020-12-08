@@ -48,7 +48,8 @@ const ShoppingCO2 = () => {
   };
 
   const resetAmount = () => {
-    const msg = "Are you sure you want to reset the amount to 0kg?";
+    //const msg = "Are you sure you want to reset the amount to 0kg?";
+    const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       setshoppingFinished(Object.assign([], userChall));
       setShoppingCount(0);
@@ -93,7 +94,7 @@ const ShoppingCO2 = () => {
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>
-            Reset Amount
+            Unpledge shopping challenge
           </button>
           <div>
             <Link to="/home">

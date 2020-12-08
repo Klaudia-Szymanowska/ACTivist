@@ -51,7 +51,8 @@ const TransportationCO2 = () => {
   };
 
   const resetAmount = () => {
-    const msg = "Are you sure you want to reset the amount to 0kg?";
+    //const msg = "Are you sure you want to reset the amount to 0kg?";
+    const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       settransportFinished(Object.assign([], userChall));
       setTransporttransportCount(0);
@@ -104,7 +105,7 @@ const TransportationCO2 = () => {
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>
-            Reset Amount
+            Unpledge transportation challenge
           </button>
           <div>
             <Link to="/home">
