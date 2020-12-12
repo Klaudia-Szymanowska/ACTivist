@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const ShoppingCO2 = () => {
-  var userChall = [];
-  var userChallFinish = [];
-  var shoppingChallFinished = localStorage.getItem("shoppingChallFinished");
-  var pledgedChallenges = localStorage.getItem("shoppingChallenges");
+  let userChall = [];
+  let userChallFinish = [];
+  let shoppingChallFinished = localStorage.getItem("shoppingChallFinished");
+  let pledgedChallenges = localStorage.getItem("shoppingChallenges");
   if (pledgedChallenges) {
     userChall = JSON.parse(localStorage.getItem("shoppingChallenges"));
   }

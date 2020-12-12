@@ -14,14 +14,14 @@ export const MyChallenges = () => {
     setIsOpen(!isOpen);
   };
 
-  var foodChal = [];
-  var householdChal = [];
-  var transportChal = [];
-  var shoppingChal = [];
-  var pledgedfoodChal = localStorage.getItem("foodChallenges");
-  var pledgedhouseholdChal = localStorage.getItem("householdChallenges");
-  var pledgedtransportChal = localStorage.getItem("transportChallenges");
-  var pledgedshoppingChal = localStorage.getItem("shoppingChallenges");
+  let foodChal = [];
+  let householdChal = [];
+  let transportChal = [];
+  let shoppingChal = [];
+  let pledgedfoodChal = localStorage.getItem("foodChallenges");
+  let pledgedhouseholdChal = localStorage.getItem("householdChallenges");
+  let pledgedtransportChal = localStorage.getItem("transportChallenges");
+  let pledgedshoppingChal = localStorage.getItem("shoppingChallenges");
   if (pledgedfoodChal) {
     foodChal = JSON.parse(localStorage.getItem("foodChallenges"));
   }
@@ -35,18 +35,18 @@ export const MyChallenges = () => {
     shoppingChal = JSON.parse(localStorage.getItem("shoppingChallenges"));
   }
 
-  var finishedFoodChal = [];
-  var finishedHouseholdChal = [];
-  var finishedTransportChal = [];
-  var finishedShoppingChal = [];
-  var finishedPledgedfoodChal = localStorage.getItem("foodChallFinished");
-  var finishedPledgedhouseholdChal = localStorage.getItem(
+  let finishedFoodChal = [];
+  let finishedHouseholdChal = [];
+  let finishedTransportChal = [];
+  let finishedShoppingChal = [];
+  let finishedPledgedfoodChal = localStorage.getItem("foodChallFinished");
+  let finishedPledgedhouseholdChal = localStorage.getItem(
     "householdChallengesFinised"
   );
-  var finishedPledgedtransportChal = localStorage.getItem(
+  let finishedPledgedtransportChal = localStorage.getItem(
     "transportChallFinished"
   );
-  var finishedPledgedshoppingChal = localStorage.getItem(
+  let finishedPledgedshoppingChal = localStorage.getItem(
     "shoppingChallFinished"
   );
   if (finishedPledgedfoodChal) {
