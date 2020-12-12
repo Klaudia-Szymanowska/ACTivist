@@ -11,9 +11,11 @@ import tree from "./img/tree.png";
 import bulb from "./img/bulb.png";
 
 export const Home = () => {
+  // getting current logged in user from Firebase
   const user = firebase.auth().currentUser;
   let name;
 
+  // if user is logged in then get name - only works for users signing in with Gmail
   if (user != null) {
     name = user.displayName;
   }
@@ -24,8 +26,10 @@ export const Home = () => {
   const shoppingCount = Number(localStorage.getItem("shoppingCount"));
   const totalCount =
     foodCount + householdCount + transportCount + shoppingCount;
+  // variable containing the number for tree absorped CO2 compared to total CO2-count
   let trees = totalCount / 21;
 
+  // facts displayed on home page
   const facts = [
     "800,000 hectares lost every year.",
 

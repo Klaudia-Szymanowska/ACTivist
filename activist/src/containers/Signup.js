@@ -7,12 +7,14 @@ import firebase from "firebase/app";
 import logo from "../img/logo.png";
 
 export const Signup = () => {
+  // constants containing inputted name, email and password for user signing up
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  // hook that helps with navigation
   let history = useHistory();
 
+  // function that handles registrating user in Firebase that signs up with email/password
   function handleSubmit(event) {
     firebase
       .auth()
@@ -25,8 +27,10 @@ export const Signup = () => {
           .set({
             name: name,
           });
+        // pushes to welcome page if successfull sign-up
         history.push("/welcome");
       })
+      // catch error messages and display them
       .catch(function (error) {
         let errorMessage = error.message;
         alert(errorMessage);

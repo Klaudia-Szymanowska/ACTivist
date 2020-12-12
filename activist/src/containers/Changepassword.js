@@ -7,16 +7,19 @@ import ContainerHomeSettings from "./components/containerHomeSettings";
 import logo from "../img/logo.png";
 
 export function Changepassword() {
+  // constants containing inputted email adn passwords (old and new) for users who wants to change password
   const [email, setEmail] = useState("");
   const [currentPassword, setPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmNewPassword] = useState("");
+  // getting current logged in user from Firebase
   const user = firebase.auth().currentUser;
 
   function handleSubmit(event) {
     event.preventDefault();
   }
 
+  // function that sets the above constants to empty string after caught error
   function cleanForms() {
     setEmail("");
     setPassword("");
@@ -24,6 +27,8 @@ export function Changepassword() {
     setConfirmNewPassword("");
   }
 
+  // THIS FUNCTION SHOULD BE REFACOTRED TO 2 OR 3 DIFFERENT FUNCTIONS
+  // function that validates inserted passwords and updates it by authenticating user via Firebase
   function validatePassword() {
     if (newPassword === confirmPassword) {
       firebase
@@ -37,18 +42,22 @@ export function Changepassword() {
               console.log("Password changed");
               cleanForms();
             })
+            // catch error messages for updating password and display them
             .catch(function (error) {
               let errorMessage = error.message;
               alert(errorMessage);
               cleanForms();
             });
         })
+        // catch error messages for signing in with mail/password and displays them
+        // before potetntial update passwords happens
         .catch(function (error) {
           let errorMessage = error.message;
           alert(errorMessage);
           cleanForms();
         });
     } else {
+      // error message displayed if the two inputted passwords are not the same
       alert("Not the same password");
       setNewPassword("");
       setConfirmNewPassword("");
