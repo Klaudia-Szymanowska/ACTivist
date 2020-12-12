@@ -12,7 +12,6 @@ export const Food = () => {
       <div className="text">
         <h3>Food</h3>
         <div className="center">
-          {/*<CheckboxContainer />*/}
           <FoodCO2 />
         </div>
       </div>

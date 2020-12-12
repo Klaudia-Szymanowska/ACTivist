@@ -8,17 +8,12 @@ import chall from "./img/chall.png";
 import rew from "./img/rew.png";
 
 export const Welcome = () => {
-  // should we use let instead of var?
   const user = firebase.auth().currentUser;
   let name;
 
   if (user != null) {
     name = user.displayName;
   }
-
-  // <style>
-  //   h3 {text-align: left}
-  // </style>
 
   return (
     <main>

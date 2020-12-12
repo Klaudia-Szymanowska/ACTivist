@@ -28,7 +28,6 @@ export const Signup = () => {
         history.push("/welcome");
       })
       .catch(function (error) {
-        //var errorCode = error.code;
         var errorMessage = error.message;
         alert(errorMessage);
         setEmail("");

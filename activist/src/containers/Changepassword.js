@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { FormGroup, FormControl, FormLabel } from "react-bootstrap";
-import { HashLink as Link } from "react-router-hash-link";
 import "./App.css";
 import "./Login.css";
-import home2 from "./img/home2.png";
-import set from "./img/set.png";
 import firebase from "firebase/app";
 import ContainerHomeSettings from "./components/containerHomeSettings";
 import logo from "../img/logo.png";
@@ -15,7 +12,6 @@ export function Changepassword() {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmNewPassword] = useState("");
   const user = firebase.auth().currentUser;
-  // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -29,7 +25,6 @@ export function Changepassword() {
   }
 
   function validatePassword() {
-    //if (samePasswordInput === true) {
     if (newPassword === confirmPassword) {
       firebase
         .auth()
@@ -43,14 +38,12 @@ export function Changepassword() {
               cleanForms();
             })
             .catch(function (error) {
-              //var errorCode = error.code;
               var errorMessage = error.message;
               alert(errorMessage);
               cleanForms();
             });
         })
         .catch(function (error) {
-          //var errorCode = error.code;
           var errorMessage = error.message;
           alert(errorMessage);
           cleanForms();

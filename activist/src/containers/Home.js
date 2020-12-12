@@ -4,7 +4,6 @@ import "./App.css";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
-import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
 import Settingbutton from "./components/Settingsbutton";
@@ -19,8 +18,6 @@ export const Home = () => {
     name = user.displayName;
   }
 
-  //const savedCarbon = 100 + 200 + 300 + 400;
-  //const count = localStorage.getItem("count");
   const foodCount = Number(localStorage.getItem("foodCount"));
   const householdCount = Number(localStorage.getItem("householdCount"));
   const transportCount = Number(localStorage.getItem("transportCount"));

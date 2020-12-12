@@ -51,7 +51,6 @@ const TransportationCO2 = () => {
   };
 
   const resetAmount = () => {
-    //const msg = "Are you sure you want to reset the amount to 0kg?";
     const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       settransportFinished(Object.assign([], userChall));

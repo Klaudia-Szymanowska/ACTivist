@@ -16,13 +16,10 @@ export const Settings = () => {
   const user = firebase.auth().currentUser;
   let name;
   let email;
-  //let photoUrl;
 
-  // photoUrl are seemingly correctly retrieved, but I am not sure how to display a url af a file at the moment - to-do
   if (user != null) {
     name = user.displayName;
     email = user.email;
-    //photoUrl = user.photoURL;
   }
 
   function handleSignout(event) {
@@ -35,8 +32,8 @@ export const Settings = () => {
       })
       .catch(function (error) {
         console.log(error);
-        // var errorCode = error.code;
-        // var errorMessage = error.message;
+        let errorMessage = error.message;
+        alert(errorMessage);
       });
   }
 
@@ -50,8 +47,8 @@ export const Settings = () => {
       })
       .catch(function (error) {
         console.log(error);
-        // var errorCode = error.code;
-        // var errorMessage = error.message;
+        let errorMessage = error.message;
+        alert(errorMessage);
       });
   }
 
@@ -66,9 +63,7 @@ export const Settings = () => {
         <img src={logo} id="logo" alt="logo" />
       </div>
       <div className="text">
-        <h4 style={{ color: "black" }}>
-          {name} {/* {nameFirestore} */}{" "}
-        </h4>
+        <h4 style={{ color: "black" }}>{name} </h4>
         <h4>{email}</h4>
       </div>
 
