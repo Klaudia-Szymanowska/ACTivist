@@ -38,13 +38,13 @@ export function Changepassword() {
               cleanForms();
             })
             .catch(function (error) {
-              var errorMessage = error.message;
+              let errorMessage = error.message;
               alert(errorMessage);
               cleanForms();
             });
         })
         .catch(function (error) {
-          var errorMessage = error.message;
+          let errorMessage = error.message;
           alert(errorMessage);
           cleanForms();
         });

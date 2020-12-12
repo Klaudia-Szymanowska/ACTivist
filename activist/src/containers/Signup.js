@@ -28,7 +28,7 @@ export const Signup = () => {
         history.push("/welcome");
       })
       .catch(function (error) {
-        var errorMessage = error.message;
+        let errorMessage = error.message;
         alert(errorMessage);
         setEmail("");
         setPassword("");

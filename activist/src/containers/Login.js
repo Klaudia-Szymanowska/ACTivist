@@ -17,7 +17,7 @@ export const Login = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(function (error) {
-        var errorCode = error.code;
+        let errorCode = error.code;
         if (errorCode === "auth/wrong-password") {
           alert("Wrong password.");
           setPassword("");
