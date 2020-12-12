@@ -44,7 +44,6 @@ export const Home = () => {
         </Link>
       </div>
       <div className="text">
-        {/** The below 'Welcome' only shows the name if the user signs in with Google */}
         <h3>Welcome {name} </h3>
       </div>
       <div>
