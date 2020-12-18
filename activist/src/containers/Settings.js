@@ -7,6 +7,7 @@ import Popup from "./components/Popup";
 import Homebutton from "./components/homebutton";
 
 export const Settings = () => {
+  // Initialize the popup window
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -83,6 +84,7 @@ export const Settings = () => {
           </Link>
         </div>
 
+        {/* Once click on the delete account button, trigger the popup window asking for confirmation*/}
         <button className="button2" onClick={togglePopup}>
           Delete account
         </button>

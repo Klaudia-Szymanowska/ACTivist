@@ -29,14 +29,17 @@ export const Home = () => {
     foodCount + householdCount + transportCount + shoppingCount;
   let trees = totalCount / 21;
 
+  // An array to restore some facts about cliamte change that will be shown on the home page 
   const facts =  [ "800,000 hectares lost every year.",
-
  "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
-
  "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
-
 "The worst impacts of climate change could be irreversible by 2030.",
-
+"The average temperature of the Earth is determined by the greenhouse effect.",
+"Global temperatures have increased by about 1° Celsius in the past century.",
+"The United States is the second largest contributor to carbon dioxide (CO2) in our atmosphere.",
+"Arctic sea ice and glaciers are melting.",
+"Average sea level is expected to rise between 0.5 and 1.5 metres before the end of the century.",
+"Rainforest destruction is a major cause of carbon dioxide release.",
 ];
 
   return (
@@ -98,12 +101,13 @@ export const Home = () => {
                   </h3>
                 </div>
               </div>
+              {/* randomly show one of the facts restored locally */}
               <div className="left">
                 <div className="textchall">
                   <p align="left">
                     <img src={bulb} alt="chall" />
                   </p>
-                  <h3>A fact about climate change:{facts[Math.floor(Math.random() * facts.length)]}</h3>
+                  <h3>{facts[Math.floor(Math.random() * facts.length)]}</h3>
                 </div>
               </div>
             </div>

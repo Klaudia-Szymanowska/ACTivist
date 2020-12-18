@@ -11,6 +11,7 @@ import ContainerHomeSettings from "./components/containerHomeSettings";
 import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 export const MyChallenges = () => {
+  // initialize the popup window function
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -231,6 +232,8 @@ export const MyChallenges = () => {
             </div>
           </div>
         </div>
+
+        {/* Once click on reset challenges, trigger the popup window asking for confirmation */}
         <button className="button2" onClick={togglePopup}>
           Reset challenges
         </button>
