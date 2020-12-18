@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const HouseholdCO2 = () => {
-  var userChall = [];
-  var userChallFinish = [];
-  var pledgedChallenges = localStorage.getItem("householdChallenges");
-  var householdChallengesFinised = localStorage.getItem(
+  let userChall = [];
+  let userChallFinish = [];
+  let pledgedChallenges = localStorage.getItem("householdChallenges");
+  let householdChallengesFinised = localStorage.getItem(
     "householdChallengesFinised"
   );
   if (pledgedChallenges) {
@@ -49,7 +49,6 @@ const HouseholdCO2 = () => {
   };
 
   const resetAmount = () => {
-    //const msg = "Are you sure you want to reset the amount to 0kg?";
     const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       setHouseholdeFinished(Object.assign([], userChall));

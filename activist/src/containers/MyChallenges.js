@@ -1,5 +1,4 @@
-//import React from "react";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import food from "../img/food.png";
@@ -8,7 +7,6 @@ import shopping from "../img/cart.png";
 import household from "../img/home.png";
 import Popup from "./components/Popup";
 import ContainerHomeSettings from "./components/containerHomeSettings";
-import ChallengesCatagoriesButtons from "./components/challengesCatagoriesButtons";
 
 export const MyChallenges = () => {
   // initialize the popup window function
@@ -17,14 +15,14 @@ export const MyChallenges = () => {
     setIsOpen(!isOpen);
   };
 
-  var foodChal = [];
-  var householdChal = [];
-  var transportChal = [];
-  var shoppingChal = [];
-  var pledgedfoodChal = localStorage.getItem("foodChallenges");
-  var pledgedhouseholdChal = localStorage.getItem("householdChallenges");
-  var pledgedtransportChal = localStorage.getItem("transportChallenges");
-  var pledgedshoppingChal = localStorage.getItem("shoppingChallenges");
+  let foodChal = [];
+  let householdChal = [];
+  let transportChal = [];
+  let shoppingChal = [];
+  let pledgedfoodChal = localStorage.getItem("foodChallenges");
+  let pledgedhouseholdChal = localStorage.getItem("householdChallenges");
+  let pledgedtransportChal = localStorage.getItem("transportChallenges");
+  let pledgedshoppingChal = localStorage.getItem("shoppingChallenges");
   if (pledgedfoodChal) {
     foodChal = JSON.parse(localStorage.getItem("foodChallenges"));
   }
@@ -38,18 +36,18 @@ export const MyChallenges = () => {
     shoppingChal = JSON.parse(localStorage.getItem("shoppingChallenges"));
   }
 
-  var finishedFoodChal = [];
-  var finishedHouseholdChal = [];
-  var finishedTransportChal = [];
-  var finishedShoppingChal = [];
-  var finishedPledgedfoodChal = localStorage.getItem("foodChallFinished");
-  var finishedPledgedhouseholdChal = localStorage.getItem(
+  let finishedFoodChal = [];
+  let finishedHouseholdChal = [];
+  let finishedTransportChal = [];
+  let finishedShoppingChal = [];
+  let finishedPledgedfoodChal = localStorage.getItem("foodChallFinished");
+  let finishedPledgedhouseholdChal = localStorage.getItem(
     "householdChallengesFinised"
   );
-  var finishedPledgedtransportChal = localStorage.getItem(
+  let finishedPledgedtransportChal = localStorage.getItem(
     "transportChallFinished"
   );
-  var finishedPledgedshoppingChal = localStorage.getItem(
+  let finishedPledgedshoppingChal = localStorage.getItem(
     "shoppingChallFinished"
   );
   if (finishedPledgedfoodChal) {
@@ -70,30 +68,22 @@ export const MyChallenges = () => {
       localStorage.getItem("shoppingChallFinished")
     );
   }
-  //const foodChal = JSON.parse(localStorage.getItem("foodChallenges"));
   const foodChallList = foodChal.map((chall) => <li>{chall}</li>);
-  //const finishedFoodChal = JSON.parse(localStorage.getItem("foodChallFinished"));
   const finishedFoodChallList = finishedFoodChal.map((chall) => (
     <li>{chall}</li>
   ));
 
-  //const householdChal = JSON.parse(localStorage.getItem("householdChallenges"));
   const householdChallList = householdChal.map((chall) => <li>{chall}</li>);
-  //const finishedHouseholdChal = JSON.parse(localStorage.getItem("householdChallengesFinised"));
   const finishedHouseholdChallList = finishedHouseholdChal.map((chall) => (
     <li>{chall}</li>
   ));
 
-  //const transportChal = JSON.parse(localStorage.getItem("transportChallenges"));
   const transportChallList = transportChal.map((chall) => <li>{chall}</li>);
-  //const finishedTransportChal = JSON.parse(localStorage.getItem("transportChallFinished"));
   const finishedTransportChallList = finishedTransportChal.map((chall) => (
     <li>{chall}</li>
   ));
 
-  //const shoppingChal = JSON.parse(localStorage.getItem("shoppingChallenges"));
   const shoppingChallList = shoppingChal.map((chall) => <li>{chall}</li>);
-  //const finishedShoppingChal = JSON.parse(localStorage.getItem("shoppingChallFinished"));
   const finishedShoppingChallList = finishedShoppingChal.map((chall) => (
     <li>{chall}</li>
   ));

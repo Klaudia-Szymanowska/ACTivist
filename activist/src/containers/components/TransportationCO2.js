@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const TransportationCO2 = () => {
-  var userChall = [];
-  var userChallFinish = [];
-  var transportChallFinished = localStorage.getItem("transportChallFinished");
-  var pledgedChallenges = localStorage.getItem("transportChallenges");
+  let userChall = [];
+  let userChallFinish = [];
+  let transportChallFinished = localStorage.getItem("transportChallFinished");
+  let pledgedChallenges = localStorage.getItem("transportChallenges");
   if (pledgedChallenges) {
     userChall = JSON.parse(localStorage.getItem("transportChallenges"));
   }
@@ -51,7 +51,6 @@ const TransportationCO2 = () => {
   };
 
   const resetAmount = () => {
-    //const msg = "Are you sure you want to reset the amount to 0kg?";
     const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       settransportFinished(Object.assign([], userChall));

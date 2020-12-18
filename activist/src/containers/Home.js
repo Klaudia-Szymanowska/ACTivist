@@ -4,7 +4,6 @@ import "./App.css";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
 import rew from "./img/rew.png";
-import Charts from "./components/Charts";
 import "firebase/auth";
 import firebase from "firebase/app";
 import Settingbutton from "./components/Settingsbutton";
@@ -12,21 +11,22 @@ import tree from "./img/tree.png";
 import bulb from "./img/bulb.png";
 
 export const Home = () => {
+  // getting current logged in user from Firebase
   const user = firebase.auth().currentUser;
   let name;
 
+  // if user is logged in then get name - only works for users signing in with Gmail
   if (user != null) {
     name = user.displayName;
   }
 
-  //const savedCarbon = 100 + 200 + 300 + 400;
-  //const count = localStorage.getItem("count");
   const foodCount = Number(localStorage.getItem("foodCount"));
   const householdCount = Number(localStorage.getItem("householdCount"));
   const transportCount = Number(localStorage.getItem("transportCount"));
   const shoppingCount = Number(localStorage.getItem("shoppingCount"));
   const totalCount =
     foodCount + householdCount + transportCount + shoppingCount;
+  // variable containing the number for tree absorped CO2 compared to total CO2-count
   let trees = totalCount / 21;
 
   // An array to restore some facts about cliamte change that will be shown on the home page 
@@ -50,7 +50,6 @@ export const Home = () => {
         </Link>
       </div>
       <div className="text">
-        {/** The below 'Welcome' only shows the name if the user signs in with Google */}
         <h3>Welcome {name} </h3>
       </div>
       <div>

@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const FoodCO2 = () => {
-  var userChall = [];
-  var userChallFinish = [];
-  var foodChallFinished = localStorage.getItem("foodChallFinished");
-  var pledgedChallenges = localStorage.getItem("foodChallenges");
+  let userChall = [];
+  let userChallFinish = [];
+  let foodChallFinished = localStorage.getItem("foodChallFinished");
+  let pledgedChallenges = localStorage.getItem("foodChallenges");
   if (pledgedChallenges) {
     userChall = JSON.parse(localStorage.getItem("foodChallenges"));
   }
@@ -35,7 +35,6 @@ const FoodCO2 = () => {
   const addChallenge = (newChallenge, newAmount) => {
     // here update userChall before checking the condition
     userChall = JSON.parse(localStorage.getItem("foodChallenges"));
-    //if (!userChall.includes(newChallenge)) {
     if (!(userChall && userChall.length)) {
       setChallenges([...challenges, newChallenge]);
       setfoodCount(foodCount + newAmount);
@@ -46,7 +45,6 @@ const FoodCO2 = () => {
   };
 
   const resetAmount = () => {
-    //const msg = "Are you sure you want to reset the amount to 0kg?";
     const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       setFoodFinished(Object.assign([], userChall));
