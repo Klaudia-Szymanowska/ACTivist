@@ -15,6 +15,7 @@ export const MyChallenges = () => {
     setIsOpen(!isOpen);
   };
 
+  //getting the pledged challenges from LocalStorage.
   let foodChal = [];
   let householdChal = [];
   let transportChal = [];
@@ -36,6 +37,7 @@ export const MyChallenges = () => {
     shoppingChal = JSON.parse(localStorage.getItem("shoppingChallenges"));
   }
 
+  //getting the unpledged challenges from LocalStorage.
   let finishedFoodChal = [];
   let finishedHouseholdChal = [];
   let finishedTransportChal = [];
@@ -68,6 +70,8 @@ export const MyChallenges = () => {
       localStorage.getItem("shoppingChallFinished")
     );
   }
+
+  //mapping the pledged and unpledged challenges.
   const foodChallList = foodChal.map((chall) => <li>{chall}</li>);
   const finishedFoodChallList = finishedFoodChal.map((chall) => (
     <li>{chall}</li>
@@ -88,6 +92,7 @@ export const MyChallenges = () => {
     <li>{chall}</li>
   ));
 
+  //when clicking and confirming the reset, LocalStorage will be cleared.
   function handleReset(event) {
     localStorage.clear();
   }
@@ -162,7 +167,7 @@ export const MyChallenges = () => {
       <div className="text">
         <h3>
           <br />
-          Finished challenges:
+          Unpledged challenges:
         </h3>
         <div className="container">
           <div className="content2">
