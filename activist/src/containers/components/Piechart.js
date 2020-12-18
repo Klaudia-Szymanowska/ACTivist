@@ -26,9 +26,9 @@ const Charts = () => {
           label: "amount saved",
           data: [shoppingCount, foodCount, transportationCount, householdCount],
           backgroundColor: [
+            "rgba(66,122,131,0.65)",
             "rgba(66,122,131,0.1)",
             "rgba(66,122,131,0.4)",
-            "rgba(66,122,131,0.6)",
             "rgba(66,122,131,1)",
           ],
         },

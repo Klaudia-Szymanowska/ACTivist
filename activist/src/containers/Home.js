@@ -24,8 +24,7 @@ export const Home = () => {
   const householdCount = Number(localStorage.getItem("householdCount"));
   const transportCount = Number(localStorage.getItem("transportCount"));
   const shoppingCount = Number(localStorage.getItem("shoppingCount"));
-  const totalCount =
-    foodCount + householdCount + transportCount + shoppingCount;
+  let totalCount = foodCount + householdCount + transportCount + shoppingCount;
   // variable containing the number for tree absorped CO2 compared to total CO2-count
   let trees = totalCount / 21;
 
