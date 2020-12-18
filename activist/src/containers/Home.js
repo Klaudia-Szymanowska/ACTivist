@@ -29,18 +29,19 @@ export const Home = () => {
   // variable containing the number for tree absorped CO2 compared to total CO2-count
   let trees = totalCount / 21;
 
-  // An array to restore some facts about cliamte change that will be shown on the home page 
-  const facts =  [ "800,000 hectares lost every year.",
- "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
- "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
-"The worst impacts of climate change could be irreversible by 2030.",
-"The average temperature of the Earth is determined by the greenhouse effect.",
-"Global temperatures have increased by about 1° Celsius in the past century.",
-"The United States is the second largest contributor to carbon dioxide (CO2) in our atmosphere.",
-"Arctic sea ice and glaciers are melting.",
-"Average sea level is expected to rise between 0.5 and 1.5 metres before the end of the century.",
-"Rainforest destruction is a major cause of carbon dioxide release.",
-];
+  // An array to restore some facts about cliamte change that will be shown on the home page
+  const facts = [
+    "800,000 hectares lost every year.",
+    "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
+    "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
+    "The worst impacts of climate change could be irreversible by 2030.",
+    "The average temperature of the Earth is determined by the greenhouse effect.",
+    "Global temperatures have increased by about 1° Celsius in the past century.",
+    "The United States is the second largest contributor to carbon dioxide (CO2) in our atmosphere.",
+    "Arctic sea ice and glaciers are melting.",
+    "Average sea level is expected to rise between 0.5 and 1.5 metres before the end of the century.",
+    "Rainforest destruction is a major cause of carbon dioxide release.",
+  ];
 
   return (
     <main>
@@ -56,9 +57,10 @@ export const Home = () => {
         <div className="container">
           <button className="circle">
             <div className="centeredtxt">
-              <h5 style={{ fontSize: "165%" }}>
-                Your carbon <br /> savings are:
-                <h5 style={{ fontSize: "135%" }}>{totalCount} kg</h5>
+              <h5 style={{ fontSize: "180%" }}>
+                Your carbon <br /> savings are: <br />
+                <br />
+                {totalCount} kg
               </h5>
             </div>
           </button>

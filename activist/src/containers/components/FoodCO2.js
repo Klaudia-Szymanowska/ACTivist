@@ -66,35 +66,35 @@ const FoodCO2 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("No beef", 50);
+                addChallenge("No beef", 3.8);
               }}
             >
-              No beef <br /> <b>50 kg saved per day!</b>
+              No beef <br /> <b>3.8 kg saved per day!</b>
             </button>
 
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Go pescetarian", 100);
+                addChallenge("Go pescetarian", 4.1);
               }}
             >
-              Go pescetarian <br /> <b>100 kg saved per day!</b>
+              Go pescetarian <br /> <b>4.1 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Go vegetarian", 100);
+                addChallenge("Go vegetarian", 4.4);
               }}
             >
-              Go vegetarian <br /> <b>150 kg saved per day!</b>
+              Go vegetarian <br /> <b>4.4 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Go vegan", 200);
+                addChallenge("Go vegan", 4.9);
               }}
             >
-              Go vegan <br /> <b>200 kg saved per day!</b>
+              Go vegan <br /> <b>4.9 kg saved per day!</b>
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>

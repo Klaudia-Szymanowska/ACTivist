@@ -72,35 +72,35 @@ const TransportationCO2 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Car share", 50);
+                addChallenge("Car share", 3.2);
               }}
             >
-              Car share <br /> <b>50 kg saved per day!</b>
+              Car share <br /> <b>3.2 kg saved per day!</b>
             </button>
 
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Public transport", 100);
+                addChallenge("Public transport", 6);
               }}
             >
-              Public transport <br /> <b>100 kg saved per day!</b>
+              Public transport <br /> <b>6 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Go cycling to work ", 150);
+                addChallenge("Go cycling to work ", 12.6);
               }}
             >
-              Go cycling to work <br /> <b>150 kg saved per day!</b>
+              Go cycling to work <br /> <b>12.6 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Work from home", 200);
+                addChallenge("Work from home", 12.6);
               }}
             >
-              Work from home <br /> <b>200 kg saved per day!</b>
+              Work from home <br /> <b>12.6 kg saved per day!</b>
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>

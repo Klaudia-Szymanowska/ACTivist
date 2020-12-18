@@ -68,28 +68,28 @@ const ShoppingCO2 = () => {
           <div className="center">
             <button
               id="challbutton1"
-              onClick={() => addChallenge("Buy eco products", 50)}
+              onClick={() => addChallenge("Buy eco products", 0.3)}
             >
-              Buy eco products <br /> <b>50 kg saved per day!</b>
+              Buy eco products <br /> <b>0.3 kg saved per day!</b>
             </button>
 
             <button
               id="challbutton1"
-              onClick={() => addChallenge("Go package free", 100)}
+              onClick={() => addChallenge("Go package free", 0.4)}
             >
-              Go package free <br /> <b>100 kg saved per day!</b>
+              Go package free <br /> <b>0.4 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
-              onClick={() => addChallenge("No plastic bags", 150)}
+              onClick={() => addChallenge("No plastic bags", 0.1)}
             >
-              No plastic bags <br /> <b>150 kg saved per day!</b>
+              No plastic bags <br /> <b>0.1 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
-              onClick={() => addChallenge("Buy from local supplier", 200)}
+              onClick={() => addChallenge("Buy from local supplier", 0.2)}
             >
-              Buy from local supplier <br /> <b>200 kg saved per day!</b>
+              Buy from local supplier <br /> <b>0.2 kg saved per day!</b>
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>
