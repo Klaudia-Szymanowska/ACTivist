@@ -30,7 +30,7 @@ export const Goals = () => {
               <h3>
                 Your total CO2-savings are:
                 <br />
-                {totalCount} kg!
+                {totalCount.toFixed(1)} kg!
               </h3>
             </div>
           </div>
