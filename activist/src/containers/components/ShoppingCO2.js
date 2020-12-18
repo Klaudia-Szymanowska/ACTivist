@@ -61,7 +61,8 @@ const ShoppingCO2 = () => {
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{shoppingCount}kg of CO2</span> today!
+            Congrats! You've saved{" "}
+            <span>{shoppingCount.toFixed(1)}kg of CO2</span> today!
           </h3>
         </div>
         <div>

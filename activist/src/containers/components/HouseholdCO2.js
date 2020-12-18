@@ -63,7 +63,8 @@ const HouseholdCO2 = () => {
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{householdCount}kg of CO2</span> today!
+            Congrats! You've saved{" "}
+            <span>{householdCount.toFixed(1)}kg of CO2</span> today!
           </h3>
         </div>
         <div>

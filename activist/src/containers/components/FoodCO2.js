@@ -59,7 +59,8 @@ const FoodCO2 = () => {
         <div>
           <div>
             <h3>
-              Congrats! You've saved <span>{foodCount}kg of CO2</span> today!
+              Congrats! You've saved{" "}
+              <span>{foodCount.toFixed(1)}kg of CO2</span> today!
             </h3>
           </div>
           <div className="center">

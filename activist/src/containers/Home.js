@@ -59,7 +59,7 @@ export const Home = () => {
               <h5 style={{ fontSize: "180%" }}>
                 Your carbon <br /> savings are: <br />
                 <br />
-                {totalCount} kg
+                {totalCount.toFixed(1)} kg
               </h5>
             </div>
           </button>

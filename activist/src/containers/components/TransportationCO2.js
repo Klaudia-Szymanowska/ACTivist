@@ -64,7 +64,8 @@ const TransportationCO2 = () => {
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{transportCount}kg of CO2</span> today!
+            Congrats! You've saved{" "}
+            <span>{transportCount.toFixed(1)}kg of CO2</span> today!
           </h3>
         </div>
         <div>
