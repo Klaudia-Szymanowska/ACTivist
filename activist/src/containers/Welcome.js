@@ -5,7 +5,7 @@ import firebase from "firebase/app";
 import { Link } from "react-router-dom";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
-import rew from "./img/rew.png";
+import chartline from "./img/chartline.png";
 
 export const Welcome = () => {
   // getting current logged in user from Firebase
@@ -48,7 +48,7 @@ export const Welcome = () => {
               {" "}
               <div className="iconswelcome">
                 {" "}
-                <img src={rew} alt="rew" />{" "}
+                <img src={chartline} alt="rew" />{" "}
               </div>
               See the statistics of your accomplishments.
             </p>
