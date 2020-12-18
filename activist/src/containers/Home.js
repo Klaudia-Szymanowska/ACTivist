@@ -9,8 +9,8 @@ import firebase from "firebase/app";
 import Settingbutton from "./components/Settingsbutton";
 import tree from "./img/tree.png";
 import bulb from "./img/bulb.png";
-import chartline from "./img/chartline.png"
-import tv from "./img/tv.png"
+import chartline from "./img/chartline.png";
+import tv from "./img/tv.png";
 
 export const Home = () => {
   // getting current logged in user from Firebase
@@ -28,7 +28,7 @@ export const Home = () => {
   const shoppingCount = Number(localStorage.getItem("shoppingCount"));
   let totalCount = foodCount + householdCount + transportCount + shoppingCount;
   // variable containing the number for tree absorped CO2 compared to total CO2-count
-  let trees = totalCount / 21;
+  let television = totalCount / 0.088;
 
   // An array to restore some facts about cliamte change that will be shown on the home page
   const facts = [
@@ -98,8 +98,9 @@ export const Home = () => {
                     <img src={tv} alt="chall" />
                   </p>
                   <h3>
-                    {" "}Your CO2-savings equals what {Math.round(trees)} trees
-                    absorb in a year!
+                    {" "}
+                    Your CO2-savings equals watching television non-stop for{" "}
+                    {Math.round(television)} hours!
                   </h3>
                 </div>
               </div>
