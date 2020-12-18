@@ -284,6 +284,10 @@ button {
   border-radius: 50%;
 }
 
+.circleSmall:focus {
+  background-color: #7c979b;
+}
+
 .logo {
   display: flex;
   justify-content: center;
