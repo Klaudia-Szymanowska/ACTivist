@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const TransportationCO2 = () => {
-  var userChall = [];
-  var userChallFinish = [];
-  var transportChallFinished = localStorage.getItem("transportChallFinished");
-  var pledgedChallenges = localStorage.getItem("transportChallenges");
+  let userChall = [];
+  let userChallFinish = [];
+  let transportChallFinished = localStorage.getItem("transportChallFinished");
+  let pledgedChallenges = localStorage.getItem("transportChallenges");
   if (pledgedChallenges) {
     userChall = JSON.parse(localStorage.getItem("transportChallenges"));
   }
@@ -51,7 +51,6 @@ const TransportationCO2 = () => {
   };
 
   const resetAmount = () => {
-    //const msg = "Are you sure you want to reset the amount to 0kg?";
     const msg = "Are you sure you want to unpledge?";
     if (window.confirm(msg)) {
       settransportFinished(Object.assign([], userChall));
@@ -65,7 +64,8 @@ const TransportationCO2 = () => {
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{transportCount}kg of CO2</span> today!
+            Congrats! You've saved{" "}
+            <span>{transportCount.toFixed(1)}kg of CO2</span> today!
           </h3>
         </div>
         <div>
@@ -73,35 +73,35 @@ const TransportationCO2 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Car share", 50);
+                addChallenge("Car share", 3.2);
               }}
             >
-              Car share <br /> <b>50 kg saved per day!</b>
+              Car share <br /> <b>3.2 kg saved per day!</b>
             </button>
 
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Public transport", 100);
+                addChallenge("Public transport", 6);
               }}
             >
-              Public transport <br /> <b>100 kg saved per day!</b>
+              Public transport <br /> <b>6 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Go cycling to work ", 150);
+                addChallenge("Go cycling to work ", 12.6);
               }}
             >
-              Go cycling to work <br /> <b>150 kg saved per day!</b>
+              Go cycling to work <br /> <b>12.6 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Work from home", 200);
+                addChallenge("Work from home", 12.6);
               }}
             >
-              Work from home <br /> <b>200 kg saved per day!</b>
+              Work from home <br /> <b>12.6 kg saved per day!</b>
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>

@@ -226,6 +226,7 @@ button {
   position: center;
   float: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .container1 {
@@ -281,6 +282,10 @@ button {
   padding: 10px 10px;
   background-color: #9db5bd;
   border-radius: 50%;
+}
+
+.circleSmall:focus {
+  background-color: #7c979b;
 }
 
 .logo {
@@ -354,8 +359,7 @@ button {
     width: 500%;
   }
   .chartsize {
-    margin-top: 25%;
-    height: 150%;
+    margin-top: 15%;
   }
 
   h3 {
@@ -378,11 +382,24 @@ button {
     margin-top: 9%;
     margin-bottom: -32%;
   }
+
+  .logo2 {
+    float: center;
+    margin-left: 20%;
+    height: 20%;
+  }
+  .logo3 {
+    float: center;
+    margin-left: 19%;
+    margin-bottom: -15%;
+  }
   #subpass {
     margin-top: 0%;
   }
   .content {
     font-size: 70%;
+    padding: 7px;
+    width: 300px;
   }
   .content2 {
     font-size: 100%;
@@ -553,6 +570,7 @@ h7 {
   margin-top: 10%;
 }
 
+/* styling popup window */
 .popup-box {
   position: fixed;
   background: #00000050;

@@ -5,20 +5,17 @@ import firebase from "firebase/app";
 import { Link } from "react-router-dom";
 import list from "./img/list.png";
 import chall from "./img/chall.png";
-import rew from "./img/rew.png";
+import chartline from "./img/chartline.png";
 
 export const Welcome = () => {
-  // should we use let instead of var?
+  // getting current logged in user from Firebase
   const user = firebase.auth().currentUser;
   let name;
 
+  // if user is logged in then get name - only works for users signing in with Gmail
   if (user != null) {
     name = user.displayName;
   }
-
-  // <style>
-  //   h3 {text-align: left}
-  // </style>
 
   return (
     <main>
@@ -51,7 +48,7 @@ export const Welcome = () => {
               {" "}
               <div className="iconswelcome">
                 {" "}
-                <img src={rew} alt="rew" />{" "}
+                <img src={chartline} alt="rew" />{" "}
               </div>
               See the statistics of your accomplishments.
             </p>

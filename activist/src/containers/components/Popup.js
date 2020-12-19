@@ -1,3 +1,5 @@
+// component of the popup window function
+
 import React from "react";
  
 const Popup = props => {

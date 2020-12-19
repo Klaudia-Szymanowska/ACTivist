@@ -16,20 +16,23 @@ export const Goals = () => {
       <div id="navbuttons">
         <ContainerHomeSettings />
       </div>
+
       <div className="text">
         <h3>Congratulations</h3>
       </div>
-      <div className="chartsize">
-        <div className="container2">
-          <Piechart />
-        </div>
-        <div className="container">
-          <div className="content">
-            <h5 color={"black"} style={{ fontSize: "140%" }}>
-              Your total CO2-savings are:
-              <br />
-              {totalCount} kg!
-            </h5>
+      <div className="login">
+        <div className="chartsize">
+          <div className="container2">
+            <Piechart />
+          </div>
+          <div className="container">
+            <div className="content">
+              <h3>
+                Your total CO2-savings are:
+                <br />
+                {totalCount.toFixed(1)} kg!
+              </h3>
+            </div>
           </div>
         </div>
       </div>

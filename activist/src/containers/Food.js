@@ -6,19 +6,16 @@ import ContainerHomeSettings from "./components/containerHomeSettings";
 export const Food = () => {
   return (
     <main>
-      <div>
-        <div id="navbuttons">
-          <ContainerHomeSettings />
-        </div>
-        <div className="text">
-          <h3>Food</h3>
-          <div className="center">
-            {/*<CheckboxContainer />*/}
-            <FoodCO2 />
-          </div>
-        </div>
-        );
+      <div id="navbuttons">
+        <ContainerHomeSettings />
       </div>
+      <div className="text">
+        <h3>Food</h3>
+        <div className="center">
+          <FoodCO2 />
+        </div>
+      </div>
+      );
     </main>
   );
 };

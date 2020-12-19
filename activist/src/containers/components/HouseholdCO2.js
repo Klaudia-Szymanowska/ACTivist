@@ -63,7 +63,8 @@ const HouseholdCO2 = () => {
       <div className="text">
         <div>
           <h3>
-            Congrats! You've saved <span>{householdCount}kg of CO2</span> today!
+            Congrats! You've saved{" "}
+            <span>{householdCount.toFixed(1)}kg of CO2</span> today!
           </h3>
         </div>
         <div>
@@ -71,36 +72,36 @@ const HouseholdCO2 = () => {
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Compost at home", 50);
+                addChallenge("Compost at home", 1.5);
               }}
             >
-              Compost at home <br /> <b>50 kg saved per day!</b>
+              Compost at home <br /> <b>1.5 kg saved per day!</b>
             </button>
 
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Recycle waste at home", 100);
+                addChallenge("Recycle waste at home", 1.1);
               }}
             >
               Recycle waste at home
-              <br /> <b>100 kg saved per day!</b>
+              <br /> <b>1.1 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Use less water", 150);
+                addChallenge("Use less water", 1);
               }}
             >
-              Use less water <br /> <b>150 kg saved per day!</b>
+              Use less water <br /> <b>1 kg saved per day!</b>
             </button>
             <button
               id="challbutton1"
               onClick={() => {
-                addChallenge("Switch off lights", 200);
+                addChallenge("Switch off lights", 1.6);
               }}
             >
-              Switch off lights <br /> <b>200 kg saved per day!</b>
+              Switch off lights <br /> <b>1.6 kg saved per day!</b>
             </button>
           </div>
           <button id="challbutton3" onClick={resetAmount}>
