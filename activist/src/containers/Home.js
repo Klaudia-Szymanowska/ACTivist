@@ -30,14 +30,14 @@ export const Home = () => {
 
   // An array to restore some facts about cliamte change that will be shown on the home page
   const facts = [
-    "800,000 hectares lost every year.",
+    //"800,000 hectares lost every year.",
     "11% of the world’s population is currently vulnerable to climate change impacts such as droughts, floods and heat waves.",
     "Roughly 3.2 billion people are currently impacted by land degradation worldwide.",
     "The worst impacts of climate change could be irreversible by 2030.",
     "The average temperature of the Earth is determined by the greenhouse effect.",
     "Global temperatures have increased by about 1° Celsius in the past century.",
     "The United States is the second largest contributor to carbon dioxide (CO2) in our atmosphere.",
-    "Arctic sea ice and glaciers are melting.",
+    "Arctic sea ice and glaciers are melting at an alarming speed.",
     "Average sea level is expected to rise between 0.5 and 1.5 metres before the end of the century.",
     "Rainforest destruction is a major cause of carbon dioxide release.",
   ];
